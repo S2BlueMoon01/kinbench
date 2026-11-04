@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-link: var(--link);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+/* Every text pair below is checked for WCAG AA (>= 4.5:1); --input and --ring are >= 3:1 against surfaces. */
+:root {
+  --background: #f3f6f9;
+  --foreground: #131820;
+  --card: #ffffff;
+  --card-foreground: #131820;
+  --popover: #ffffff;
+  --popover-foreground: #131820;
+  --primary: #7cc8f8;
+  --primary-foreground: #0b1a2a;
+  --secondary: #e9eef3;
+  --secondary-foreground: #131820;
+  --muted: #eaeff4;
+  --muted-foreground: #56606e;
+  --accent: #e3f2fd;
+  --accent-foreground: #0a4f80;
+  --link: #0a64a0;
+  --destructive: #c62828;
+  --success: #17744a;
+  --border: #dce3ea;
+  --input: #848fa0;
+  --ring: #0a64a0;
+  --grid-dot: rgb(19 24 32 / 0.09);
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0b0f14;
+  --foreground: #e6ecf2;
+  --card: #131a22;
+  --card-foreground: #e6ecf2;
+  --popover: #131a22;
+  --popover-foreground: #e6ecf2;
+  --primary: #8dd3fb;
+  --primary-foreground: #0b1a2a;
+  --secondary: #1a232d;
+  --secondary-foreground: #e6ecf2;
+  --muted: #1a232d;
+  --muted-foreground: #94a1b0;
+  --accent: #10263a;
+  --accent-foreground: #b9e3fc;
+  --link: #8dd3fb;
+  --destructive: #ff8a80;
+  --success: #6ee7a8;
+  --border: #243040;
+  --input: #5d6e84;
+  --ring: #8dd3fb;
+  --grid-dot: rgb(230 236 242 / 0.07);
+}
+
+/* Category hues: same lightness/chroma per theme, only the hue changes. */
+[data-cat] { --cat-bg: oklch(0.94 0.045 var(--h)); --cat-fg: oklch(0.42 0.13 var(--h)); }
+.dark [data-cat] { --cat-bg: oklch(0.28 0.06 var(--h)); --cat-fg: oklch(0.86 0.1 var(--h)); }
+[data-cat="format"] { --h: 230; }
+[data-cat="text"] { --h: 160; }
+[data-cat="image"] { --h: 330; }
+[data-cat="encode"] { --h: 280; }
+[data-cat="crypto"] { --h: 25; }
+[data-cat="generate"] { --h: 80; }
+[data-cat="convert"] { --h: 195; }
+[data-cat="code"] { --h: 130; }
+[data-cat="media"] { --h: 55; }
+
+@layer base {
+  * {
+    @apply border-border outline-ring;
+  }
+  html {
+    @apply font-sans;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  button:not(:disabled), [role="button"]:not(:disabled), label:has(input) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2;
+  }
+}
+
+/* Nav drawer (native <dialog>): slide in from the left; @starting-style animates the open state. */
+.drawer {
+  transition: translate 0.2s ease-out, display 0.2s allow-discrete, overlay 0.2s allow-discrete;
+  translate: -100% 0;
+}
+.drawer[open] { translate: 0 0; }
+@starting-style { .drawer[open] { translate: -100% 0; } }
+@media (prefers-reduced-motion: reduce) { .drawer { transition: none; } }
+
+/* Rendered Markdown (Markdown preview). No typography plugin: these few rules are all it needs. */
+.markdown { @apply leading-relaxed; }
+.markdown > * + * { @apply mt-3; }
+.markdown :is(h1, h2, h3, h4) { @apply mt-6 font-semibold tracking-tight first:mt-0; }
+.markdown h1 { @apply text-2xl; }
+.markdown h2 { @apply border-b pb-1 text-xl; }
+.markdown h3 { @apply text-lg; }
+.markdown :is(ul, ol) { @apply pl-6; }
+.markdown ul { @apply list-disc; }
+.markdown ol { @apply list-decimal; }
+.markdown li:has(> input) { @apply -ml-5 list-none; }
+.markdown a { @apply text-link underline underline-offset-4; }
+.markdown :not(pre) > code { @apply rounded bg-muted px-1 py-0.5 font-mono text-[0.9em]; }
+.markdown pre { @apply overflow-x-auto rounded-lg bg-muted p-3 font-mono text-[13px]; }
+.markdown blockquote { @apply border-l-4 pl-4 text-muted-foreground; }
+.markdown table { @apply block overflow-x-auto text-sm; }
+.markdown :is(th, td) { @apply border px-3 py-1.5 text-left; }
+.markdown hr { @apply my-6; }
+.markdown img { @apply max-w-full; }

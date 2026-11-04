@@ -1,0 +1,4 @@
+# Neither is needed: @swc/core is an optional next-intl extractor, @parcel/watcher is for Tailwind CLI watch mode.
+allowBuilds:
+  '@swc/core': false
+  '@parcel/watcher': false

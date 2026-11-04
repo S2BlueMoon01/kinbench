@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+test-results/
+playwright-report/
+e2e/screenshots/
+# copied from node_modules by scripts/copy-vendor.mjs
+public/vendor

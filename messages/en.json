@@ -1,0 +1,1837 @@
+{
+  "ui": {
+    "nav": {
+      "skip": "Skip to content",
+      "openMenu": "Open menu",
+      "close": "Close",
+      "home": "Home",
+      "tools": "Tools"
+    },
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "language": {
+      "label": "Language",
+      "vi": "Tiếng Việt",
+      "en": "English"
+    },
+    "actions": {
+      "copy": "Copy",
+      "copied": "Copied",
+      "copyFailed": "Couldn't copy",
+      "download": "Download",
+      "clear": "Clear",
+      "options": "Options",
+      "remember": "Remember input on this device",
+      "resize": "Resize panels",
+      "chooseFile": "Choose a file",
+      "orDrop": "or drop it here",
+      "copyNamed": "Copy {name}",
+      "orPaste": "or paste a screenshot with Ctrl+V"
+    },
+    "search": {
+      "open": "Search tools",
+      "label": "Search tools",
+      "placeholder": "Search tools, e.g. json or hash",
+      "empty": "No matching tools"
+    },
+    "footer": {
+      "label": "Site",
+      "privacy": "Privacy",
+      "about": "About",
+      "note": "No backend · no analytics · no cookies"
+    }
+  },
+  "site": {
+    "tagline": "Developer tools that run 100% in your browser",
+    "privacyBadge": "Processed locally — nothing is uploaded",
+    "breadcrumb": "Breadcrumb",
+    "categories": {
+      "format": {
+        "name": "Format & Validate",
+        "description": "Pretty-print, validate and minify JSON, CSS and more."
+      },
+      "text": {
+        "name": "Text",
+        "description": "Count, compare and transform text."
+      },
+      "image": {
+        "name": "Image",
+        "description": "Convert, compress and edit images without uploading them."
+      },
+      "encode": {
+        "name": "Encode & Decode",
+        "description": "Base64, URL, JWT and other encodings."
+      },
+      "crypto": {
+        "name": "Hash & Crypto",
+        "description": "Hashes, HMAC and encryption with Web Crypto."
+      },
+      "generate": {
+        "name": "Generators",
+        "description": "UUIDs, passwords, CSS snippets and more."
+      },
+      "convert": {
+        "name": "Converters",
+        "description": "Timestamps, number bases, colors and units."
+      },
+      "code": {
+        "name": "Code",
+        "description": "Run and test JavaScript, regular expressions and HTTP requests."
+      },
+      "media": {
+        "name": "PDF & Video",
+        "description": "Merge and split PDFs, turn videos into GIFs, without uploading them."
+      }
+    },
+    "toolPage": {
+      "howTo": "How to use",
+      "whySafe": "Why it's safe",
+      "faq": "Frequently asked questions",
+      "related": "Related tools"
+    },
+    "whySafe": {
+      "browser": "All processing runs as JavaScript inside your browser — Kinbench has no backend.",
+      "noUpload": "Nothing you paste or drop is uploaded. Open DevTools → Network and check for yourself.",
+      "csp": "A strict Content-Security-Policy blocks the page from sending requests to any other server.",
+      "offline": "Tools you have opened keep working offline: a service worker keeps a copy of them on your device."
+    },
+    "faqPrivacy": {
+      "q": "Is my data sent to a server?",
+      "a": "No. Kinbench is a static site: the tool runs entirely in your browser and there is no backend to receive your data. A strict Content-Security-Policy also blocks requests to other servers, and automated tests check that using each tool makes no network request carrying your data."
+    },
+    "featureList": {
+      "browser": "Runs entirely in the browser",
+      "noUpload": "No data upload",
+      "free": "Free, no sign-up",
+      "offline": "Works offline"
+    },
+    "og": {
+      "badge": "100% local — nothing is uploaded"
+    }
+  },
+  "home": {
+    "metaTitle": "Kinbench — developer tools that run 100% in your browser",
+    "metaDescription": "Free JSON, text, image, hash and encoding tools for developers. Everything runs locally in your browser — nothing is uploaded to any server.",
+    "title": "100% local tools — your data never leaves your browser",
+    "subtitle": "Format, convert, hash and debug without pasting secrets into someone else's server.",
+    "categoriesTitle": "Browse by category",
+    "recentTitle": "Recently used"
+  },
+  "category": {
+    "metaTitle": "{name} — runs in your browser, no upload | Kinbench",
+    "metaDescription": "{name} tools for developers. Everything runs locally in your browser; nothing is sent to a server.",
+    "toolCount": "{count, plural, one {# tool} other {# tools}}"
+  },
+  "notFound": {
+    "title": "Page not found"
+  },
+  "tools": {
+    "json-formatter": {
+      "title": "JSON Formatter",
+      "metaTitle": "JSON Formatter & Validator — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Format, validate and minify JSON in your browser. Errors show the exact line and column. Your data is never sent to any server.",
+      "intro": "Paste or drop JSON to pretty-print, validate or minify it. Everything runs locally in your browser, and big numbers and escape sequences are kept exactly as written.",
+      "howTo": {
+        "paste": "Paste JSON into the Input pane, or drop a .json file onto it.",
+        "mode": "Pick Format or Minify, and the indent size.",
+        "errors": "If the JSON is invalid, the error shows its line and column — click it to jump there.",
+        "export": "Copy the result or download it as a file."
+      },
+      "faq": {
+        "bigNumbers": {
+          "q": "Why are my big numbers kept exactly?",
+          "a": "Most formatters run JSON.parse, which rounds integers above 2^53. Kinbench reformats the original tokens instead, so 12345678901234567890 stays 12345678901234567890 and 1.50 stays 1.50."
+        },
+        "strict": {
+          "q": "Are comments or trailing commas allowed?",
+          "a": "No. It validates strict JSON (RFC 8259), so comments and trailing commas are reported as errors with their position."
+        },
+        "size": {
+          "q": "How large a file can it handle?",
+          "a": "Files of several megabytes work fine. The only limit is your device's memory, because nothing is uploaded."
+        }
+      },
+      "ui": {
+        "input": "Input",
+        "output": "Output",
+        "inputPlaceholder": "Paste JSON here or drop a .json file",
+        "outputPlaceholder": "The result appears here",
+        "mode": "Mode",
+        "format": "Format",
+        "minify": "Minify",
+        "indent": "Indent",
+        "spaces": "{count} spaces",
+        "tab": "Tab",
+        "sample": "Try a sample",
+        "sampleNote": "Runs right in your browser — ệ ữ ở ặ ỹ",
+        "valid": "Valid JSON",
+        "dropHint": "Drop the file to load it",
+        "fileError": "Couldn't read that file",
+        "errorAt": "Line {line}, column {column}",
+        "jumpToError": "Jump to error",
+        "errors": {
+          "InvalidSymbol": "Unexpected character",
+          "InvalidNumberFormat": "Invalid number",
+          "PropertyNameExpected": "Expected a property name in double quotes",
+          "ValueExpected": "Expected a value",
+          "ColonExpected": "Expected ':'",
+          "CommaExpected": "Expected ','",
+          "CloseBraceExpected": "Expected a closing curly brace",
+          "CloseBracketExpected": "Expected ']'",
+          "EndOfFileExpected": "Unexpected content after the end of the JSON",
+          "InvalidCommentToken": "Comments are not allowed in JSON",
+          "UnexpectedEndOfComment": "Unterminated comment",
+          "UnexpectedEndOfString": "Unterminated string",
+          "UnexpectedEndOfNumber": "The number ends unexpectedly",
+          "InvalidUnicode": "Invalid \\u escape",
+          "InvalidEscapeCharacter": "Invalid escape sequence",
+          "InvalidCharacter": "Control characters must be escaped inside strings",
+          "Unknown": "Invalid JSON"
+        }
+      }
+    },
+    "text-counter": {
+      "title": "Text Counter",
+      "metaTitle": "Character & Word Counter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Count characters, words, lines, UTF-8 bytes and reading time as you type. Your text stays in your browser and is never sent to a server.",
+      "intro": "Type or paste text to count characters, words, lines and UTF-8 bytes, and to estimate reading time. Counting happens in your browser as you type; nothing is uploaded.",
+      "howTo": {
+        "paste": "Type or paste your text into the box.",
+        "read": "The counts update as you type: characters, characters without spaces, words, lines, UTF-8 bytes and reading time.",
+        "remember": "Turn on “Remember input on this device” to keep the text after a reload."
+      },
+      "faq": {
+        "characters": {
+          "q": "How are characters counted?",
+          "a": "Kinbench counts what you see as one character (a grapheme cluster), so an emoji like 👍🏽 or a Vietnamese letter typed with combining marks, such as ệ, counts as 1 even though it is made of several code points."
+        },
+        "bytes": {
+          "q": "Why do bytes and characters differ?",
+          "a": "Bytes are the size of the text encoded as UTF-8, which is what databases, APIs and SMS limits usually measure. ASCII letters take 1 byte, accented letters 2–3 bytes and emoji 4 or more."
+        },
+        "reading": {
+          "q": "How is reading time estimated?",
+          "a": "Words divided by 200 words per minute, rounded up, which is a typical silent reading speed for text on a screen."
+        }
+      },
+      "ui": {
+        "input": "Text",
+        "placeholder": "Type or paste text here",
+        "stats": "Statistics",
+        "labels": {
+          "characters": "Characters",
+          "charactersNoSpaces": "Characters (no spaces)",
+          "words": "Words",
+          "lines": "Lines",
+          "bytes": "UTF-8 bytes",
+          "readingMinutes": "Reading time"
+        }
+      }
+    },
+    "base64": {
+      "title": "Base64 Encode / Decode",
+      "metaTitle": "Base64 Encode & Decode — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Encode text or files to Base64 and decode it back, with UTF-8 and URL-safe support. Runs in your browser; nothing is sent to a server.",
+      "intro": "Encode text or any file to Base64, or decode Base64 back to text or a downloadable file. UTF-8 and URL-safe Base64 are handled, and everything happens in your browser.",
+      "howTo": {
+        "mode": "Choose Encode or Decode.",
+        "input": "Type or paste text, or choose a file. Files are read on your device, never uploaded.",
+        "output": "Copy the result or download it. Decoded binary data downloads as a file."
+      },
+      "faq": {
+        "urlSafe": {
+          "q": "Does it support URL-safe Base64 (base64url)?",
+          "a": "Decoding accepts both standard and URL-safe Base64 (with - and _), with or without = padding and line breaks. Encoding outputs standard Base64."
+        },
+        "unicode": {
+          "q": "Why does my non-English text decode correctly here but not with atob()?",
+          "a": "atob() and btoa() only handle Latin-1. Kinbench converts text to UTF-8 bytes first, so Vietnamese, emoji and every other script round-trip correctly."
+        },
+        "encryption": {
+          "q": "Is Base64 encryption?",
+          "a": "No. Base64 is an encoding, not encryption: anyone can decode it. Don’t use it to hide secrets."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "encode": "Encode",
+        "decode": "Decode",
+        "input": "Input",
+        "output": "Output",
+        "encodePlaceholder": "Type or paste text to encode",
+        "decodePlaceholder": "Paste Base64 to decode",
+        "outputPlaceholder": "The result appears here",
+        "invalid": "This isn’t valid Base64",
+        "binary": "Binary data — use Download to save the file",
+        "fileError": "Couldn’t read that file",
+        "truncated": "Showing the first {count, number} characters. Copy or download to get the full result."
+      }
+    },
+    "uuid-generator": {
+      "title": "UUID / ULID / nanoid Generator",
+      "metaTitle": "UUID, ULID & nanoid Generator — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Generate UUID v4, ULID and nanoid in bulk with your browser’s secure random generator. IDs are created locally and never sent to a server.",
+      "intro": "Generate up to 1,000 UUID v4, ULID or nanoid values at once. IDs come from your browser’s cryptographically secure random generator and are never sent anywhere.",
+      "howTo": {
+        "kind": "Pick UUID v4, ULID or nanoid, and how many you need.",
+        "generate": "Press Generate for a fresh batch. Each ID is on its own line.",
+        "export": "Copy them all or download them as a text file."
+      },
+      "faq": {
+        "which": {
+          "q": "Which one should I use?",
+          "a": "UUID v4 is the most widely supported. ULID sorts by creation time, which keeps database indexes compact. nanoid is shorter (21 characters by default) and URL-safe."
+        },
+        "random": {
+          "q": "Are these IDs really random?",
+          "a": "Yes. They use crypto.randomUUID() and crypto.getRandomValues(), the browser’s cryptographically secure generator, not Math.random()."
+        },
+        "collisions": {
+          "q": "Can two IDs collide?",
+          "a": "In practice, no. UUID v4 has 122 random bits and a 21-character nanoid about 126. You would need to generate billions of IDs per second for decades before a collision became likely."
+        }
+      },
+      "ui": {
+        "kind": "Type",
+        "count": "Count",
+        "size": "Length",
+        "generate": "Generate",
+        "output": "Generated IDs",
+        "generated": "{count, plural, one {# ID} other {# IDs}}"
+      }
+    },
+    "unix-timestamp": {
+      "title": "Unix Timestamp Converter",
+      "metaTitle": "Unix Timestamp Converter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert Unix timestamps (seconds or ms) to ISO 8601, local and relative time, and back. Runs in your browser; nothing is sent to a server.",
+      "intro": "Convert a Unix timestamp to a readable date in UTC and in your time zone, or turn a date into a timestamp. Seconds and milliseconds are detected automatically.",
+      "howTo": {
+        "paste": "Paste a timestamp, or press “Use current time”.",
+        "unit": "Leave the unit on Auto, or force seconds or milliseconds.",
+        "reverse": "To go the other way, pick a date and time on the right. It is read in your device’s time zone."
+      },
+      "faq": {
+        "units": {
+          "q": "Seconds or milliseconds: how does Auto decide?",
+          "a": "Numbers of 100,000,000,000 or more are read as milliseconds, smaller ones as seconds. Read as seconds, such a large number would be a date after the year 5000, so the guess is almost always right."
+        },
+        "timezone": {
+          "q": "Which time zone is used?",
+          "a": "Unix time is always UTC. The “Local time” row shows the same moment in your device’s time zone, which the page reads from your browser."
+        },
+        "y2038": {
+          "q": "Does it handle dates after 2038?",
+          "a": "Yes. JavaScript dates are not limited to 32 bits, so any date from about 271,821 BC to AD 275,760 works."
+        }
+      },
+      "ui": {
+        "now": "Current Unix time",
+        "useNow": "Use current time",
+        "toDate": "Timestamp → date",
+        "toTimestamp": "Date → timestamp",
+        "timestamp": "Unix timestamp",
+        "unit": "Unit",
+        "auto": "Auto",
+        "seconds": "Seconds",
+        "milliseconds": "Milliseconds",
+        "invalid": "Enter a number, like 1700000000",
+        "readAsSeconds": "Read as seconds",
+        "readAsMilliseconds": "Read as milliseconds",
+        "iso": "ISO 8601 (UTC)",
+        "localTime": "Local time ({timeZone})",
+        "relative": "Relative",
+        "localDate": "Date and time ({timeZone})"
+      }
+    },
+    "jwt-decoder": {
+      "title": "JWT Decoder",
+      "metaTitle": "JWT Decoder — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Decode a JWT’s header and payload, check exp, iat and nbf, and verify HS256 signatures. Tokens stay in your browser and are never sent to a server.",
+      "intro": "Paste a JSON Web Token to see its header, payload and expiry. Decoding does not check the signature; to verify an HS256, HS384 or HS512 token, enter its secret. The token and secret stay in your browser.",
+      "howTo": {
+        "paste": "Paste a token into the Token box.",
+        "read": "Read the decoded header and payload, and the exp, iat and nbf dates in your time zone.",
+        "verify": "For HS256, HS384 and HS512 tokens, enter the secret to verify the signature. Without it, the signature is not checked."
+      },
+      "faq": {
+        "verification": {
+          "q": "Does decoding prove the token is valid?",
+          "a": "No. Anyone can create a token with any payload. Only a signature check proves who issued it: enter the secret for HMAC tokens here, and always verify tokens on your server."
+        },
+        "rs256": {
+          "q": "Can it verify RS256 or ES256 tokens?",
+          "a": "Not yet. Those need the issuer’s public key; this tool only verifies HMAC signatures (HS256, HS384, HS512) with a shared secret. Other tokens are decoded only."
+        },
+        "safe": {
+          "q": "Is it safe to paste a production token?",
+          "a": "The token and secret are processed only in this tab and never sent anywhere. Still, a valid token is a credential: prefer test or expired tokens, and close the tab when you are done."
+        }
+      },
+      "ui": {
+        "token": "Token",
+        "placeholder": "Paste a JWT (header.payload.signature)",
+        "sample": "Try a sample",
+        "decoded": "Decoded",
+        "empty": "Paste a token to see what it contains.",
+        "header": "Header",
+        "payload": "Payload",
+        "signature": "Signature",
+        "claims": {
+          "exp": "Expires (exp)",
+          "nbf": "Not before (nbf)",
+          "iat": "Issued at (iat)"
+        },
+        "expired": "Expired",
+        "notExpired": "Not expired",
+        "secretLabel": "Secret for {alg}",
+        "secretNote": "Used only in this tab to check the signature. It is never saved or sent.",
+        "cannotVerify": "This tool only verifies HS256, HS384 and HS512 signatures. This token uses {alg}, so it is decoded only.",
+        "notVerified": "Signature not verified. Decoding alone does not prove the token is genuine.",
+        "verified": "Signature verified with this secret",
+        "invalidSignature": "The signature doesn’t match this secret",
+        "errors": {
+          "parts": "A JWT has three parts separated by dots",
+          "header": "The header isn’t valid Base64url-encoded JSON",
+          "payload": "The payload isn’t valid Base64url-encoded JSON"
+        }
+      }
+    },
+    "hash-generator": {
+      "title": "Hash Generator",
+      "metaTitle": "MD5, SHA-1, SHA-256 & SHA-512 Hash Generator — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Hash text or files with MD5, SHA-1, SHA-256 and SHA-512 at once. Large files are read in your browser and never uploaded to a server.",
+      "intro": "Get the MD5, SHA-1, SHA-256 and SHA-512 hashes of text or a file in one go. Hashing runs in a background worker in your browser, so even multi-gigabyte files stay on your device.",
+      "howTo": {
+        "input": "Type or paste text, or choose a file to hash.",
+        "read": "All four hashes appear together. Files show progress while they are read.",
+        "copy": "Copy any hash with the button next to it, for example to compare it with a published checksum."
+      },
+      "faq": {
+        "verify": {
+          "q": "How do I check a downloaded file?",
+          "a": "Choose the file here and compare its SHA-256 with the checksum published by the download site. If even one character differs, the file is not the same."
+        },
+        "md5": {
+          "q": "Are MD5 and SHA-1 still safe?",
+          "a": "Not for security. Both have practical collision attacks, so use SHA-256 or SHA-512 for signatures and integrity checks. MD5 and SHA-1 are fine for non-security uses such as cache keys or matching old checksums."
+        },
+        "passwords": {
+          "q": "Can I use this to hash passwords?",
+          "a": "No. Plain hashes are far too fast to store passwords safely. Use a slow password hash such as Argon2, bcrypt or scrypt on your server."
+        }
+      },
+      "ui": {
+        "input": "Input",
+        "placeholder": "Type or paste text to hash",
+        "output": "Hashes",
+        "ofFile": "of the file",
+        "empty": "The hashes of your text or file appear here.",
+        "hashing": "Hashing… {percent}%",
+        "progress": "Hashing progress",
+        "failed": "Couldn’t hash this input"
+      }
+    },
+    "function-runner": {
+      "title": "Function Runner",
+      "metaTitle": "JavaScript Function Runner & Tester — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Test a JavaScript function against a table of cases in a sandboxed Web Worker. Your code runs on your device and is never sent to a server.",
+      "intro": "Write a JavaScript function, add test cases and run them all in a sandboxed Web Worker. You get pass or fail, the actual output, the time per case and captured console.log, and endless loops are stopped by a timeout.",
+      "howTo": {
+        "code": "Write a single function in the Function box: a function declaration or an arrow function.",
+        "cases": "Add test cases. Params are the arguments as a JSON array, like [1, 2]; expected is the JSON value the function should return.",
+        "run": "Press Run all. Each case runs in a fresh worker and is stopped if it takes longer than the timeout (3 seconds by default)."
+      },
+      "faq": {
+        "sandbox": {
+          "q": "Is it safe to run code here?",
+          "a": "Your code runs only inside a dedicated Web Worker, which can’t touch the page, its storage or the network: a separate Content-Security-Policy blocks every request from the worker, and each case gets a new worker that is terminated as soon as it finishes or times out."
+        },
+        "async": {
+          "q": "Can I test async functions?",
+          "a": "Yes. If the function returns a Promise, the runner waits for it, and the time includes the wait. The timeout still applies."
+        },
+        "compare": {
+          "q": "How are results compared?",
+          "a": "Structurally, like a deep equal: objects match regardless of key order, arrays must match in order, and NaN equals NaN. Expected values are JSON, so they can’t express undefined, functions or a Map."
+        }
+      },
+      "ui": {
+        "code": "Function",
+        "codePlaceholder": "Write one function, for example (a, b) => a + b",
+        "sample": "Try a sample",
+        "cases": "Test cases",
+        "case": "Case {n}",
+        "params": "Params (JSON array)",
+        "expected": "Expected (JSON)",
+        "actual": "Actual",
+        "logs": "Console ({count})",
+        "addCase": "Add case",
+        "removeCase": "Remove case {n}",
+        "run": "Run all",
+        "running": "Running…",
+        "summary": "{passed} of {total} passed",
+        "timeout": "Timeout (ms)",
+        "timedOut": "Stopped after {ms, number} ms: the function didn’t finish in time.",
+        "status": {
+          "passed": "Passed",
+          "failed": "Failed",
+          "error": "Error",
+          "timeout": "Timed out",
+          "invalid": "Invalid case"
+        },
+        "invalid": {
+          "params": "Params must be a JSON array, like [1, 2]",
+          "expected": "Expected must be valid JSON, like 3 or \"text\""
+        },
+        "errors": {
+          "notFunction": "The code must be a single function, like (a, b) => a + b",
+          "uncloneable": "The return value can’t be copied out of the sandbox (for example a function or a Symbol)"
+        }
+      }
+    },
+    "css-formatter": {
+      "title": "CSS & SCSS Formatter",
+      "metaTitle": "CSS & SCSS Formatter, Minifier & Compiler — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Format and minify CSS, and compile SCSS to CSS, with Prettier and Dart Sass in your browser. Your stylesheets are never sent to a server.",
+      "intro": "Format CSS and SCSS with Prettier, compile SCSS to CSS, or minify either with Dart Sass. Both libraries run in a background worker in your browser and load only when you first use them.",
+      "howTo": {
+        "paste": "Paste CSS or SCSS, and pick the language under Options.",
+        "mode": "Choose Format, Compile (SCSS → CSS) or Minify.",
+        "errors": "Syntax errors show the line and column; click to jump there.",
+        "export": "Copy the result or download it as a file."
+      },
+      "faq": {
+        "libraries": {
+          "q": "Which tools does it use?",
+          "a": "Prettier 3 for formatting, and Dart Sass, the reference Sass implementation, for compiling and minifying: the same libraries you would run in a build. They load on demand from this site, Prettier at about 65 KB and Sass at about 700 KB, and your browser caches them afterwards."
+        },
+        "minifyCss": {
+          "q": "Can I minify plain CSS?",
+          "a": "Yes. Choose CSS under Options, then Minify. Comments and whitespace are removed and values are shortened where it is safe."
+        },
+        "imports": {
+          "q": "Do @use and @import work?",
+          "a": "Only for built-in modules such as sass:math and sass:color. Other files can’t be imported, because the tool never reads files from your disk or the network."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "format": "Format",
+        "compile": "Compile",
+        "minify": "Minify",
+        "language": "Language",
+        "input": "Input",
+        "output": "Output",
+        "cssPlaceholder": "Paste CSS here",
+        "scssPlaceholder": "Paste SCSS here",
+        "outputPlaceholder": "The result appears here",
+        "sample": "Try a sample",
+        "syntaxError": "Syntax error",
+        "errorAt": "Line {line}, column {column}",
+        "loadingPrettier": "Loading Prettier (one time)…",
+        "loadingSass": "Loading the Sass compiler (~700 KB, one time)…"
+      }
+    },
+    "image-converter": {
+      "title": "Image Converter & Compressor",
+      "metaTitle": "Image Compressor & Converter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert images to PNG, JPEG, WebP or AVIF and compress them with a quality slider. Photos are processed in your browser and never uploaded.",
+      "intro": "Convert PNG, JPEG, WebP and AVIF images and compress them with a quality slider, then compare before and after in one frame. Your images are processed in your browser and never uploaded.",
+      "howTo": {
+        "pick": "Choose or drop an image.",
+        "format": "Pick the output format and quality under Options.",
+        "compare": "Drag across the preview to compare the original with the result, and check how much smaller it is.",
+        "download": "Download the converted image."
+      },
+      "faq": {
+        "avif": {
+          "q": "Why does AVIF take longer?",
+          "a": "Browsers can display AVIF but not create it, so Kinbench loads an AVIF encoder compiled to WebAssembly (about 1.1 MB, once) and encodes in a background worker. Large photos can take several seconds."
+        },
+        "metadata": {
+          "q": "Is EXIF metadata kept?",
+          "a": "No. The image is redrawn on a canvas, so EXIF data such as GPS location and camera details is not in the result. Your original file is not changed."
+        },
+        "transparency": {
+          "q": "What happens to transparency?",
+          "a": "PNG, WebP and AVIF keep it. JPEG has no transparency, so transparent areas become white."
+        }
+      },
+      "ui": {
+        "format": "Format",
+        "quality": "Quality",
+        "preview": "Preview",
+        "hint": "PNG, JPEG, WebP, AVIF, GIF and any other format your browser can open. Images stay on your device.",
+        "before": "Original",
+        "after": "Result",
+        "compare": "Before and after comparison",
+        "encoding": "Encoding…",
+        "loadingAvif": "Loading the AVIF encoder (~1.1 MB, one time)…",
+        "lossless": "PNG is lossless, so quality doesn’t apply",
+        "decodeError": "This file couldn’t be opened as an image",
+        "dimensions": "{width} × {height} px",
+        "smaller": "{percent}% smaller",
+        "larger": "{percent}% larger",
+        "same": "Same size"
+      }
+    },
+    "case-converter": {
+      "title": "Case Converter",
+      "metaTitle": "Case Converter: camelCase, snake_case, kebab-case — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert text to camelCase, PascalCase, snake_case, kebab-case, Title Case and more at once. Runs in your browser; nothing is sent to a server.",
+      "intro": "Type a phrase or a list of names and get every common case at once: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, Title Case and more. Everything runs in your browser.",
+      "howTo": {
+        "paste": "Type or paste text. Each line is converted on its own, so a list of names works too.",
+        "copy": "Copy the case you need with the button next to it.",
+        "accents": "Identifier cases drop accents (Việt → viet), so the result is safe for code and URLs."
+      },
+      "faq": {
+        "accents": {
+          "q": "What happens to accented letters?",
+          "a": "Identifier cases (camelCase, snake_case, kebab-case and so on) remove accents, so “Xin chào Việt Nam” becomes xin-chao-viet-nam. Text cases such as Title Case and lowercase keep them."
+        },
+        "acronyms": {
+          "q": "How are acronyms split?",
+          "a": "An uppercase run followed by a capitalized word is split before its last letter, so XMLHttpRequest becomes xml, http, request. Digits stay attached to the word before them (v2Api becomes v2, api)."
+        }
+      },
+      "ui": {
+        "input": "Text",
+        "placeholder": "Type or paste text, e.g. user profile id",
+        "output": "All cases",
+        "empty": "Every case of your text appears here.",
+        "cases": {
+          "camel": "camelCase",
+          "pascal": "PascalCase",
+          "snake": "snake_case",
+          "constant": "CONSTANT_CASE",
+          "kebab": "kebab-case",
+          "dot": "dot.case",
+          "title": "Title Case",
+          "sentence": "Sentence case",
+          "lower": "lowercase",
+          "upper": "UPPERCASE"
+        }
+      }
+    },
+    "url-encoder": {
+      "title": "URL Encoder & Parser",
+      "metaTitle": "URL Encode / Decode & URL Parser — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Percent-encode or decode URLs and query values, and split a URL into its parts and parameters. Runs in your browser; nothing is sent to a server.",
+      "intro": "Percent-encode text for a URL, decode an encoded link, and see any URL split into protocol, host, path, query parameters and fragment. Everything runs in your browser.",
+      "howTo": {
+        "paste": "Paste the text or URL into Input.",
+        "mode": "Choose Encode or Decode, and under Options whether it is a single value (component) or a full URL.",
+        "parts": "If the input or the decoded result is a URL, its parts and decoded query parameters are listed on the right."
+      },
+      "faq": {
+        "scope": {
+          "q": "Component or full URL: which should I use?",
+          "a": "Use component for a single value such as a query parameter: it also escapes / ? & = and #. Use full URL to make a whole address safe while keeping those characters as URL syntax."
+        },
+        "plus": {
+          "q": "Why does + stay a plus when I decode?",
+          "a": "Decoding follows the URL standard, where + is a literal plus. Only HTML forms use + for spaces; the parameter table on the right reads the query the way forms send it, so + appears as a space there."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "encode": "Encode",
+        "decode": "Decode",
+        "scope": "Encode as",
+        "component": "Component",
+        "fullUrl": "Full URL",
+        "input": "Input",
+        "encodePlaceholder": "Text or URL to encode",
+        "decodePlaceholder": "Encoded text, e.g. caf%C3%A9%20au%20lait",
+        "encodeError": "This text contains a broken Unicode character and can’t be encoded",
+        "decodeError": "Malformed % sequence: this isn’t valid percent-encoding",
+        "output": "Output",
+        "outputPlaceholder": "The result appears here",
+        "parts": "URL parts",
+        "part": {
+          "protocol": "Protocol",
+          "username": "Username",
+          "password": "Password",
+          "hostname": "Host",
+          "port": "Port",
+          "pathname": "Path",
+          "hash": "Fragment"
+        },
+        "params": "{count, plural, one {# query parameter} other {# query parameters}}",
+        "key": "Key",
+        "value": "Value",
+        "noUrl": "Paste a full URL (with https://) to see its parts."
+      }
+    },
+    "html-entities": {
+      "title": "HTML Entities Encoder",
+      "metaTitle": "HTML Entities Encode / Decode — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Escape text for HTML or decode named and numeric HTML entities, including all 2,231 HTML5 names. Runs in your browser; nothing is sent to a server.",
+      "intro": "Escape text so it is safe inside HTML, or turn entities like &lt; &copy; &#7879; back into characters. Decoding knows every HTML5 entity and works the way browsers do.",
+      "howTo": {
+        "paste": "Paste text or HTML into Input.",
+        "mode": "Choose Encode or Decode. When encoding, pick special characters only or every non-ASCII character under Options.",
+        "export": "Copy the result or download it."
+      },
+      "faq": {
+        "which": {
+          "q": "Which characters must be escaped in HTML?",
+          "a": "Inside text and attributes, escaping the ampersand, the less-than and greater-than signs and both quote marks is enough when the page is UTF-8. Escaping every non-ASCII character is only needed for systems that can’t handle UTF-8."
+        },
+        "xss": {
+          "q": "Does escaping protect against XSS?",
+          "a": "Escaping is the right defence for text placed in HTML content and quoted attributes. It is not enough inside JavaScript, URLs or CSS, which need their own encoding."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "encode": "Encode",
+        "decode": "Decode",
+        "scope": "Escape",
+        "special": "Special characters",
+        "all": "All non-ASCII",
+        "input": "Input",
+        "encodePlaceholder": "Text or HTML to escape",
+        "decodePlaceholder": "HTML with entities, e.g. &lt;b&gt; &copy; 2025",
+        "output": "Output",
+        "outputPlaceholder": "The result appears here"
+      }
+    },
+    "number-base": {
+      "title": "Number Base Converter",
+      "metaTitle": "Binary, Octal, Decimal & Hex Converter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert integers of any size between binary, octal, decimal, hex and any base from 2 to 36. Runs in your browser; nothing is sent to a server.",
+      "intro": "Convert whole numbers between binary, octal, decimal, hexadecimal and any base from 2 to 36. Numbers of any size are exact, well past JavaScript’s 2^53 limit.",
+      "howTo": {
+        "from": "Pick the base your number is written in.",
+        "type": "Type the number. Prefixes like 0x and separators like _ are accepted.",
+        "read": "Read it in every base, plus one custom base of your choice."
+      },
+      "faq": {
+        "big": {
+          "q": "Is there a size limit?",
+          "a": "No practical one: numbers are handled as BigInt, so a 64-bit value such as 18446744073709551615 converts exactly."
+        },
+        "negative": {
+          "q": "How are negative numbers shown?",
+          "a": "With a minus sign in every base (−ff), not as two’s complement, because two’s complement depends on a bit width."
+        }
+      },
+      "ui": {
+        "input": "Input",
+        "from": "From",
+        "bases": {
+          "2": "Binary",
+          "8": "Octal",
+          "10": "Decimal",
+          "16": "Hex"
+        },
+        "number": "Number",
+        "placeholders": {
+          "2": "1010 1010",
+          "8": "755",
+          "10": "255",
+          "16": "ff or 0xFF"
+        },
+        "invalid": "That isn’t a valid base-{base} integer",
+        "customBase": "Also show base",
+        "output": "In every base",
+        "empty": "Type a number to convert it.",
+        "baseN": "Base {base}"
+      }
+    },
+    "px-rem": {
+      "title": "PX to REM Converter",
+      "metaTitle": "PX to REM Converter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert px to rem and rem to px with any root font size, plus a table of common sizes. Runs in your browser; nothing is sent to a server.",
+      "intro": "Convert pixels to rem and back using your root font size (16px by default), and keep a table of common sizes at hand.",
+      "howTo": {
+        "type": "Type a value in px or rem; the other updates as you type.",
+        "base": "Change the root font size if your html element doesn’t use 16px.",
+        "table": "Use the table for the sizes you need most often."
+      },
+      "faq": {
+        "why": {
+          "q": "Why use rem instead of px?",
+          "a": "rem scales with the root font size, so text and spacing grow when a user raises the browser’s default font size. Fixed px values ignore that setting."
+        },
+        "em": {
+          "q": "What about em?",
+          "a": "em is relative to the font size of the current element instead of the root. If that element uses the root size, 1em equals 1rem."
+        }
+      },
+      "ui": {
+        "convert": "Convert",
+        "px": "Pixels (px)",
+        "rem": "rem",
+        "base": "Root font size",
+        "hint": "1rem = {base}px",
+        "table": "Common sizes"
+      }
+    },
+    "chmod-calculator": {
+      "title": "Chmod Calculator",
+      "metaTitle": "Chmod Calculator: 755, rwxr-xr-x — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Turn Unix permissions into octal (755) and symbolic (rwxr-xr-x) notation and back, including setuid, setgid and sticky bits. Runs in your browser.",
+      "intro": "Tick the permissions for owner, group and others to get the chmod number, or type 755 or rwxr-xr-x to see what it means. Special bits (setuid, setgid, sticky) are included.",
+      "howTo": {
+        "tick": "Tick read, write and execute for owner, group and others.",
+        "type": "Or type an octal mode (644) or a symbolic one (rw-r--r--, also as shown by ls -l).",
+        "copy": "Copy the ready-made chmod command."
+      },
+      "faq": {
+        "common": {
+          "q": "What do 644 and 755 mean?",
+          "a": "644 lets the owner read and write and everyone else only read: typical for files. 755 adds execute for everyone: typical for directories and scripts."
+        },
+        "special": {
+          "q": "What are setuid, setgid and sticky?",
+          "a": "setuid and setgid run a program with the file owner’s or group’s rights (on a directory, setgid makes new files inherit its group). The sticky bit on a directory such as /tmp lets users delete only their own files."
+        }
+      },
+      "ui": {
+        "permissions": "Permissions",
+        "perm": {
+          "read": "Read",
+          "write": "Write",
+          "execute": "Execute"
+        },
+        "who": {
+          "owner": "Owner",
+          "group": "Group",
+          "other": "Others"
+        },
+        "special": "Special bits",
+        "specialBits": {
+          "setuid": "setuid",
+          "setgid": "setgid",
+          "sticky": "Sticky"
+        },
+        "result": "Result",
+        "octal": "Octal",
+        "symbolic": "Symbolic",
+        "command": "Command",
+        "file": "file",
+        "lsOutput": "As shown by ls -l"
+      }
+    },
+    "cidr-calculator": {
+      "title": "CIDR Calculator",
+      "metaTitle": "CIDR / Subnet Calculator for IPv4 & IPv6 — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Get the network, broadcast, netmask, host range and address count of any IPv4 or IPv6 CIDR block. Runs in your browser; nothing is sent to a server.",
+      "intro": "Enter an IPv4 or IPv6 address with a prefix, like 10.0.0.0/16 or 2001:db8::/48, to get its network address, mask, host range and number of addresses.",
+      "howTo": {
+        "type": "Type an address with a prefix length, e.g. 192.168.1.10/24.",
+        "read": "Read the network, broadcast (IPv4), masks, first and last host and the address count.",
+        "copy": "Copy any value with the button next to it."
+      },
+      "faq": {
+        "usable": {
+          "q": "Why are 2 addresses missing from the usable IPv4 hosts?",
+          "a": "The first address names the network and the last is the broadcast address. /31 links (RFC 3021) and single /32 addresses are the exceptions, and IPv6 has no broadcast address."
+        },
+        "hostBits": {
+          "q": "What if my address has host bits set?",
+          "a": "That’s fine: 192.168.1.10/24 is treated as the 192.168.1.0/24 network that contains it."
+        }
+      },
+      "ui": {
+        "input": "Address / prefix",
+        "hint": "IPv4 or IPv6, e.g. 10.0.0.0/16 or 2001:db8::/48",
+        "invalid": "Not a valid IPv4 or IPv6 address with a prefix",
+        "result": "IPv{version} subnet",
+        "resultEmpty": "Subnet",
+        "network": "Network",
+        "broadcast": "Broadcast",
+        "last": "Last address",
+        "netmask": "Netmask",
+        "hostmask": "Wildcard (host mask)",
+        "firstHost": "First host",
+        "lastHost": "Last host",
+        "total": "Addresses",
+        "usable": "Usable hosts",
+        "usableV6": "Usable addresses",
+        "empty": "Enter a CIDR block to see its details."
+      }
+    },
+    "password-generator": {
+      "title": "Password Generator",
+      "metaTitle": "Strong Password Generator — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Generate strong random passwords with the browser’s secure random generator, with entropy shown. Passwords are created locally and never sent.",
+      "intro": "Create strong random passwords with the length and character sets you need. They come from your browser’s cryptographically secure generator and never leave this page.",
+      "howTo": {
+        "options": "Set the length and how many passwords you want under Options.",
+        "sets": "Choose the character sets; each chosen set appears at least once.",
+        "copy": "Press Generate for new ones, then copy or download them."
+      },
+      "faq": {
+        "random": {
+          "q": "How random are they?",
+          "a": "Each character is picked with crypto.getRandomValues and rejection sampling, so every character in the set is exactly equally likely. Math.random() is never used."
+        },
+        "entropy": {
+          "q": "What does the strength meter mean?",
+          "a": "It shows the entropy: length × log2(alphabet size). 80 bits or more is very strong; 16 characters from all four sets give about 104 bits."
+        },
+        "similar": {
+          "q": "Why exclude look-alike characters?",
+          "a": "I, l, 1, O, 0 and o are easy to confuse when a password is read aloud or typed from paper. Excluding them costs a little entropy, which a longer password makes up for."
+        }
+      },
+      "ui": {
+        "generate": "Generate",
+        "length": "Length",
+        "count": "Count",
+        "characters": "Characters",
+        "sets": {
+          "lower": "Lowercase (a–z)",
+          "upper": "Uppercase (A–Z)",
+          "digits": "Digits (0–9)",
+          "symbols": "Symbols (!@#…)"
+        },
+        "excludeSimilar": "Exclude look-alikes (I l 1 O 0 o)",
+        "output": "Passwords",
+        "strength": {
+          "weak": "Weak",
+          "fair": "Fair",
+          "strong": "Strong",
+          "veryStrong": "Very strong"
+        },
+        "bits": "{bits} bits",
+        "noSets": "Choose at least one character set."
+      }
+    },
+    "color-converter": {
+      "title": "Color Converter & Contrast Checker",
+      "metaTitle": "Color Converter & WCAG Contrast Checker — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert colors between HEX, RGB, HSL and OKLCH, and check WCAG AA/AAA contrast between two colors. Runs in your browser; nothing is sent to a server.",
+      "intro": "Convert any CSS color between HEX, RGB, HSL and OKLCH, and check whether a text and background pair meets WCAG AA and AAA contrast.",
+      "howTo": {
+        "color": "Type or pick a color: hex, rgb(), hsl(), oklch() or a CSS name like rebeccapurple.",
+        "copy": "Copy it in the notation you need.",
+        "contrast": "Set a text and a background color to see their contrast ratio and WCAG results."
+      },
+      "faq": {
+        "levels": {
+          "q": "What do AA and AAA mean?",
+          "a": "WCAG requires a contrast of at least 4.5:1 for normal text (AA) and 7:1 for the stricter AAA level. Large text (24px, or 19px bold) needs 3:1 for AA and 4.5:1 for AAA."
+        },
+        "oklch": {
+          "q": "Why OKLCH?",
+          "a": "OKLCH is perceptually uniform: changing lightness or hue changes how the color looks in a predictable way, which makes palettes and accessible variations easier to build."
+        },
+        "alpha": {
+          "q": "How is a transparent text color handled?",
+          "a": "It is blended over the background first, then the contrast is measured, which is what the user actually sees."
+        }
+      },
+      "ui": {
+        "convert": "Convert",
+        "color": "Color",
+        "invalid": "Not a color this tool can read",
+        "contrast": "Contrast",
+        "foreground": "Text color",
+        "background": "Background color",
+        "swap": "Swap",
+        "sampleLarge": "Large text sample",
+        "sampleNormal": "Normal text: the quick brown fox jumps over the lazy dog.",
+        "levels": {
+          "aa": "AA normal",
+          "aaLarge": "AA large",
+          "aaa": "AAA normal",
+          "aaaLarge": "AAA large"
+        },
+        "pass": "Pass",
+        "fail": "Fail",
+        "pick": "{name} picker"
+      }
+    },
+    "hmac-generator": {
+      "title": "HMAC Generator",
+      "metaTitle": "HMAC SHA-256 / SHA-512 Generator — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Compute HMAC-SHA256, SHA-384, SHA-512 and SHA-1 with Web Crypto, with text, hex or Base64 keys. Your message and key never leave your browser.",
+      "intro": "Sign a message with a secret key using HMAC-SHA256, SHA-384, SHA-512 or SHA-1, for example to check a webhook signature. It uses your browser’s Web Crypto API; the key never leaves the page.",
+      "howTo": {
+        "message": "Paste the message, e.g. the raw body of a webhook request.",
+        "key": "Enter the secret key and choose whether it is text, hex or Base64.",
+        "compare": "Compare the hex or Base64 result with the signature you received."
+      },
+      "faq": {
+        "webhook": {
+          "q": "My webhook signature doesn’t match. Why?",
+          "a": "The message must be byte-for-byte the raw body that was signed: reformatted JSON, a missing trailing newline or a different key encoding all change the result."
+        },
+        "sha1": {
+          "q": "Is HMAC-SHA1 still safe?",
+          "a": "HMAC-SHA1 is not broken the way plain SHA-1 is, but prefer HMAC-SHA256 for anything new. SHA-1 is here for checking older APIs."
+        }
+      },
+      "ui": {
+        "algorithm": "Algorithm",
+        "message": "Message",
+        "messagePlaceholder": "Message to sign",
+        "key": "Secret key",
+        "keyFormat": "Key as",
+        "formats": {
+          "text": "Text",
+          "hex": "Hex",
+          "base64": "Base64"
+        },
+        "keyPlaceholder": "Secret key",
+        "invalidKey": {
+          "text": "Enter a key",
+          "hex": "Not valid hex (an even number of 0–9 a–f)",
+          "base64": "Not valid Base64"
+        },
+        "keyNote": "Used only in this tab, never saved or sent.",
+        "hex": "HMAC-{algorithm} (hex)",
+        "base64": "HMAC-{algorithm} (Base64)",
+        "empty": "Enter a key to compute the HMAC."
+      }
+    },
+    "aes-encryption": {
+      "title": "AES Encryption",
+      "metaTitle": "AES-256 Encrypt / Decrypt Text with a Password — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Encrypt and decrypt text with AES-256-GCM and a password, using Web Crypto in your browser. The text and password are never sent to a server.",
+      "intro": "Encrypt text with a password using AES-256-GCM, and decrypt it again later. The key is derived from your password with PBKDF2 (600,000 iterations), and everything runs in your browser.",
+      "howTo": {
+        "mode": "Choose Encrypt or Decrypt.",
+        "input": "Enter the text (or the encrypted Base64) and a password.",
+        "run": "Press the button, then copy the result. Decrypting needs exactly the same password."
+      },
+      "faq": {
+        "format": {
+          "q": "What exactly is the output?",
+          "a": "Base64 of a 16-byte salt, a 12-byte IV and the AES-256-GCM ciphertext with its 16-byte tag. The key is PBKDF2-HMAC-SHA256 of the password and salt with 600,000 iterations, so any tool that follows this layout can decrypt it."
+        },
+        "wrong": {
+          "q": "What if I forget the password?",
+          "a": "The text can’t be recovered: there is no backdoor and no copy anywhere. GCM also detects a wrong password or modified data instead of returning garbage."
+        },
+        "slow": {
+          "q": "Why does it take a moment?",
+          "a": "Deriving the key is deliberately slow (600,000 rounds) so guessing passwords by brute force is slow too."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "encrypt": "Encrypt",
+        "decrypt": "Decrypt",
+        "working": "Working…",
+        "plaintext": "Plain text",
+        "ciphertext": "Encrypted (Base64)",
+        "plainPlaceholder": "Text to encrypt",
+        "cipherPlaceholder": "Base64 produced by this tool",
+        "password": "Password",
+        "passwordNote": "Used only in this tab, never saved or sent. Use a long passphrase.",
+        "outputPlaceholder": "The result appears here",
+        "decryptFailed": "Wrong password, or the data was modified or isn’t from this tool",
+        "format": "AES-256-GCM · PBKDF2-SHA256, 600,000 iterations · salt 16 B + IV 12 B + ciphertext + tag 16 B, Base64"
+      }
+    },
+    "text-diff": {
+      "title": "Text Diff",
+      "metaTitle": "Text Diff: Compare Two Texts — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Compare two texts line by line or word by word, and export a unified diff patch. Runs in your browser; nothing is sent to a server.",
+      "intro": "Paste two versions of a text, config file or snippet to see exactly what changed, line by line or word by word. Copy the result as a standard unified diff. Everything runs in your browser.",
+      "howTo": {
+        "paste": "Paste the original text on the left and the changed one on the right.",
+        "mode": "Choose Lines for code and config, or Words for prose.",
+        "export": "Copy or download the changes as a unified diff (.patch)."
+      },
+      "faq": {
+        "patch": {
+          "q": "Can I apply the patch with git?",
+          "a": "Yes. The patch is a standard unified diff; save it and run git apply changes.patch or patch -p0 in the folder of the original file (rename original.txt in the header if needed)."
+        },
+        "whitespace": {
+          "q": "What does “ignore leading and trailing whitespace” do?",
+          "a": "Lines that differ only in indentation or trailing spaces count as unchanged. Spaces inside a line still count."
+        }
+      },
+      "ui": {
+        "mode": "Compare",
+        "lines": "Lines",
+        "words": "Words",
+        "ignoreWhitespace": "Ignore leading and trailing whitespace",
+        "original": "Original",
+        "changed": "Changed",
+        "result": "Differences",
+        "empty": "Paste two texts to compare them.",
+        "sample": "Try a sample",
+        "identical": "The texts are identical."
+      }
+    },
+    "regex-tester": {
+      "title": "Regex Tester",
+      "metaTitle": "Regex Tester for JavaScript — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Test JavaScript regular expressions with live highlighting, capture groups and replace preview. Runs in your browser; nothing is sent to a server.",
+      "intro": "Write a JavaScript regular expression and see every match highlighted as you type, with capture groups and a replace preview. Patterns run in a separate worker, so a runaway one can’t freeze the page.",
+      "howTo": {
+        "pattern": "Type the pattern without the surrounding slashes, and pick flags under Options.",
+        "text": "Paste the text to search; matches are highlighted and listed with their groups.",
+        "replace": "Optionally type a replacement, using $1, $2… for groups, to preview the result."
+      },
+      "faq": {
+        "engine": {
+          "q": "Which regex flavor is this?",
+          "a": "Your browser’s JavaScript engine (ECMAScript), so the result is exactly what your JS code will do. Syntax from PCRE or Python, such as possessive quantifiers, may not work."
+        },
+        "timeout": {
+          "q": "Why does it say the pattern took too long?",
+          "a": "Some patterns, like (a+)+$, backtrack exponentially on certain inputs. The tester stops the worker after 1.5 seconds; in production that pattern could hang your app too (ReDoS)."
+        }
+      },
+      "ui": {
+        "flags": "Flags",
+        "flag": {
+          "g": "global: find all matches",
+          "i": "ignore case",
+          "m": "multiline: ^ and $ match at line breaks",
+          "s": "dotAll: . matches newlines",
+          "u": "unicode",
+          "y": "sticky"
+        },
+        "pattern": "Pattern",
+        "hint": "Type a pattern to start.",
+        "timeout": "Stopped after 1.5 s: this pattern backtracks too much on this text",
+        "invalid": "Invalid pattern: {message}",
+        "matches": "{count, plural, =0 {No matches} one {# match} other {# matches}}",
+        "truncated": "showing the first 1,000",
+        "text": "Test text",
+        "textPlaceholder": "Text to search",
+        "replacement": "Replace with (optional)",
+        "result": "Matches",
+        "replaced": "After replacing",
+        "empty": "Matches are highlighted here."
+      }
+    },
+    "cron-parser": {
+      "title": "Cron Expression Parser",
+      "metaTitle": "Cron Expression Parser: Explain & Next Run Times — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Explain a cron expression in plain words and list its next run times in your time zone or UTC. Runs in your browser; nothing is sent to a server.",
+      "intro": "Paste a cron schedule to read it in plain words and see when it will run next, in your time zone or in UTC. Standard 5-field crontab syntax with names, ranges, steps and @daily-style macros.",
+      "howTo": {
+        "type": "Type or paste a cron expression, or start from a preset.",
+        "read": "Read the description and the value of each field.",
+        "next": "Check the next 10 run times, in local time or UTC."
+      },
+      "faq": {
+        "fields": {
+          "q": "What are the five fields?",
+          "a": "Minute (0–59), hour (0–23), day of month (1–31), month (1–12 or JAN–DEC) and day of week (0–7 or SUN–SAT, where both 0 and 7 are Sunday)."
+        },
+        "dayOr": {
+          "q": "Why does “0 0 13 * FRI” run on more than Friday the 13th?",
+          "a": "In standard cron, when both day of month and day of week are set, a time matches if either matches. So it runs on every 13th and on every Friday."
+        },
+        "seconds": {
+          "q": "Are seconds or years supported?",
+          "a": "No. This tool follows the standard 5-field crontab used by Linux, Kubernetes CronJobs and GitHub Actions. Quartz-style 6 or 7-field expressions are reported as invalid."
+        }
+      },
+      "ui": {
+        "expression": "Cron expression",
+        "errors": {
+          "fields": "A cron expression needs exactly 5 fields: minute hour day month weekday",
+          "minute": "Invalid minute field (0–59)",
+          "hour": "Invalid hour field (0–23)",
+          "day": "Invalid day-of-month field (1–31)",
+          "month": "Invalid month field (1–12 or JAN–DEC)",
+          "weekday": "Invalid day-of-week field (0–7 or SUN–SAT)"
+        },
+        "fields": "Fields",
+        "field": {
+          "minute": "Minute",
+          "hour": "Hour",
+          "day": "Day of month",
+          "month": "Month",
+          "weekday": "Day of week"
+        },
+        "next": "Next runs",
+        "timeZone": "Time zone",
+        "local": "Local",
+        "never": "This schedule doesn’t run in the next 5 years.",
+        "empty": "Fix the expression to see the next run times."
+      }
+    },
+    "curl-converter": {
+      "title": "cURL to fetch / axios",
+      "metaTitle": "cURL to fetch & axios Converter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert a cURL command, e.g. from DevTools “Copy as cURL”, to JavaScript fetch or axios code. Runs in your browser; your tokens are never sent.",
+      "intro": "Paste a cURL command, for example from DevTools “Copy as cURL”, and get the same request as JavaScript fetch or axios code. Headers, JSON bodies, form data and basic auth are converted locally, so your tokens stay on your device.",
+      "howTo": {
+        "paste": "Paste a curl command. Line continuations and the $'…' quoting of Chrome’s “Copy as cURL (bash)” are understood.",
+        "target": "Choose fetch or axios.",
+        "copy": "Copy the code. Flags that don’t affect the request are skipped, and unknown ones are listed."
+      },
+      "faq": {
+        "supported": {
+          "q": "Which curl options are supported?",
+          "a": "-X, -H, -d and its --data variants, --data-urlencode, --json, -F, -u, -A, -e, -b, -G, -I and --url. Options like -s, -L, -k and --compressed don’t change the request and are skipped."
+        },
+        "cookies": {
+          "q": "Will the Cookie header work in the browser?",
+          "a": "Browsers don’t let fetch set a Cookie header; it works in Node.js. In the browser, cookies for the target site are sent automatically when you use credentials: \"include\"."
+        }
+      },
+      "ui": {
+        "target": "Output",
+        "input": "cURL command",
+        "placeholder": "Paste a curl command",
+        "sample": "Try a sample",
+        "errors": {
+          "quote": "A quote is never closed",
+          "notCurl": "The command must start with curl",
+          "noUrl": "No URL found in the command"
+        },
+        "outputPlaceholder": "The JavaScript code appears here",
+        "ignored": "Not converted:"
+      }
+    },
+    "box-shadow-generator": {
+      "title": "Box Shadow Generator",
+      "metaTitle": "CSS Box Shadow Generator — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Design CSS box-shadow with live preview: offsets, blur, spread, color, opacity, inset and multiple layers. Runs in your browser; nothing is uploaded.",
+      "intro": "Build a CSS box-shadow with sliders and a live preview. Stack several layers for soft, realistic shadows, then copy the CSS.",
+      "howTo": {
+        "adjust": "Move the sliders for offset, blur, spread and opacity, and pick a color.",
+        "layers": "Add layers for more depth; switch between them with the layer buttons.",
+        "copy": "Copy the box-shadow declaration."
+      },
+      "faq": {
+        "layers": {
+          "q": "Why use more than one layer?",
+          "a": "Real shadows are sharp near the object and soft further away. Combining a small, dark layer with a large, faint one looks far more natural than a single blur."
+        },
+        "spread": {
+          "q": "What does a negative spread do?",
+          "a": "It shrinks the shadow before blurring, so the shadow stays under the element instead of showing on every side. It’s the trick behind most “elevation” shadows."
+        }
+      },
+      "ui": {
+        "layers": "Layers",
+        "layer": "Layer {n}",
+        "addLayer": "Add layer",
+        "removeLayer": "Remove layer",
+        "x": "Horizontal offset",
+        "y": "Vertical offset",
+        "blur": "Blur",
+        "spread": "Spread",
+        "opacity": "Opacity",
+        "color": "Color",
+        "inset": "Inset",
+        "preview": "Preview"
+      }
+    },
+    "gradient-generator": {
+      "title": "CSS Gradient Generator",
+      "metaTitle": "CSS Gradient Generator: Linear, Radial & Conic — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Create linear, radial and conic CSS gradients with up to 6 color stops and a live preview. Runs in your browser; nothing is sent to a server.",
+      "intro": "Create linear, radial and conic CSS gradients with a live preview, pick colors and positions for up to six stops, and copy the CSS.",
+      "howTo": {
+        "type": "Choose linear, radial or conic, and set the angle.",
+        "stops": "Pick a color and position for each stop; add or remove stops.",
+        "copy": "Copy the background-image declaration."
+      },
+      "faq": {
+        "muddy": {
+          "q": "Why does my gradient look gray in the middle?",
+          "a": "Mixing two saturated colors in sRGB passes through duller tones. Add a stop in the middle with a brighter color, or use colors closer in hue."
+        },
+        "support": {
+          "q": "Do all browsers support conic gradients?",
+          "a": "Yes, every current browser supports linear, radial and conic gradients without prefixes."
+        }
+      },
+      "ui": {
+        "settings": "Settings",
+        "type": "Type",
+        "types": {
+          "linear": "Linear",
+          "radial": "Radial",
+          "conic": "Conic"
+        },
+        "angle": "Angle",
+        "stops": "Color stops",
+        "stopColor": "Color of stop {n}",
+        "stop": "Stop {n} position",
+        "removeStop": "Remove stop {n}",
+        "addStop": "Add stop",
+        "preview": "Preview"
+      }
+    },
+    "cubic-bezier": {
+      "title": "Cubic Bezier Editor",
+      "metaTitle": "CSS Cubic Bezier Easing Editor — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Shape a CSS cubic-bezier easing curve by dragging, compare it with linear, and copy the timing function. Runs in your browser, nothing uploaded.",
+      "intro": "Drag the two handles to shape an easing curve, compare it with linear motion, and copy the cubic-bezier() timing function for your CSS transitions and animations.",
+      "howTo": {
+        "drag": "Drag the handles, type exact values, or start from a preset.",
+        "play": "Press Play to compare the motion with linear timing.",
+        "copy": "Copy the cubic-bezier() value or the full transition line."
+      },
+      "faq": {
+        "overshoot": {
+          "q": "Why can y go below 0 or above 1?",
+          "a": "y is the progress of the animation. Going past 1 overshoots the end value and comes back, which gives a “back” or springy effect. x is time, so it must stay between 0 and 1."
+        },
+        "keywords": {
+          "q": "How do ease and ease-in-out compare?",
+          "a": "ease is cubic-bezier(0.25, 0.1, 0.25, 1): a quick start and a long, gentle stop. ease-in-out (0.42, 0, 0.58, 1) is symmetric, slow at both ends."
+        }
+      },
+      "ui": {
+        "curve": "Curve",
+        "preview": "Preview",
+        "play": "Play",
+        "yourCurve": "Your curve",
+        "linear": "linear"
+      }
+    },
+    "json-converter": {
+      "title": "JSON ↔ YAML, XML, CSV, TOML",
+      "metaTitle": "Convert JSON to YAML, XML, CSV & TOML and back — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Convert between JSON, YAML, XML, CSV and TOML in any direction. Runs in your browser; your data and config files are never sent to a server.",
+      "intro": "Convert data between JSON, YAML, XML, CSV and TOML in any direction: config files, API responses, spreadsheets exported as CSV. Each format’s parser loads only when you pick it, and everything runs in your browser.",
+      "howTo": {
+        "formats": "Pick the format you have and the one you want.",
+        "paste": "Paste your data on the left; the converted version appears on the right.",
+        "export": "Copy or download the result. The swap button converts back the other way."
+      },
+      "faq": {
+        "xml": {
+          "q": "How are XML attributes and repeated tags handled?",
+          "a": "Attributes become keys starting with @_ (id=\"1\" becomes \"@_id\": \"1\") and repeated tags become arrays, so converting back gives the same XML. Attribute values stay text."
+        },
+        "csv": {
+          "q": "What about nested data in CSV?",
+          "a": "CSV is flat: each object becomes a row and each key a column. Nested objects and arrays are written into the cell as JSON. Reading CSV turns numbers and true/false into real values."
+        },
+        "toml": {
+          "q": "Why can’t I convert some JSON to TOML?",
+          "a": "A TOML document must be a table (an object) at the top level, so a JSON array or a single value can’t be written as TOML. Wrap it in an object first."
+        }
+      },
+      "ui": {
+        "from": "From",
+        "to": "To",
+        "swap": "Swap formats",
+        "placeholder": "Paste {format} here",
+        "outputPlaceholder": "The result appears here",
+        "errors": {
+          "parse": "This isn’t valid {format}:",
+          "csvShape": "CSV needs a list of objects (rows) or a single object",
+          "tomlShape": "TOML needs an object at the top level"
+        }
+      }
+    },
+    "json-to-types": {
+      "title": "JSON to TypeScript & Zod",
+      "metaTitle": "JSON to TypeScript Interface & Zod Schema — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Generate TypeScript interfaces or a Zod schema from a JSON sample, with optional fields detected from arrays. Your data never leaves your browser.",
+      "intro": "Paste a JSON sample, such as an API response, to get matching TypeScript interfaces or a Zod schema. Keys missing from some array items become optional, and mixed values become unions.",
+      "howTo": {
+        "paste": "Paste a JSON example, ideally with several array items.",
+        "target": "Choose TypeScript or Zod, and the name of the root type under Options.",
+        "copy": "Copy or download the code and review it: a sample can’t show every case."
+      },
+      "faq": {
+        "optional": {
+          "q": "How are optional fields detected?",
+          "a": "All items of an array are merged: a key present in some objects but not others becomes optional (key?: type, or .optional() in Zod)."
+        },
+        "limits": {
+          "q": "What can’t be inferred?",
+          "a": "Only what the sample shows: a value that is always null is typed null, and an empty array is unknown[]. Dates and enums stay strings; edit the result where you know more."
+        }
+      },
+      "ui": {
+        "target": "Output",
+        "rootName": "Root type name",
+        "placeholder": "Paste a JSON sample, e.g. an API response",
+        "invalid": "Invalid JSON:",
+        "outputPlaceholder": "The generated types appear here"
+      }
+    },
+    "sql-formatter": {
+      "title": "SQL Formatter",
+      "metaTitle": "SQL Formatter for PostgreSQL, MySQL & more — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Format SQL queries for PostgreSQL, MySQL, SQLite, SQL Server and BigQuery with your keyword case and indent. Your queries never leave your browser.",
+      "intro": "Turn a one-line or messy SQL query into readable, consistently indented SQL. Supports standard SQL, PostgreSQL, MySQL, SQLite, SQL Server and BigQuery, and nothing is uploaded.",
+      "howTo": {
+        "paste": "Paste one or more SQL statements.",
+        "options": "Choose the dialect, keyword case and indent under Options.",
+        "export": "Copy the formatted SQL or download it as a .sql file."
+      },
+      "faq": {
+        "dialect": {
+          "q": "Why does the dialect matter?",
+          "a": "Each database has its own syntax, such as PostgreSQL’s :: casts and $1 parameters, MySQL backticks or T-SQL square brackets. Choosing the right dialect makes the formatter read them correctly."
+        },
+        "change": {
+          "q": "Can formatting change what my query does?",
+          "a": "No: only whitespace, line breaks and keyword case change. Strings, identifiers and comments are kept as they are."
+        }
+      },
+      "ui": {
+        "dialect": "Dialect",
+        "standardSql": "Standard SQL",
+        "keywords": "Keywords",
+        "case": {
+          "upper": "UPPER",
+          "lower": "lower",
+          "preserve": "As typed"
+        },
+        "indent": "Indent",
+        "placeholder": "Paste SQL, e.g. select * from users where id = 1",
+        "invalid": "Couldn’t parse this SQL:",
+        "output": "Formatted",
+        "outputPlaceholder": "The formatted SQL appears here"
+      }
+    },
+    "code-formatter": {
+      "title": "HTML & JavaScript Formatter",
+      "metaTitle": "HTML, JavaScript & TypeScript Formatter (Prettier) — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Format HTML, JavaScript and TypeScript with Prettier, with your print width, indent, semicolons and quotes. Code is formatted locally, never uploaded.",
+      "intro": "Format HTML, JavaScript and TypeScript with Prettier, the formatter most teams already use. Inline scripts and styles in HTML are formatted too. Prettier loads in a background worker on first use; your code stays in your browser.",
+      "howTo": {
+        "language": "Choose HTML, JavaScript or TypeScript.",
+        "paste": "Paste your code; the formatted version appears on the right.",
+        "options": "Match your project’s Prettier settings under Options, then copy or download."
+      },
+      "faq": {
+        "same": {
+          "q": "Is the output the same as running Prettier in my project?",
+          "a": "Yes, for the same options: it is Prettier 3 itself. Settings from a .prettierrc file aren’t read, so set print width, indent, semicolons and quotes here."
+        },
+        "jsx": {
+          "q": "Does it support JSX?",
+          "a": "Yes. JavaScript and TypeScript both accept JSX syntax (as in .jsx and .tsx files)."
+        }
+      },
+      "ui": {
+        "language": "Language",
+        "printWidth": "Line width",
+        "indent": "Indent",
+        "semi": "Semicolons",
+        "singleQuote": "Single quotes",
+        "placeholder": "Paste {language} here",
+        "syntaxError": "Syntax error",
+        "errorAt": "Line {line}, column {column}",
+        "output": "Formatted",
+        "loading": "Loading Prettier (one time)…",
+        "outputPlaceholder": "The formatted code appears here"
+      }
+    },
+    "markdown-preview": {
+      "title": "Markdown Preview",
+      "metaTitle": "Markdown Preview & Markdown to HTML — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Preview GitHub-flavored Markdown live and export clean, sanitized HTML. Runs in your browser; your notes and docs are never sent to a server.",
+      "intro": "Write or paste Markdown and see it rendered as you type, with GitHub-flavored tables, task lists and code blocks. Export the result as clean HTML. Everything runs in your browser.",
+      "howTo": {
+        "write": "Write or paste Markdown on the left.",
+        "preview": "Check the live preview on the right.",
+        "export": "Copy the HTML or download it as a standalone .html file."
+      },
+      "faq": {
+        "images": {
+          "q": "Why don’t images from other websites show?",
+          "a": "Loading an image from another server would tell that server your IP address and when you opened the document. Kinbench doesn’t make such requests, so remote images are replaced by their description."
+        },
+        "safe": {
+          "q": "Is HTML inside Markdown safe?",
+          "a": "The output is sanitized with DOMPurify: scripts, event handlers like onclick and inline styles are removed before anything is shown or exported."
+        }
+      },
+      "ui": {
+        "placeholder": "Write Markdown here",
+        "sample": "Try a sample",
+        "preview": "Preview",
+        "empty": "The rendered Markdown appears here.",
+        "remoteImage": "remote image not loaded"
+      }
+    },
+    "svg-optimizer": {
+      "title": "SVG Optimizer",
+      "metaTitle": "SVG Optimizer (SVGO) — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Shrink SVG files with SVGO: remove editor metadata, comments and redundant markup, with before/after previews. Files never leave your browser.",
+      "intro": "Make SVG icons and illustrations smaller with SVGO: editor metadata, comments, hidden elements and redundant attributes are removed, and paths are simplified. Compare before and after side by side; nothing is uploaded.",
+      "howTo": {
+        "input": "Paste SVG code or choose a .svg file.",
+        "check": "Compare the before and after previews and the size saved.",
+        "export": "Copy the optimized SVG or download it."
+      },
+      "faq": {
+        "safe": {
+          "q": "Can optimizing change how my SVG looks?",
+          "a": "The default preset is designed to be safe for almost every file. Compare the two previews; if something changed, turn off multipass, which applies the optimizations repeatedly."
+        },
+        "scripts": {
+          "q": "Is it safe to open an untrusted SVG here?",
+          "a": "Yes. Previews are shown as images, which never run scripts that may be inside an SVG."
+        }
+      },
+      "ui": {
+        "multipass": "Multipass",
+        "pretty": "Pretty-print",
+        "placeholder": "Paste SVG code here",
+        "invalid": "Couldn’t read this SVG:",
+        "fileError": "Couldn’t read that file",
+        "output": "Optimized",
+        "saved": "{percent}% smaller",
+        "outputPlaceholder": "The optimized SVG appears here",
+        "before": "Before",
+        "after": "After"
+      }
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer & Remover",
+      "metaTitle": "EXIF Viewer & Metadata Remover — runs in your browser, no upload | Kinbench",
+      "metaDescription": "See the EXIF, GPS and camera data hidden in a photo, and remove it, losslessly for JPEG and PNG. Photos are processed in your browser, never uploaded.",
+      "intro": "Photos often carry hidden data: the camera, the time, even the GPS position where they were taken. See all of it, then download a clean copy before sharing. JPEG and PNG are cleaned without re-compressing, and your photos never leave your browser.",
+      "howTo": {
+        "pick": "Choose or drop a photo.",
+        "read": "Review its metadata; a warning appears if it contains a GPS location.",
+        "remove": "Press “Remove metadata”, then download the clean copy."
+      },
+      "faq": {
+        "lossless": {
+          "q": "Does removing metadata reduce quality?",
+          "a": "Not for JPEG and PNG: only the metadata blocks are cut out and the image data is copied byte for byte. Other formats, and photos that rely on EXIF rotation, are re-encoded at high quality instead."
+        },
+        "what": {
+          "q": "What exactly is removed?",
+          "a": "EXIF (camera, settings, dates, GPS), XMP, IPTC and comments, plus PNG text chunks. Color profiles are kept so the colors don’t change. The tool re-reads the result to confirm nothing is left."
+        }
+      },
+      "ui": {
+        "remove": "Remove metadata",
+        "hint": "JPEG, PNG, WebP, HEIC… The photo stays on your device.",
+        "image": "Image",
+        "notImage": "This file couldn’t be opened as an image",
+        "cleaned": "Metadata removed.",
+        "cleanedPartly": "{count, plural, one {# field} other {# fields}} could not be removed.",
+        "lossless": "Image data untouched (lossless).",
+        "reencoded": "Re-encoded to apply the rotation.",
+        "metadata": "{count, plural, =0 {Metadata} other {Metadata (#)}}",
+        "gpsWarning": "This photo reveals where it was taken:",
+        "reading": "Reading metadata…",
+        "none": "No metadata found."
+      }
+    },
+    "image-resize": {
+      "title": "Image Resizer & Cropper",
+      "metaTitle": "Resize & Crop Images — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Crop images to any aspect ratio and resize them to exact pixel sizes, then export as JPEG, PNG or WebP. Images are processed locally, never uploaded.",
+      "intro": "Crop a photo to 1:1, 16:9 or any shape, resize it to exact pixels, and save it as JPEG, PNG or WebP. Drag the crop box or type exact values; everything runs in your browser.",
+      "howTo": {
+        "pick": "Choose or drop an image.",
+        "crop": "Pick an aspect ratio and drag the crop box, or type its position and size.",
+        "size": "Set the output width or height, choose a format, and download."
+      },
+      "faq": {
+        "upscale": {
+          "q": "Can I make an image larger?",
+          "a": "Yes, up to 10,000 px per side, but enlarging can’t add detail that isn’t there, so it will look softer."
+        },
+        "exif": {
+          "q": "Is the photo’s metadata kept?",
+          "a": "No. The image is redrawn on a canvas, so EXIF data such as GPS location is not copied into the result."
+        }
+      },
+      "ui": {
+        "notImage": "This file couldn’t be opened as an image",
+        "crop": "Crop",
+        "rect": {
+          "x": "Left",
+          "y": "Top",
+          "w": "Width",
+          "h": "Height"
+        },
+        "output": "Output",
+        "aspect": "Aspect",
+        "free": "Free",
+        "width": "Width (px)",
+        "height": "Height (px)",
+        "lock": "Keep proportions",
+        "format": "Format",
+        "quality": "Quality"
+      }
+    },
+    "favicon-generator": {
+      "title": "Favicon Generator",
+      "metaTitle": "Favicon Generator: ICO, PNG & Apple Touch Icon — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Make favicon.ico, PNG icons, an Apple touch icon and a web manifest from one image, with the HTML tags. Generated in your browser, nothing uploaded.",
+      "intro": "Turn one logo into every icon a site needs: favicon.ico, PNG favicons, the Apple touch icon, Android icons and a web manifest, zipped, with the HTML tags to paste. Your logo never leaves your browser.",
+      "howTo": {
+        "pick": "Choose a square logo, ideally an SVG or a PNG of at least 512 px.",
+        "adjust": "Adjust padding and background; check the previews.",
+        "download": "Download the ZIP, put the files at your site root and paste the HTML tags into the head of your pages."
+      },
+      "faq": {
+        "which": {
+          "q": "Which files do I really need?",
+          "a": "favicon.ico covers every browser; the PNGs give sharper tabs; apple-touch-icon.png is used when someone adds your site to an iPhone home screen; the manifest and Android icons are for installable web apps."
+        },
+        "background": {
+          "q": "Why does the Apple icon have a background?",
+          "a": "iOS shows transparent pixels as black, so the Apple touch icon always uses the background color you choose."
+        }
+      },
+      "ui": {
+        "source": "Source image",
+        "notImage": "This file couldn’t be opened as an image",
+        "hint": "SVG or PNG, square, 512 px or larger works best.",
+        "padding": "Padding",
+        "background": "Background color",
+        "transparent": "Transparent background (except the Apple icon)",
+        "siteName": "Site name (for the manifest)",
+        "result": "Icons",
+        "tags": "HTML tags for the page head",
+        "contents": "The ZIP contains favicon.ico, 5 PNG icons, site.webmanifest and, for SVG input, favicon.svg.",
+        "empty": "Choose an image to generate the icons."
+      }
+    },
+    "qr-code": {
+      "title": "QR Code Generator & Reader",
+      "metaTitle": "QR Code Generator & Reader — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Create QR codes for links or text as PNG or SVG, and read QR codes from images. Runs in your browser; nothing is sent to a server.",
+      "intro": "Create a QR code for any link or text, with your colors and error correction, and download it as PNG or SVG. Or read the QR code in a screenshot or photo. Everything runs in your browser.",
+      "howTo": {
+        "create": "Type a link or text; the QR code updates as you type.",
+        "style": "Adjust error correction, margin, size and colors, then download PNG or SVG.",
+        "read": "To decode a code, switch to Read and choose an image that contains it."
+      },
+      "faq": {
+        "ecc": {
+          "q": "Which error correction level should I choose?",
+          "a": "M (15%) suits most uses. Choose Q or H if the code will be printed small, may get damaged, or will have a logo placed over it; the code gets denser in exchange."
+        },
+        "expire": {
+          "q": "Do these QR codes expire?",
+          "a": "No. The content is stored in the code itself, with no redirect service in between, so it works as long as the link or text is valid."
+        },
+        "contrast": {
+          "q": "Can I use any colors?",
+          "a": "Keep a dark code on a light background with strong contrast; some scanners can’t read inverted or low-contrast codes."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "create": "Create",
+        "read": "Read",
+        "content": "Content",
+        "placeholder": "A link or any text",
+        "ecc": "Error correction",
+        "margin": "Margin (modules)",
+        "size": "PNG size",
+        "fg": "Code color",
+        "bg": "Background",
+        "preview": "Preview",
+        "qrAlt": "QR code for: {text}",
+        "empty": "Type something to create a QR code.",
+        "image": "Image with a QR code",
+        "decoded": "Content",
+        "notImage": "This file couldn’t be opened as an image",
+        "notFound": "No QR code found in this image",
+        "reading": "Reading…",
+        "readHint": "Choose a screenshot or photo that contains a QR code."
+      }
+    },
+    "pdf-tools": {
+      "title": "PDF Merge & Split",
+      "metaTitle": "Merge & Split PDF — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Merge several PDFs into one or split a PDF by page ranges. Your documents are processed in your browser and never uploaded to a server.",
+      "intro": "Combine several PDFs into one, in the order you choose, or split a PDF into parts by page ranges. Contracts and invoices stay on your device: everything runs in your browser.",
+      "howTo": {
+        "mode": "Choose Merge or Split.",
+        "files": "Merge: add two or more PDFs and order them. Split: add one PDF and type page ranges like 1-3, 5, 8-.",
+        "download": "Press the button and download the result; several parts come as a ZIP."
+      },
+      "faq": {
+        "quality": {
+          "q": "Does merging or splitting change the quality?",
+          "a": "No. Pages are copied as they are, with their text, fonts and images; nothing is re-rendered or compressed."
+        },
+        "protected": {
+          "q": "Can I use password-protected PDFs?",
+          "a": "Not yet: encrypted PDFs can’t be read without their password, so they are reported instead of being changed."
+        }
+      },
+      "ui": {
+        "mode": "Mode",
+        "merge": "Merge",
+        "split": "Split",
+        "mergeAction": "Merge PDFs",
+        "splitAction": "Split PDF",
+        "files": "PDF files",
+        "file": "PDF file",
+        "pages": "{count, plural, one {# page} other {# pages}}",
+        "moveUp": "Move {name} up",
+        "moveDown": "Move {name} down",
+        "remove": "Remove {name}",
+        "addMore": "Add at least one more PDF to merge.",
+        "result": "Result",
+        "pagesToKeep": "Page ranges",
+        "ranges": "Ranges, from 1 to {count}",
+        "invalidRanges": "Use page numbers from 1 to {count}, e.g. 1-3, 5, 8-",
+        "everyPage": "One file per page",
+        "rangesHint": "Each range becomes its own PDF; several are downloaded as a ZIP.",
+        "mergeHint": "Add PDFs, put them in order, then merge.",
+        "splitHint": "Add a PDF to split it.",
+        "errors": {
+          "encrypted": "This PDF is password-protected",
+          "invalid": "This file isn’t a readable PDF"
+        }
+      }
+    },
+    "video-to-gif": {
+      "title": "Video to GIF",
+      "metaTitle": "Video to GIF Converter — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Turn an MP4, WebM or MOV clip into a GIF with ffmpeg, choosing start, length, frame rate and width. Videos never leave your browser.",
+      "intro": "Cut a short clip from an MP4, WebM or MOV video and turn it into a GIF, with an optimized color palette. It uses ffmpeg compiled to WebAssembly, running in your browser, so your video is never uploaded.",
+      "howTo": {
+        "pick": "Choose or drop a video.",
+        "settings": "Set the start, the length (up to 30 s), the frame rate and the width.",
+        "convert": "Press Convert. The first time, the video engine (about 31 MB) is downloaded once, then the GIF is ready to download."
+      },
+      "faq": {
+        "download": {
+          "q": "Why is there a 31 MB download?",
+          "a": "That is ffmpeg itself, compiled to WebAssembly, so the conversion can run on your device instead of a server. It is downloaded only when you first convert, from this site, and kept by your browser for next time."
+        },
+        "size": {
+          "q": "How can I make the GIF smaller?",
+          "a": "Lower the width and the frame rate, and keep the clip short. GIF stores every frame as an image, so a 10-second clip at 15 fps already holds 150 frames."
+        },
+        "formats": {
+          "q": "Which videos work?",
+          "a": "Common formats such as MP4 (H.264), WebM, MOV and AVI. Very long or very large videos may run out of memory in the browser; trim them first."
+        }
+      },
+      "ui": {
+        "convert": "Convert to GIF",
+        "cancel": "Cancel",
+        "video": "Video",
+        "hint": "MP4, WebM, MOV… The video stays on your device.",
+        "settings": "GIF settings",
+        "start": "Start",
+        "duration": "Length",
+        "fps": "Frame rate",
+        "width": "Width",
+        "original": "Original size",
+        "downloading": "Downloading the video engine (ffmpeg)…",
+        "downloadNote": "One time only: your browser keeps it for next time. It comes from this site, not a third party.",
+        "starting": "Starting the video engine…",
+        "engineFailed": "The video engine couldn’t be loaded. Check your connection and try again.",
+        "converting": "Converting… {percent}%",
+        "convertFailed": "Conversion failed:",
+        "result": "GIF"
+      }
+    },
+    "function-benchmark": {
+      "title": "Function Benchmark",
+      "metaTitle": "JavaScript Function Benchmark: Compare Speed — runs in your browser, no upload | Kinbench",
+      "metaDescription": "Compare how fast several JavaScript functions run on the same input: ops/sec, margin of error, relative speed. Runs locally in a sandboxed worker.",
+      "intro": "Write two or more versions of a function and see which is fastest on the same input, with operations per second and margin of error. Each one runs in its own sandboxed worker in your browser.",
+      "howTo": {
+        "args": "Type the arguments as a JSON array; every function gets the same ones.",
+        "fns": "Write each version as a function, e.g. (a) => a.slice().sort(). Add up to six.",
+        "run": "Press Run and compare: the fastest is marked, the others show how many times slower they are."
+      },
+      "faq": {
+        "accuracy": {
+          "q": "How reliable are the numbers?",
+          "a": "Each function is warmed up, then run in batches for the time you choose; the ± value is the 95% margin of error. Close results (within the margins) are effectively a tie. Other tabs and power saving can affect timings."
+        },
+        "real": {
+          "q": "Will it be just as fast in my app?",
+          "a": "Not necessarily. Micro-benchmarks measure one small piece in isolation; real code runs with other data, other engines and garbage collection. Use the result to compare approaches, not as an absolute speed."
+        }
+      },
+      "ui": {
+        "run": "Run benchmark",
+        "running": "Measuring {name}…",
+        "budget": "Time per function (ms)",
+        "args": "Arguments (JSON array)",
+        "invalidArgs": "Arguments must be a JSON array, e.g. [[3, 1, 2]]",
+        "sample": "Try a sample: three ways to sort a copy",
+        "name": "Name of function {n}",
+        "code": "Code of {name}",
+        "remove": "Remove {name}",
+        "add": "Add function",
+        "ops": "{hz} ops/s",
+        "fastest": "Fastest",
+        "baseline": "baseline",
+        "slower": "{times}× slower",
+        "measuring": "Measuring…",
+        "timedOut": "Stopped: a call didn’t finish in time",
+        "notFunction": "The code must be a single function"
+      }
+    }
+  },
+  "privacy": {
+    "metaTitle": "Privacy — how Kinbench keeps your data in your browser | Kinbench",
+    "metaDescription": "How Kinbench processes everything locally: no backend, no analytics, a strict CSP, offline support, and how to verify it yourself in DevTools.",
+    "title": "Privacy: your data stays in your browser",
+    "intro": "Kinbench is a set of static web pages. There is no server-side code, no account and no database, so there is nowhere for your data to go. This page explains how that works and how you can check it yourself.",
+    "sections": {
+      "local": {
+        "title": "Everything runs on your device",
+        "body": "Each tool is JavaScript that runs in your browser tab. Heavier work, such as hashing large files, encoding images or running your code, runs in Web Workers, still on your device. Files you choose are read locally with the File API and never uploaded."
+      },
+      "noTracking": {
+        "title": "No analytics, no cookies, no third parties",
+        "body": "Kinbench has no analytics, no ads and no tracking pixels, and it sets no cookies. Fonts and libraries are served from this site; no third-party script or CDN is ever loaded."
+      },
+      "storage": {
+        "title": "What is stored on your device",
+        "body": "Only what makes the site work: your theme and language, the list of tools you opened recently (their names only, never their content) and, if you turn on “Remember input” in a tool, that tool’s input. It all stays in your browser’s localStorage, and you can clear it at any time in your browser settings."
+      },
+      "csp": {
+        "title": "A strict Content-Security-Policy",
+        "body": "Every page carries a Content-Security-Policy that only allows connections back to this site, so even a bug or a compromised library could not send your data elsewhere. Inline scripts run only if they match an exact hash. The Function Runner’s sandbox has a stricter policy still, with no network access at all."
+      },
+      "offline": {
+        "title": "Works offline",
+        "body": "A service worker keeps a copy of the pages and tools you have opened, so they keep working without an internet connection. It caches only the site’s own files, never your data."
+      },
+      "verify": {
+        "title": "Check it yourself",
+        "steps": {
+          "open": "Open your browser’s developer tools (F12, or Cmd+Option+I on a Mac) and go to the Network tab.",
+          "use": "Use any tool: paste data, choose a file, press run.",
+          "check": "Watch the requests. You will only see this site’s own code files being loaded, and nothing being sent.",
+          "offline": "Optionally, switch DevTools to Offline: the tools you have opened keep working."
+        }
+      }
+    }
+  },
+  "about": {
+    "metaTitle": "About Kinbench — privacy-first developer tools | Kinbench",
+    "metaDescription": "Kinbench is a free set of developer tools that run entirely in your browser: JSON, CSS, images, hashes, JWT and more, with nothing uploaded.",
+    "title": "About Kinbench",
+    "intro": "Kinbench is a free collection of everyday developer tools: formatters, encoders, hash and ID generators, an image converter and a JavaScript test runner. All of them run entirely in your browser.",
+    "sections": {
+      "why": {
+        "title": "Why another tools site?",
+        "body": "Pasting a JWT, an API response or a customer’s file into a random website means trusting a server you can’t see. Kinbench removes the server: the tools are static files, so your data never leaves your device."
+      },
+      "how": {
+        "title": "How it’s built",
+        "body": "Next.js exported as static files. Each tool’s code loads only on its own page, heavy libraries (Prettier, Sass, image codecs) load on first use, and CPU-heavy work runs in Web Workers. The interface is in English and Vietnamese."
+      },
+      "free": {
+        "title": "Free, no sign-up",
+        "body": "There are no accounts, no usage limits and no ads."
+      }
+    },
+    "privacyLink": "Read how Kinbench protects your data →"
+  }
+}

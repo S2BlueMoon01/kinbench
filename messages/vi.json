@@ -1,0 +1,1837 @@
+{
+  "ui": {
+    "nav": {
+      "skip": "Bỏ qua, tới nội dung chính",
+      "openMenu": "Mở menu",
+      "close": "Đóng",
+      "home": "Trang chủ",
+      "tools": "Công cụ"
+    },
+    "theme": {
+      "label": "Giao diện",
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Theo hệ thống"
+    },
+    "language": {
+      "label": "Ngôn ngữ",
+      "vi": "Tiếng Việt",
+      "en": "English"
+    },
+    "actions": {
+      "copy": "Copy",
+      "copied": "Đã copy",
+      "copyFailed": "Không copy được",
+      "download": "Tải về",
+      "clear": "Xoá",
+      "options": "Tuỳ chọn",
+      "remember": "Ghi nhớ input trên máy này",
+      "resize": "Kéo để đổi kích thước",
+      "chooseFile": "Chọn file",
+      "orDrop": "hoặc kéo thả vào đây",
+      "copyNamed": "Copy {name}",
+      "orPaste": "hoặc dán ảnh chụp màn hình bằng Ctrl+V"
+    },
+    "search": {
+      "open": "Tìm công cụ",
+      "label": "Tìm công cụ",
+      "placeholder": "Tìm công cụ, ví dụ json hoặc hash",
+      "empty": "Không có công cụ nào khớp"
+    },
+    "footer": {
+      "label": "Trang",
+      "privacy": "Quyền riêng tư",
+      "about": "Giới thiệu",
+      "note": "Không backend · không analytics · không cookie"
+    }
+  },
+  "site": {
+    "tagline": "Công cụ cho developer chạy 100% trên trình duyệt",
+    "privacyBadge": "Xử lý ngay trên máy — không tải lên server",
+    "breadcrumb": "Đường dẫn",
+    "categories": {
+      "format": {
+        "name": "Format & kiểm tra",
+        "description": "Format, validate và minify JSON, CSS và nhiều định dạng khác."
+      },
+      "text": {
+        "name": "Văn bản",
+        "description": "Đếm, so sánh và biến đổi văn bản."
+      },
+      "image": {
+        "name": "Hình ảnh",
+        "description": "Chuyển định dạng, nén và chỉnh ảnh mà không cần tải lên."
+      },
+      "encode": {
+        "name": "Encode & decode",
+        "description": "Base64, URL, JWT và các kiểu mã hoá khác."
+      },
+      "crypto": {
+        "name": "Hash & mã hoá",
+        "description": "Hash, HMAC và mã hoá bằng Web Crypto."
+      },
+      "generate": {
+        "name": "Tạo dữ liệu",
+        "description": "UUID, mật khẩu, đoạn CSS và hơn thế nữa."
+      },
+      "convert": {
+        "name": "Chuyển đổi",
+        "description": "Timestamp, hệ cơ số, màu sắc và đơn vị."
+      },
+      "code": {
+        "name": "Chạy code",
+        "description": "Chạy và test JavaScript, regex và HTTP request."
+      },
+      "media": {
+        "name": "PDF & video",
+        "description": "Gộp, tách PDF và đổi video sang GIF mà không cần tải lên."
+      }
+    },
+    "toolPage": {
+      "howTo": "Cách dùng",
+      "whySafe": "Vì sao an toàn?",
+      "faq": "Câu hỏi thường gặp",
+      "related": "Công cụ liên quan"
+    },
+    "whySafe": {
+      "browser": "Mọi xử lý đều chạy bằng JavaScript ngay trong trình duyệt — Kinbench không có backend.",
+      "noUpload": "Dữ liệu bạn dán hay kéo thả không được tải lên đâu cả. Mở DevTools → tab Network để tự kiểm chứng.",
+      "csp": "Content-Security-Policy nghiêm ngặt chặn trang gửi request tới bất kỳ server nào khác.",
+      "offline": "Công cụ bạn đã mở vẫn chạy khi offline: service worker giữ sẵn một bản sao trên máy bạn."
+    },
+    "faqPrivacy": {
+      "q": "Dữ liệu của tôi có bị gửi lên server không?",
+      "a": "Không. Kinbench là trang tĩnh: công cụ chạy hoàn toàn trên trình duyệt của bạn và không có backend nào để nhận dữ liệu. Content-Security-Policy còn chặn mọi request tới server khác, và bộ test tự động kiểm tra rằng dùng từng công cụ không tạo ra request nào mang dữ liệu của bạn."
+    },
+    "featureList": {
+      "browser": "Chạy hoàn toàn trên trình duyệt",
+      "noUpload": "Không tải dữ liệu lên",
+      "free": "Miễn phí, không cần đăng ký",
+      "offline": "Chạy được offline"
+    },
+    "og": {
+      "badge": "100% trên máy — không tải lên server"
+    }
+  },
+  "home": {
+    "metaTitle": "Kinbench — công cụ cho developer chạy 100% trên trình duyệt",
+    "metaDescription": "Bộ công cụ miễn phí cho developer: JSON, văn bản, hình ảnh, hash, encode... Tất cả chạy ngay trên trình duyệt, không tải dữ liệu lên server nào.",
+    "title": "Công cụ chạy 100% trên máy — dữ liệu không rời khỏi trình duyệt",
+    "subtitle": "Format, chuyển đổi, hash và debug mà không phải dán dữ liệu nhạy cảm lên server của người khác.",
+    "categoriesTitle": "Danh mục công cụ",
+    "recentTitle": "Dùng gần đây"
+  },
+  "category": {
+    "metaTitle": "{name} — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+    "metaDescription": "Các công cụ {name} cho developer. Tất cả chạy ngay trên trình duyệt, không gửi dữ liệu lên server.",
+    "toolCount": "{count} công cụ"
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang"
+  },
+  "tools": {
+    "json-formatter": {
+      "title": "JSON Formatter",
+      "metaTitle": "Format JSON online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Format, validate và minify JSON ngay trên trình duyệt. Báo lỗi đúng dòng, đúng cột. Dữ liệu không bao giờ được gửi lên server.",
+      "intro": "Dán hoặc kéo thả JSON để format, kiểm tra lỗi hay minify. Mọi thứ chạy trên trình duyệt của bạn, số lớn và chuỗi escape được giữ nguyên như bản gốc.",
+      "howTo": {
+        "paste": "Dán JSON vào ô Input, hoặc kéo thả file .json vào đó.",
+        "mode": "Chọn Format hoặc Minify và kiểu thụt lề.",
+        "errors": "Nếu JSON sai, thông báo lỗi sẽ chỉ rõ dòng và cột — bấm vào để nhảy tới đúng chỗ.",
+        "export": "Copy kết quả hoặc tải về thành file."
+      },
+      "faq": {
+        "bigNumbers": {
+          "q": "Vì sao số lớn của tôi không bị làm tròn?",
+          "a": "Phần lớn công cụ format dùng JSON.parse, vốn làm tròn số nguyên lớn hơn 2^53. Kinbench format lại trực tiếp từ các token gốc, nên 12345678901234567890 vẫn là 12345678901234567890 và 1.50 vẫn là 1.50."
+        },
+        "strict": {
+          "q": "Có chấp nhận comment hay trailing comma không?",
+          "a": "Không. Công cụ kiểm tra theo chuẩn JSON (RFC 8259), nên comment và trailing comma sẽ bị báo lỗi kèm vị trí."
+        },
+        "size": {
+          "q": "Xử lý được file lớn cỡ nào?",
+          "a": "File vài MB vẫn chạy tốt. Giới hạn duy nhất là bộ nhớ thiết bị của bạn, vì không có gì được tải lên."
+        }
+      },
+      "ui": {
+        "input": "Input",
+        "output": "Output",
+        "inputPlaceholder": "Dán JSON vào đây hoặc kéo thả file .json",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+        "mode": "Chế độ",
+        "format": "Format",
+        "minify": "Minify",
+        "indent": "Thụt lề",
+        "spaces": "{count} dấu cách",
+        "tab": "Tab",
+        "sample": "Dùng dữ liệu mẫu",
+        "sampleNote": "Chạy ngay trên trình duyệt — ệ ữ ở ặ ỹ",
+        "valid": "JSON hợp lệ",
+        "dropHint": "Thả file vào đây",
+        "fileError": "Không đọc được file này",
+        "errorAt": "Dòng {line}, cột {column}",
+        "jumpToError": "Tới chỗ lỗi",
+        "errors": {
+          "InvalidSymbol": "Ký tự không hợp lệ",
+          "InvalidNumberFormat": "Số không hợp lệ",
+          "PropertyNameExpected": "Thiếu tên thuộc tính (phải đặt trong dấu ngoặc kép)",
+          "ValueExpected": "Thiếu giá trị",
+          "ColonExpected": "Thiếu dấu ':'",
+          "CommaExpected": "Thiếu dấu phẩy ','",
+          "CloseBraceExpected": "Thiếu dấu đóng ngoặc nhọn",
+          "CloseBracketExpected": "Thiếu dấu ']'",
+          "EndOfFileExpected": "Có nội dung thừa sau khi JSON đã kết thúc",
+          "InvalidCommentToken": "JSON không cho phép comment",
+          "UnexpectedEndOfComment": "Comment chưa được đóng",
+          "UnexpectedEndOfString": "Chuỗi chưa đóng dấu ngoặc kép",
+          "UnexpectedEndOfNumber": "Số bị cắt ngang",
+          "InvalidUnicode": "Escape \\u không hợp lệ",
+          "InvalidEscapeCharacter": "Escape sequence không hợp lệ",
+          "InvalidCharacter": "Ký tự điều khiển trong chuỗi phải được escape",
+          "Unknown": "JSON không hợp lệ"
+        }
+      }
+    },
+    "text-counter": {
+      "title": "Đếm ký tự",
+      "metaTitle": "Đếm ký tự, đếm từ online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đếm ký tự, số từ, số dòng, số byte UTF-8 và thời gian đọc ngay khi gõ. Văn bản chỉ nằm trên trình duyệt, không gửi lên server.",
+      "intro": "Gõ hoặc dán văn bản để đếm ký tự, số từ, số dòng, số byte UTF-8 và ước lượng thời gian đọc. Mọi phép đếm chạy ngay trên trình duyệt khi bạn gõ, không có gì được tải lên.",
+      "howTo": {
+        "paste": "Gõ hoặc dán văn bản vào ô bên dưới.",
+        "read": "Số liệu cập nhật ngay khi bạn gõ: ký tự, ký tự không tính khoảng trắng, số từ, số dòng, số byte UTF-8 và thời gian đọc.",
+        "remember": "Bật “Ghi nhớ input trên máy này” nếu muốn giữ lại văn bản sau khi tải lại trang."
+      },
+      "faq": {
+        "characters": {
+          "q": "Ký tự được đếm thế nào?",
+          "a": "Kinbench đếm theo đúng những gì bạn nhìn thấy (grapheme cluster), nên emoji như 👍🏽 hay chữ ệ gõ bằng dấu tổ hợp vẫn chỉ tính là 1 ký tự, dù bên trong gồm nhiều code point."
+        },
+        "bytes": {
+          "q": "Vì sao số byte khác số ký tự?",
+          "a": "Số byte là kích thước văn bản khi mã hoá UTF-8, thứ mà database, API hay giới hạn SMS thường dùng để đo. Chữ ASCII chiếm 1 byte, chữ tiếng Việt có dấu chiếm 2–3 byte, emoji từ 4 byte trở lên."
+        },
+        "reading": {
+          "q": "Thời gian đọc được tính ra sao?",
+          "a": "Lấy số từ chia cho 200 từ mỗi phút rồi làm tròn lên, đây là tốc độ đọc thầm phổ biến với văn bản trên màn hình. Với tiếng Việt, mỗi tiếng được tính là một từ."
+        }
+      },
+      "ui": {
+        "input": "Văn bản",
+        "placeholder": "Gõ hoặc dán văn bản vào đây",
+        "stats": "Thống kê",
+        "labels": {
+          "characters": "Ký tự",
+          "charactersNoSpaces": "Ký tự (không tính khoảng trắng)",
+          "words": "Số từ",
+          "lines": "Số dòng",
+          "bytes": "Byte UTF-8",
+          "readingMinutes": "Thời gian đọc"
+        }
+      }
+    },
+    "base64": {
+      "title": "Base64 Encode / Decode",
+      "metaTitle": "Base64 encode, decode online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Encode văn bản hoặc file sang Base64 và decode ngược lại, hỗ trợ UTF-8 và URL-safe. Chạy ngay trên trình duyệt, không gửi gì lên server.",
+      "intro": "Encode văn bản hoặc bất kỳ file nào sang Base64, hoặc decode Base64 về văn bản hay file để tải về. Hỗ trợ UTF-8 và Base64 URL-safe, mọi thứ chạy ngay trên trình duyệt.",
+      "howTo": {
+        "mode": "Chọn Encode hoặc Decode.",
+        "input": "Gõ, dán văn bản hoặc chọn file. File được đọc ngay trên máy, không tải lên.",
+        "output": "Copy hoặc tải kết quả về. Dữ liệu nhị phân sau khi decode sẽ được tải về dạng file."
+      },
+      "faq": {
+        "urlSafe": {
+          "q": "Có hỗ trợ Base64 URL-safe (base64url) không?",
+          "a": "Khi decode, công cụ nhận cả Base64 chuẩn lẫn URL-safe (dùng - và _), có hoặc không có dấu = và xuống dòng. Khi encode, kết quả là Base64 chuẩn."
+        },
+        "unicode": {
+          "q": "Vì sao tiếng Việt decode đúng ở đây nhưng lỗi với atob()?",
+          "a": "atob() và btoa() chỉ xử lý được Latin-1. Kinbench chuyển văn bản sang byte UTF-8 trước, nên tiếng Việt, emoji và mọi hệ chữ khác đều encode và decode chính xác."
+        },
+        "encryption": {
+          "q": "Base64 có phải là mã hoá bảo mật không?",
+          "a": "Không. Base64 chỉ là cách encode, không phải encryption: ai cũng decode được. Đừng dùng nó để giấu thông tin bí mật."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "encode": "Encode",
+        "decode": "Decode",
+        "input": "Input",
+        "output": "Output",
+        "encodePlaceholder": "Gõ hoặc dán văn bản cần encode",
+        "decodePlaceholder": "Dán chuỗi Base64 cần decode",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+        "invalid": "Đây không phải Base64 hợp lệ",
+        "binary": "Dữ liệu nhị phân — bấm Tải về để lưu file",
+        "fileError": "Không đọc được file này",
+        "truncated": "Đang hiển thị {count, number} ký tự đầu. Copy hoặc tải về để lấy toàn bộ kết quả."
+      }
+    },
+    "uuid-generator": {
+      "title": "Tạo UUID / ULID / nanoid",
+      "metaTitle": "Tạo UUID, ULID, nanoid online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tạo hàng loạt UUID v4, ULID và nanoid bằng bộ sinh số ngẫu nhiên an toàn của trình duyệt. ID được tạo ngay trên máy, không gửi lên server.",
+      "intro": "Tạo cùng lúc tới 1.000 giá trị UUID v4, ULID hoặc nanoid. ID được sinh bằng bộ sinh số ngẫu nhiên an toàn về mật mã của trình duyệt và không được gửi đi đâu cả.",
+      "howTo": {
+        "kind": "Chọn UUID v4, ULID hoặc nanoid và số lượng cần tạo.",
+        "generate": "Bấm Tạo mới để sinh một loạt ID khác. Mỗi ID nằm trên một dòng.",
+        "export": "Copy toàn bộ hoặc tải về dạng file text."
+      },
+      "faq": {
+        "which": {
+          "q": "Nên dùng loại nào?",
+          "a": "UUID v4 được hỗ trợ rộng rãi nhất. ULID sắp xếp được theo thời gian tạo, giúp index trong database gọn hơn. nanoid ngắn hơn (mặc định 21 ký tự) và đặt được thẳng vào URL."
+        },
+        "random": {
+          "q": "ID tạo ra có thật sự ngẫu nhiên không?",
+          "a": "Có. Công cụ dùng crypto.randomUUID() và crypto.getRandomValues(), bộ sinh số ngẫu nhiên an toàn về mật mã của trình duyệt, chứ không phải Math.random()."
+        },
+        "collisions": {
+          "q": "Hai ID có thể bị trùng không?",
+          "a": "Trên thực tế là không. UUID v4 có 122 bit ngẫu nhiên, nanoid 21 ký tự có khoảng 126 bit. Phải tạo hàng tỷ ID mỗi giây trong nhiều thập kỷ thì khả năng trùng mới đáng kể."
+        }
+      },
+      "ui": {
+        "kind": "Loại",
+        "count": "Số lượng",
+        "size": "Độ dài",
+        "generate": "Tạo mới",
+        "output": "ID đã tạo",
+        "generated": "{count, plural, other {# ID}}"
+      }
+    },
+    "unix-timestamp": {
+      "title": "Chuyển đổi Unix timestamp",
+      "metaTitle": "Chuyển đổi Unix timestamp online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi Unix timestamp (giây hoặc mili giây) sang ISO 8601, giờ địa phương, thời gian tương đối và ngược lại. Chạy trên trình duyệt, không gửi lên server.",
+      "intro": "Đổi Unix timestamp sang ngày giờ dễ đọc theo UTC và theo múi giờ của bạn, hoặc đổi ngày giờ thành timestamp. Công cụ tự nhận biết đơn vị giây hay mili giây.",
+      "howTo": {
+        "paste": "Dán timestamp vào, hoặc bấm “Lấy thời điểm hiện tại”.",
+        "unit": "Để đơn vị ở chế độ Tự động, hoặc chọn hẳn giây hay mili giây.",
+        "reverse": "Muốn đổi ngược lại, chọn ngày giờ ở khung bên phải. Giá trị được hiểu theo múi giờ của thiết bị."
+      },
+      "faq": {
+        "units": {
+          "q": "Giây hay mili giây: chế độ Tự động chọn thế nào?",
+          "a": "Số từ 100.000.000.000 trở lên được hiểu là mili giây, nhỏ hơn là giây. Nếu hiểu là giây thì số lớn như vậy sẽ rơi vào sau năm 5000, nên cách đoán này gần như luôn đúng."
+        },
+        "timezone": {
+          "q": "Công cụ dùng múi giờ nào?",
+          "a": "Unix time luôn tính theo UTC. Dòng “Giờ địa phương” hiển thị cùng thời điểm đó theo múi giờ của thiết bị, do trình duyệt cung cấp."
+        },
+        "y2038": {
+          "q": "Có xử lý được ngày sau năm 2038 không?",
+          "a": "Có. Kiểu Date của JavaScript không bị giới hạn 32 bit, nên dùng được mọi ngày từ khoảng năm 271.821 trước Công nguyên đến năm 275.760."
+        }
+      },
+      "ui": {
+        "now": "Unix time hiện tại",
+        "useNow": "Lấy thời điểm hiện tại",
+        "toDate": "Timestamp → ngày giờ",
+        "toTimestamp": "Ngày giờ → timestamp",
+        "timestamp": "Unix timestamp",
+        "unit": "Đơn vị",
+        "auto": "Tự động",
+        "seconds": "Giây",
+        "milliseconds": "Mili giây",
+        "invalid": "Hãy nhập một số, ví dụ 1700000000",
+        "readAsSeconds": "Đang hiểu là giây",
+        "readAsMilliseconds": "Đang hiểu là mili giây",
+        "iso": "ISO 8601 (UTC)",
+        "localTime": "Giờ địa phương ({timeZone})",
+        "relative": "Tương đối",
+        "localDate": "Ngày giờ ({timeZone})"
+      }
+    },
+    "jwt-decoder": {
+      "title": "Decode JWT",
+      "metaTitle": "Decode JWT online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Decode header, payload của JWT, xem exp, iat, nbf và verify chữ ký HS256. Token chỉ nằm trên trình duyệt, không bao giờ gửi lên server.",
+      "intro": "Dán JSON Web Token để xem header, payload và thời hạn. Decode không kiểm tra chữ ký; muốn verify token HS256, HS384 hay HS512, hãy nhập secret. Token và secret chỉ nằm trên trình duyệt của bạn.",
+      "howTo": {
+        "paste": "Dán token vào ô Token.",
+        "read": "Xem header, payload đã decode và các mốc exp, iat, nbf theo múi giờ của bạn.",
+        "verify": "Với token HS256, HS384, HS512, nhập secret để verify chữ ký. Nếu không nhập, chữ ký sẽ không được kiểm tra."
+      },
+      "faq": {
+        "verification": {
+          "q": "Decode được có nghĩa là token hợp lệ không?",
+          "a": "Không. Ai cũng tạo được token với payload tuỳ ý. Chỉ kiểm tra chữ ký mới chứng minh được ai phát hành token: nhập secret với token HMAC ở đây, và luôn verify token ở phía server."
+        },
+        "rs256": {
+          "q": "Có verify được token RS256 hay ES256 không?",
+          "a": "Hiện chưa. Các thuật toán này cần public key của bên phát hành; công cụ chỉ verify chữ ký HMAC (HS256, HS384, HS512) bằng secret dùng chung. Token loại khác chỉ được decode."
+        },
+        "safe": {
+          "q": "Dán token production vào có an toàn không?",
+          "a": "Token và secret chỉ được xử lý trong tab này, không gửi đi đâu. Dù vậy, token còn hạn vẫn là thông tin đăng nhập: nên dùng token test hoặc đã hết hạn, và đóng tab khi xong việc."
+        }
+      },
+      "ui": {
+        "token": "Token",
+        "placeholder": "Dán JWT vào đây (header.payload.signature)",
+        "sample": "Dùng token mẫu",
+        "decoded": "Kết quả decode",
+        "empty": "Dán token để xem nội dung bên trong.",
+        "header": "Header",
+        "payload": "Payload",
+        "signature": "Chữ ký",
+        "claims": {
+          "exp": "Hết hạn (exp)",
+          "nbf": "Bắt đầu hiệu lực (nbf)",
+          "iat": "Phát hành lúc (iat)"
+        },
+        "expired": "Đã hết hạn",
+        "notExpired": "Còn hạn",
+        "secretLabel": "Secret cho {alg}",
+        "secretNote": "Chỉ dùng trong tab này để kiểm tra chữ ký. Không bao giờ được lưu hay gửi đi.",
+        "cannotVerify": "Công cụ chỉ verify được chữ ký HS256, HS384 và HS512. Token này dùng {alg} nên chỉ được decode.",
+        "notVerified": "Chữ ký chưa được verify. Decode được không có nghĩa là token thật.",
+        "verified": "Chữ ký hợp lệ với secret này",
+        "invalidSignature": "Chữ ký không khớp với secret này",
+        "errors": {
+          "parts": "JWT phải gồm ba phần, ngăn cách bởi dấu chấm",
+          "header": "Header không phải JSON được encode Base64url hợp lệ",
+          "payload": "Payload không phải JSON được encode Base64url hợp lệ"
+        }
+      }
+    },
+    "hash-generator": {
+      "title": "Tạo mã hash",
+      "metaTitle": "Tạo hash MD5, SHA-1, SHA-256, SHA-512 online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tính hash MD5, SHA-1, SHA-256 và SHA-512 cho văn bản hoặc file cùng lúc. File lớn được đọc ngay trên trình duyệt, không tải lên server.",
+      "intro": "Tính cùng lúc hash MD5, SHA-1, SHA-256 và SHA-512 của văn bản hoặc file. Việc tính hash chạy trong worker nền của trình duyệt, nên cả file nhiều GB cũng không rời khỏi máy bạn.",
+      "howTo": {
+        "input": "Gõ, dán văn bản hoặc chọn file cần tính hash.",
+        "read": "Cả bốn hash hiện cùng lúc. Với file, thanh tiến trình chạy trong lúc đọc.",
+        "copy": "Bấm nút bên cạnh để copy từng hash, ví dụ để so với checksum mà trang tải về công bố."
+      },
+      "faq": {
+        "verify": {
+          "q": "Làm sao kiểm tra file tải về có bị sửa không?",
+          "a": "Chọn file ở đây rồi so SHA-256 với checksum mà trang tải về công bố. Chỉ cần lệch một ký tự là file đã khác."
+        },
+        "md5": {
+          "q": "MD5 và SHA-1 còn an toàn không?",
+          "a": "Không, nếu dùng cho bảo mật. Cả hai đều đã bị tấn công collision trong thực tế, nên hãy dùng SHA-256 hoặc SHA-512 cho chữ ký và kiểm tra toàn vẹn. MD5 và SHA-1 vẫn ổn cho việc không liên quan bảo mật như cache key hay đối chiếu checksum cũ."
+        },
+        "passwords": {
+          "q": "Có dùng để hash mật khẩu được không?",
+          "a": "Không. Hash thông thường chạy quá nhanh nên không an toàn để lưu mật khẩu. Hãy dùng thuật toán chậm như Argon2, bcrypt hoặc scrypt ở phía server."
+        }
+      },
+      "ui": {
+        "input": "Input",
+        "placeholder": "Gõ hoặc dán văn bản cần tính hash",
+        "output": "Kết quả hash",
+        "ofFile": "của file",
+        "empty": "Hash của văn bản hoặc file sẽ hiện ở đây.",
+        "hashing": "Đang tính hash… {percent}%",
+        "progress": "Tiến trình tính hash",
+        "failed": "Không tính được hash cho dữ liệu này"
+      }
+    },
+    "function-runner": {
+      "title": "Chạy & test function",
+      "metaTitle": "Chạy, test function JavaScript online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Viết function JavaScript và test với bảng test case trong Web Worker sandbox. Code chạy ngay trên máy bạn, không bao giờ gửi lên server.",
+      "intro": "Viết một function JavaScript, thêm test case rồi chạy tất cả trong Web Worker sandbox. Bạn xem được pass hay fail, output thực tế, thời gian từng case và console.log; vòng lặp vô hạn sẽ bị dừng khi hết timeout.",
+      "howTo": {
+        "code": "Viết một function duy nhất vào ô Function: function thông thường hoặc arrow function.",
+        "cases": "Thêm test case. Params là danh sách tham số dạng mảng JSON, ví dụ [1, 2]; expected là giá trị JSON mà function phải trả về.",
+        "run": "Bấm Chạy tất cả. Mỗi case chạy trong một worker mới và bị dừng nếu chạy lâu hơn timeout (mặc định 3 giây)."
+      },
+      "faq": {
+        "sandbox": {
+          "q": "Chạy code ở đây có an toàn không?",
+          "a": "Code của bạn chỉ chạy trong một Web Worker riêng, không chạm được vào trang, storage hay mạng: một Content-Security-Policy riêng chặn mọi request từ worker, và mỗi case dùng một worker mới, bị huỷ ngay khi chạy xong hoặc hết giờ."
+        },
+        "async": {
+          "q": "Có test được async function không?",
+          "a": "Có. Nếu function trả về Promise, runner sẽ chờ kết quả và thời gian đo bao gồm cả lúc chờ. Timeout vẫn được áp dụng."
+        },
+        "compare": {
+          "q": "Kết quả được so sánh thế nào?",
+          "a": "So sánh theo cấu trúc, giống deep equal: object khớp nhau không phụ thuộc thứ tự key, mảng phải đúng thứ tự, và NaN bằng NaN. Expected viết bằng JSON nên không biểu diễn được undefined, function hay Map."
+        }
+      },
+      "ui": {
+        "code": "Function",
+        "codePlaceholder": "Viết một function, ví dụ (a, b) => a + b",
+        "sample": "Dùng ví dụ mẫu",
+        "cases": "Test case",
+        "case": "Case {n}",
+        "params": "Params (mảng JSON)",
+        "expected": "Expected (JSON)",
+        "actual": "Thực tế",
+        "logs": "Console ({count})",
+        "addCase": "Thêm case",
+        "removeCase": "Xoá case {n}",
+        "run": "Chạy tất cả",
+        "running": "Đang chạy…",
+        "summary": "{passed}/{total} case pass",
+        "timeout": "Timeout (ms)",
+        "timedOut": "Đã dừng sau {ms, number} ms: function chạy quá thời gian cho phép.",
+        "status": {
+          "passed": "Pass",
+          "failed": "Fail",
+          "error": "Lỗi",
+          "timeout": "Hết giờ",
+          "invalid": "Case sai"
+        },
+        "invalid": {
+          "params": "Params phải là mảng JSON, ví dụ [1, 2]",
+          "expected": "Expected phải là JSON hợp lệ, ví dụ 3 hoặc \"text\""
+        },
+        "errors": {
+          "notFunction": "Code phải là một function duy nhất, ví dụ (a, b) => a + b",
+          "uncloneable": "Không lấy được giá trị trả về ra khỏi sandbox (ví dụ function hoặc Symbol)"
+        }
+      }
+    },
+    "css-formatter": {
+      "title": "Format CSS & SCSS",
+      "metaTitle": "Format, minify CSS & compile SCSS online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Format, minify CSS và compile SCSS sang CSS bằng Prettier và Dart Sass ngay trên trình duyệt. Stylesheet không bao giờ bị gửi lên server.",
+      "intro": "Format CSS và SCSS bằng Prettier, compile SCSS sang CSS hoặc minify bằng Dart Sass. Cả hai thư viện chạy trong worker nền của trình duyệt và chỉ được tải khi bạn dùng lần đầu.",
+      "howTo": {
+        "paste": "Dán CSS hoặc SCSS vào, chọn ngôn ngữ trong phần Tuỳ chọn.",
+        "mode": "Chọn Format, Compile (SCSS → CSS) hoặc Minify.",
+        "errors": "Lỗi cú pháp sẽ hiện dòng và cột; bấm vào để nhảy tới đúng chỗ.",
+        "export": "Copy kết quả hoặc tải về thành file."
+      },
+      "faq": {
+        "libraries": {
+          "q": "Công cụ dùng thư viện gì?",
+          "a": "Prettier 3 để format và Dart Sass, bản Sass chuẩn, để compile và minify: đúng những thư viện bạn vẫn chạy khi build. Chúng chỉ được tải từ chính trang này khi cần, Prettier khoảng 65 KB, Sass khoảng 700 KB, và trình duyệt sẽ cache lại cho các lần sau."
+        },
+        "minifyCss": {
+          "q": "Minify được CSS thường không?",
+          "a": "Được. Chọn CSS trong phần Tuỳ chọn rồi chọn Minify. Comment và khoảng trắng bị bỏ đi, giá trị được rút gọn ở những chỗ an toàn."
+        },
+        "imports": {
+          "q": "@use và @import có dùng được không?",
+          "a": "Chỉ với module có sẵn như sass:math và sass:color. Không import được file khác, vì công cụ không bao giờ đọc file trên máy hay trên mạng."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "format": "Format",
+        "compile": "Compile",
+        "minify": "Minify",
+        "language": "Ngôn ngữ",
+        "input": "Input",
+        "output": "Output",
+        "cssPlaceholder": "Dán CSS vào đây",
+        "scssPlaceholder": "Dán SCSS vào đây",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+        "sample": "Dùng dữ liệu mẫu",
+        "syntaxError": "Lỗi cú pháp",
+        "errorAt": "Dòng {line}, cột {column}",
+        "loadingPrettier": "Đang tải Prettier (chỉ lần đầu)…",
+        "loadingSass": "Đang tải Sass compiler (~700 KB, chỉ lần đầu)…"
+      }
+    },
+    "image-converter": {
+      "title": "Chuyển đổi & nén ảnh",
+      "metaTitle": "Nén ảnh online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Chuyển ảnh sang PNG, JPEG, WebP hoặc AVIF và nén với thanh chỉnh chất lượng. Ảnh được xử lý ngay trên trình duyệt, không tải lên server.",
+      "intro": "Chuyển đổi ảnh PNG, JPEG, WebP, AVIF và nén bằng thanh chỉnh chất lượng, rồi so sánh trước và sau ngay trên một khung hình. Ảnh được xử lý trên trình duyệt và không bao giờ bị tải lên.",
+      "howTo": {
+        "pick": "Chọn hoặc kéo thả một ảnh vào.",
+        "format": "Chọn định dạng và chất lượng đầu ra trong phần Tuỳ chọn.",
+        "compare": "Kéo ngang trên ảnh xem trước để so sánh bản gốc với kết quả, và xem dung lượng giảm bao nhiêu.",
+        "download": "Tải ảnh đã chuyển đổi về máy."
+      },
+      "faq": {
+        "avif": {
+          "q": "Vì sao xuất AVIF lâu hơn?",
+          "a": "Trình duyệt hiển thị được AVIF nhưng không tự tạo được, nên Kinbench tải một AVIF encoder biên dịch sang WebAssembly (khoảng 1,1 MB, chỉ một lần) và encode trong worker nền. Ảnh lớn có thể mất vài giây."
+        },
+        "metadata": {
+          "q": "Thông tin EXIF có được giữ lại không?",
+          "a": "Không. Ảnh được vẽ lại trên canvas nên dữ liệu EXIF như vị trí GPS hay thông tin máy ảnh không có trong kết quả. File gốc của bạn không bị thay đổi."
+        },
+        "transparency": {
+          "q": "Phần trong suốt của ảnh thì sao?",
+          "a": "PNG, WebP và AVIF giữ nguyên phần trong suốt. JPEG không hỗ trợ trong suốt nên các vùng đó sẽ thành màu trắng."
+        }
+      },
+      "ui": {
+        "format": "Định dạng",
+        "quality": "Chất lượng",
+        "preview": "Xem trước",
+        "hint": "PNG, JPEG, WebP, AVIF, GIF và mọi định dạng khác trình duyệt mở được. Ảnh chỉ nằm trên máy bạn.",
+        "before": "Bản gốc",
+        "after": "Kết quả",
+        "compare": "So sánh trước và sau",
+        "encoding": "Đang encode…",
+        "loadingAvif": "Đang tải AVIF encoder (~1,1 MB, chỉ lần đầu)…",
+        "lossless": "PNG là định dạng lossless nên không áp dụng chất lượng",
+        "decodeError": "Không mở được file này dưới dạng ảnh",
+        "dimensions": "{width} × {height} px",
+        "smaller": "nhỏ hơn {percent}%",
+        "larger": "lớn hơn {percent}%",
+        "same": "Không đổi dung lượng"
+      }
+    },
+    "case-converter": {
+      "title": "Đổi kiểu chữ",
+      "metaTitle": "Đổi camelCase, snake_case, kebab-case online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi văn bản sang camelCase, PascalCase, snake_case, kebab-case, Title Case… cùng lúc. Chạy ngay trên trình duyệt, không gửi gì lên server.",
+      "intro": "Gõ một cụm từ hoặc danh sách tên để xem ngay mọi kiểu viết phổ biến: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, Title Case và hơn thế. Mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "paste": "Gõ hoặc dán văn bản. Mỗi dòng được đổi riêng, nên dán cả danh sách tên cũng được.",
+        "copy": "Bấm nút bên cạnh để copy kiểu bạn cần.",
+        "accents": "Các kiểu dùng cho code sẽ bỏ dấu (Việt → viet), nên kết quả dùng được ngay trong code và URL."
+      },
+      "faq": {
+        "accents": {
+          "q": "Chữ có dấu được xử lý thế nào?",
+          "a": "Các kiểu dùng cho code (camelCase, snake_case, kebab-case…) sẽ bỏ dấu, nên “Xin chào Việt Nam” thành xin-chao-viet-nam. Các kiểu văn bản như Title Case hay chữ thường thì giữ nguyên dấu."
+        },
+        "acronyms": {
+          "q": "Từ viết tắt được tách ra sao?",
+          "a": "Một chuỗi chữ hoa đứng trước một từ viết hoa chữ đầu sẽ được tách trước chữ cuối, nên XMLHttpRequest thành xml, http, request. Chữ số đi liền với từ đứng trước (v2Api thành v2, api)."
+        }
+      },
+      "ui": {
+        "input": "Văn bản",
+        "placeholder": "Gõ hoặc dán văn bản, ví dụ user profile id",
+        "output": "Mọi kiểu chữ",
+        "empty": "Mọi kiểu viết của văn bản sẽ hiện ở đây.",
+        "cases": {
+          "camel": "camelCase",
+          "pascal": "PascalCase",
+          "snake": "snake_case",
+          "constant": "CONSTANT_CASE",
+          "kebab": "kebab-case",
+          "dot": "dot.case",
+          "title": "Viết Hoa Mỗi Từ",
+          "sentence": "Viết hoa đầu câu",
+          "lower": "chữ thường",
+          "upper": "CHỮ HOA"
+        }
+      }
+    },
+    "url-encoder": {
+      "title": "URL Encode & phân tích URL",
+      "metaTitle": "URL encode, decode & phân tích URL online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Encode, decode URL và giá trị query, tách URL thành từng phần và tham số. Chạy ngay trên trình duyệt, không gửi dữ liệu lên server.",
+      "intro": "Percent-encode văn bản để đặt vào URL, decode một link đã mã hoá, và xem URL được tách thành protocol, host, path, tham số query và fragment. Mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "paste": "Dán văn bản hoặc URL vào ô Input.",
+        "mode": "Chọn Encode hoặc Decode, và trong Tuỳ chọn chọn đó là một giá trị (component) hay cả URL.",
+        "parts": "Nếu input hoặc kết quả decode là một URL, các phần của nó và tham số query đã decode sẽ hiện ở bên phải."
+      },
+      "faq": {
+        "scope": {
+          "q": "Nên chọn Component hay Full URL?",
+          "a": "Chọn Component cho một giá trị riêng lẻ như tham số query: nó escape cả / ? & = và #. Chọn Full URL khi cần làm sạch cả địa chỉ mà vẫn giữ các ký tự đó làm cú pháp URL."
+        },
+        "plus": {
+          "q": "Vì sao dấu + vẫn là dấu + khi decode?",
+          "a": "Decode tuân theo chuẩn URL, trong đó + là dấu cộng. Chỉ form HTML mới dùng + thay cho khoảng trắng; bảng tham số bên phải đọc query theo cách form gửi đi, nên ở đó + hiện thành khoảng trắng."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "encode": "Encode",
+        "decode": "Decode",
+        "scope": "Encode kiểu",
+        "component": "Component",
+        "fullUrl": "Full URL",
+        "input": "Input",
+        "encodePlaceholder": "Văn bản hoặc URL cần encode",
+        "decodePlaceholder": "Chuỗi đã encode, ví dụ c%C3%A0%20ph%C3%AA",
+        "encodeError": "Văn bản chứa ký tự Unicode bị hỏng nên không encode được",
+        "decodeError": "Chuỗi % bị sai: đây không phải percent-encoding hợp lệ",
+        "output": "Output",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+        "parts": "Các phần của URL",
+        "part": {
+          "protocol": "Protocol",
+          "username": "Username",
+          "password": "Password",
+          "hostname": "Host",
+          "port": "Port",
+          "pathname": "Path",
+          "hash": "Fragment"
+        },
+        "params": "{count} tham số query",
+        "key": "Key",
+        "value": "Giá trị",
+        "noUrl": "Dán một URL đầy đủ (có https://) để xem các phần của nó."
+      }
+    },
+    "html-entities": {
+      "title": "Encode HTML entities",
+      "metaTitle": "Encode, decode HTML entities online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Escape văn bản cho HTML hoặc decode HTML entity dạng tên và số, đủ 2.231 tên của HTML5. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Escape văn bản để đặt an toàn vào HTML, hoặc đổi các entity như &lt; &copy; &#7879; về lại ký tự. Phần decode biết mọi entity của HTML5 và xử lý đúng như trình duyệt.",
+      "howTo": {
+        "paste": "Dán văn bản hoặc HTML vào ô Input.",
+        "mode": "Chọn Encode hoặc Decode. Khi encode, chọn chỉ ký tự đặc biệt hay mọi ký tự ngoài ASCII trong phần Tuỳ chọn.",
+        "export": "Copy hoặc tải kết quả về."
+      },
+      "faq": {
+        "which": {
+          "q": "Ký tự nào bắt buộc phải escape trong HTML?",
+          "a": "Trong nội dung và thuộc tính, chỉ cần escape dấu &, dấu nhỏ hơn, dấu lớn hơn và hai loại dấu nháy là đủ khi trang dùng UTF-8. Escape mọi ký tự ngoài ASCII chỉ cần cho hệ thống không xử lý được UTF-8."
+        },
+        "xss": {
+          "q": "Escape có chống được XSS không?",
+          "a": "Escape là cách phòng thủ đúng cho văn bản đặt trong nội dung HTML và thuộc tính có dấu ngoặc kép. Nó không đủ trong JavaScript, URL hay CSS, vốn cần kiểu encode riêng."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "encode": "Encode",
+        "decode": "Decode",
+        "scope": "Escape",
+        "special": "Ký tự đặc biệt",
+        "all": "Mọi ký tự ngoài ASCII",
+        "input": "Input",
+        "encodePlaceholder": "Văn bản hoặc HTML cần escape",
+        "decodePlaceholder": "HTML có entity, ví dụ &lt;b&gt; &copy; 2025",
+        "output": "Output",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây"
+      }
+    },
+    "number-base": {
+      "title": "Đổi hệ cơ số",
+      "metaTitle": "Đổi số nhị phân, bát phân, thập phân, hex online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi số nguyên mọi độ lớn giữa nhị phân, bát phân, thập phân, hex và mọi hệ từ 2 đến 36. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Đổi số nguyên giữa nhị phân, bát phân, thập phân, thập lục phân và mọi hệ cơ số từ 2 đến 36. Số lớn cỡ nào cũng chính xác, vượt xa giới hạn 2^53 của JavaScript.",
+      "howTo": {
+        "from": "Chọn hệ cơ số của số bạn nhập.",
+        "type": "Gõ số vào. Có thể dùng tiền tố như 0x và dấu phân cách _.",
+        "read": "Xem kết quả ở mọi hệ, cộng thêm một hệ tuỳ chọn."
+      },
+      "faq": {
+        "big": {
+          "q": "Có giới hạn độ lớn không?",
+          "a": "Gần như không: số được xử lý bằng BigInt, nên giá trị 64 bit như 18446744073709551615 vẫn đổi chính xác."
+        },
+        "negative": {
+          "q": "Số âm hiển thị thế nào?",
+          "a": "Bằng dấu trừ ở mọi hệ (−ff), không dùng bù hai, vì bù hai còn phụ thuộc vào số bit."
+        }
+      },
+      "ui": {
+        "input": "Input",
+        "from": "Hệ gốc",
+        "bases": {
+          "2": "Nhị phân",
+          "8": "Bát phân",
+          "10": "Thập phân",
+          "16": "Hex"
+        },
+        "number": "Số",
+        "placeholders": {
+          "2": "1010 1010",
+          "8": "755",
+          "10": "255",
+          "16": "ff hoặc 0xFF"
+        },
+        "invalid": "Đây không phải số nguyên hợp lệ trong hệ {base}",
+        "customBase": "Hiện thêm hệ",
+        "output": "Ở mọi hệ",
+        "empty": "Gõ một số để đổi.",
+        "baseN": "Hệ {base}"
+      }
+    },
+    "px-rem": {
+      "title": "Đổi PX sang REM",
+      "metaTitle": "Đổi px sang rem online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi px sang rem và rem sang px với cỡ font gốc tuỳ chọn, kèm bảng các cỡ thường dùng. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Đổi pixel sang rem và ngược lại theo cỡ font gốc của bạn (mặc định 16px), kèm bảng các cỡ hay dùng để tra nhanh.",
+      "howTo": {
+        "type": "Gõ giá trị px hoặc rem, ô còn lại cập nhật ngay khi gõ.",
+        "base": "Đổi cỡ font gốc nếu thẻ html của bạn không dùng 16px.",
+        "table": "Tra bảng cho các cỡ dùng thường xuyên."
+      },
+      "faq": {
+        "why": {
+          "q": "Vì sao nên dùng rem thay cho px?",
+          "a": "rem co giãn theo cỡ font gốc, nên chữ và khoảng cách lớn lên khi người dùng tăng cỡ font mặc định của trình duyệt. Giá trị px cố định thì bỏ qua thiết lập đó."
+        },
+        "em": {
+          "q": "Còn em thì sao?",
+          "a": "em tính theo cỡ font của chính phần tử đó thay vì phần tử gốc. Nếu phần tử dùng cỡ gốc thì 1em bằng 1rem."
+        }
+      },
+      "ui": {
+        "convert": "Chuyển đổi",
+        "px": "Pixel (px)",
+        "rem": "rem",
+        "base": "Cỡ font gốc",
+        "hint": "1rem = {base}px",
+        "table": "Các cỡ thường dùng"
+      }
+    },
+    "chmod-calculator": {
+      "title": "Tính quyền chmod",
+      "metaTitle": "Tính chmod 755, rwxr-xr-x online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi quyền Unix sang dạng số (755) và dạng ký hiệu (rwxr-xr-x) và ngược lại, có cả setuid, setgid, sticky. Chạy ngay trên trình duyệt.",
+      "intro": "Tick quyền cho owner, group và others để có số chmod, hoặc gõ 755 hay rwxr-xr-x để xem ý nghĩa. Có cả các bit đặc biệt setuid, setgid và sticky.",
+      "howTo": {
+        "tick": "Tick quyền đọc, ghi, thực thi cho owner, group và others.",
+        "type": "Hoặc gõ quyền dạng số (644) hay dạng ký hiệu (rw-r--r--, dán từ ls -l cũng được).",
+        "copy": "Copy câu lệnh chmod đã viết sẵn."
+      },
+      "faq": {
+        "common": {
+          "q": "644 và 755 nghĩa là gì?",
+          "a": "644 cho owner đọc và ghi, mọi người khác chỉ đọc: thường dùng cho file. 755 thêm quyền thực thi cho tất cả: thường dùng cho thư mục và script."
+        },
+        "special": {
+          "q": "setuid, setgid và sticky là gì?",
+          "a": "setuid và setgid chạy chương trình với quyền của owner hoặc group của file (với thư mục, setgid khiến file mới thừa hưởng group của nó). Sticky bit trên thư mục như /tmp chỉ cho mỗi người xoá file của chính mình."
+        }
+      },
+      "ui": {
+        "permissions": "Quyền",
+        "perm": {
+          "read": "Đọc",
+          "write": "Ghi",
+          "execute": "Thực thi"
+        },
+        "who": {
+          "owner": "Owner",
+          "group": "Group",
+          "other": "Others"
+        },
+        "special": "Bit đặc biệt",
+        "specialBits": {
+          "setuid": "setuid",
+          "setgid": "setgid",
+          "sticky": "Sticky"
+        },
+        "result": "Kết quả",
+        "octal": "Dạng số",
+        "symbolic": "Dạng ký hiệu",
+        "command": "Câu lệnh",
+        "file": "file",
+        "lsOutput": "Như khi chạy ls -l"
+      }
+    },
+    "cidr-calculator": {
+      "title": "Tính CIDR",
+      "metaTitle": "Tính CIDR, subnet IPv4 & IPv6 online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tính địa chỉ mạng, broadcast, netmask, dải host và số địa chỉ của mọi khối CIDR IPv4 hoặc IPv6. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Nhập địa chỉ IPv4 hoặc IPv6 kèm prefix, như 10.0.0.0/16 hay 2001:db8::/48, để có địa chỉ mạng, mask, dải host và số địa chỉ.",
+      "howTo": {
+        "type": "Gõ địa chỉ kèm độ dài prefix, ví dụ 192.168.1.10/24.",
+        "read": "Xem địa chỉ mạng, broadcast (IPv4), các mask, host đầu và cuối, và số địa chỉ.",
+        "copy": "Bấm nút bên cạnh để copy từng giá trị."
+      },
+      "faq": {
+        "usable": {
+          "q": "Vì sao số host dùng được của IPv4 ít hơn 2?",
+          "a": "Địa chỉ đầu tiên là địa chỉ mạng, địa chỉ cuối là broadcast. Ngoại lệ là đường /31 (RFC 3021) và địa chỉ đơn /32; IPv6 thì không có broadcast."
+        },
+        "hostBits": {
+          "q": "Nếu địa chỉ của tôi có bit host thì sao?",
+          "a": "Không sao: 192.168.1.10/24 được hiểu là mạng 192.168.1.0/24 chứa nó."
+        }
+      },
+      "ui": {
+        "input": "Địa chỉ / prefix",
+        "hint": "IPv4 hoặc IPv6, ví dụ 10.0.0.0/16 hay 2001:db8::/48",
+        "invalid": "Không phải địa chỉ IPv4 hay IPv6 hợp lệ kèm prefix",
+        "result": "Subnet IPv{version}",
+        "resultEmpty": "Subnet",
+        "network": "Địa chỉ mạng",
+        "broadcast": "Broadcast",
+        "last": "Địa chỉ cuối",
+        "netmask": "Netmask",
+        "hostmask": "Wildcard (host mask)",
+        "firstHost": "Host đầu tiên",
+        "lastHost": "Host cuối cùng",
+        "total": "Số địa chỉ",
+        "usable": "Host dùng được",
+        "usableV6": "Địa chỉ dùng được",
+        "empty": "Nhập một khối CIDR để xem chi tiết."
+      }
+    },
+    "password-generator": {
+      "title": "Tạo mật khẩu",
+      "metaTitle": "Tạo mật khẩu mạnh ngẫu nhiên online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tạo mật khẩu ngẫu nhiên mạnh bằng bộ sinh số an toàn của trình duyệt, kèm độ mạnh (entropy). Mật khẩu tạo ngay trên máy, không gửi đi đâu.",
+      "intro": "Tạo mật khẩu ngẫu nhiên mạnh với độ dài và bộ ký tự bạn cần. Mật khẩu được sinh bằng bộ sinh số ngẫu nhiên an toàn về mật mã của trình duyệt và không rời khỏi trang này.",
+      "howTo": {
+        "options": "Chỉnh độ dài và số lượng mật khẩu trong phần Tuỳ chọn.",
+        "sets": "Chọn các bộ ký tự; mỗi bộ đã chọn sẽ xuất hiện ít nhất một lần.",
+        "copy": "Bấm Tạo mới để sinh mật khẩu khác, rồi copy hoặc tải về."
+      },
+      "faq": {
+        "random": {
+          "q": "Mật khẩu ngẫu nhiên đến mức nào?",
+          "a": "Mỗi ký tự được chọn bằng crypto.getRandomValues và rejection sampling, nên mọi ký tự trong bộ có xác suất đúng bằng nhau. Không bao giờ dùng Math.random()."
+        },
+        "entropy": {
+          "q": "Thanh độ mạnh nghĩa là gì?",
+          "a": "Nó cho biết entropy: độ dài × log2(số ký tự có thể chọn). Từ 80 bit trở lên là rất mạnh; 16 ký tự từ cả bốn bộ cho khoảng 104 bit."
+        },
+        "similar": {
+          "q": "Sao lại bỏ các ký tự dễ nhầm?",
+          "a": "I, l, 1, O, 0 và o rất dễ nhầm khi đọc mật khẩu cho người khác hoặc gõ lại từ giấy. Bỏ chúng chỉ giảm chút entropy, tăng độ dài một chút là bù lại."
+        }
+      },
+      "ui": {
+        "generate": "Tạo mới",
+        "length": "Độ dài",
+        "count": "Số lượng",
+        "characters": "Bộ ký tự",
+        "sets": {
+          "lower": "Chữ thường (a–z)",
+          "upper": "Chữ hoa (A–Z)",
+          "digits": "Chữ số (0–9)",
+          "symbols": "Ký hiệu (!@#…)"
+        },
+        "excludeSimilar": "Bỏ ký tự dễ nhầm (I l 1 O 0 o)",
+        "output": "Mật khẩu",
+        "strength": {
+          "weak": "Yếu",
+          "fair": "Tạm được",
+          "strong": "Mạnh",
+          "veryStrong": "Rất mạnh"
+        },
+        "bits": "{bits} bit",
+        "noSets": "Hãy chọn ít nhất một bộ ký tự."
+      }
+    },
+    "color-converter": {
+      "title": "Đổi màu & kiểm tra tương phản",
+      "metaTitle": "Đổi màu HEX, RGB, HSL, OKLCH & kiểm tra tương phản WCAG online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi màu giữa HEX, RGB, HSL, OKLCH và kiểm tra độ tương phản WCAG AA/AAA giữa hai màu. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Đổi mọi màu CSS giữa HEX, RGB, HSL và OKLCH, và kiểm tra một cặp màu chữ và màu nền có đạt độ tương phản WCAG AA, AAA hay không.",
+      "howTo": {
+        "color": "Gõ hoặc chọn màu: hex, rgb(), hsl(), oklch() hay tên màu CSS như rebeccapurple.",
+        "copy": "Copy màu ở định dạng bạn cần.",
+        "contrast": "Chọn màu chữ và màu nền để xem tỷ lệ tương phản và kết quả WCAG."
+      },
+      "faq": {
+        "levels": {
+          "q": "AA và AAA nghĩa là gì?",
+          "a": "WCAG yêu cầu tương phản tối thiểu 4,5:1 cho chữ thường (mức AA) và 7:1 cho mức AAA khắt khe hơn. Chữ lớn (24px, hoặc 19px đậm) cần 3:1 cho AA và 4,5:1 cho AAA."
+        },
+        "oklch": {
+          "q": "Sao lại có OKLCH?",
+          "a": "OKLCH đồng đều theo cảm nhận: đổi độ sáng hay sắc độ thì màu thay đổi đúng như mắt mong đợi, nên dựng bảng màu và các biến thể dễ đọc dễ hơn nhiều."
+        },
+        "alpha": {
+          "q": "Màu chữ trong suốt được tính thế nào?",
+          "a": "Màu chữ được trộn lên màu nền trước, rồi mới đo tương phản, đúng với những gì người dùng thực sự nhìn thấy."
+        }
+      },
+      "ui": {
+        "convert": "Chuyển đổi",
+        "color": "Màu",
+        "invalid": "Công cụ không đọc được màu này",
+        "contrast": "Tương phản",
+        "foreground": "Màu chữ",
+        "background": "Màu nền",
+        "swap": "Đảo màu",
+        "sampleLarge": "Chữ lớn mẫu",
+        "sampleNormal": "Chữ thường: Tôi yêu tiếng nước tôi từ khi mới ra đời.",
+        "levels": {
+          "aa": "AA chữ thường",
+          "aaLarge": "AA chữ lớn",
+          "aaa": "AAA chữ thường",
+          "aaaLarge": "AAA chữ lớn"
+        },
+        "pass": "Đạt",
+        "fail": "Chưa đạt",
+        "pick": "{name}: bảng chọn màu"
+      }
+    },
+    "hmac-generator": {
+      "title": "Tạo HMAC",
+      "metaTitle": "Tạo HMAC SHA-256, SHA-512 online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tính HMAC-SHA256, SHA-384, SHA-512, SHA-1 bằng Web Crypto, key dạng text, hex hoặc Base64. Message và key không bao giờ rời khỏi trình duyệt.",
+      "intro": "Ký một message bằng secret key với HMAC-SHA256, SHA-384, SHA-512 hoặc SHA-1, ví dụ để kiểm tra chữ ký webhook. Công cụ dùng Web Crypto API của trình duyệt; key không bao giờ rời khỏi trang.",
+      "howTo": {
+        "message": "Dán message vào, ví dụ body gốc của request webhook.",
+        "key": "Nhập secret key và chọn key ở dạng text, hex hay Base64.",
+        "compare": "So kết quả hex hoặc Base64 với chữ ký bạn nhận được."
+      },
+      "faq": {
+        "webhook": {
+          "q": "Chữ ký webhook không khớp, tại sao?",
+          "a": "Message phải giống từng byte với body gốc đã được ký: JSON bị format lại, thiếu dấu xuống dòng cuối hay key encode khác kiểu đều làm kết quả thay đổi."
+        },
+        "sha1": {
+          "q": "HMAC-SHA1 còn an toàn không?",
+          "a": "HMAC-SHA1 không bị phá như SHA-1 thông thường, nhưng với hệ thống mới hãy dùng HMAC-SHA256. SHA-1 có ở đây để kiểm tra các API cũ."
+        }
+      },
+      "ui": {
+        "algorithm": "Thuật toán",
+        "message": "Message",
+        "messagePlaceholder": "Message cần ký",
+        "key": "Secret key",
+        "keyFormat": "Key dạng",
+        "formats": {
+          "text": "Text",
+          "hex": "Hex",
+          "base64": "Base64"
+        },
+        "keyPlaceholder": "Secret key",
+        "invalidKey": {
+          "text": "Hãy nhập key",
+          "hex": "Hex không hợp lệ (số ký tự 0–9 a–f phải chẵn)",
+          "base64": "Base64 không hợp lệ"
+        },
+        "keyNote": "Chỉ dùng trong tab này, không bao giờ được lưu hay gửi đi.",
+        "hex": "HMAC-{algorithm} (hex)",
+        "base64": "HMAC-{algorithm} (Base64)",
+        "empty": "Nhập key để tính HMAC."
+      }
+    },
+    "aes-encryption": {
+      "title": "Mã hoá AES",
+      "metaTitle": "Mã hoá, giải mã AES-256 bằng mật khẩu online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Mã hoá và giải mã văn bản bằng AES-256-GCM với mật khẩu, dùng Web Crypto ngay trên trình duyệt. Văn bản và mật khẩu không gửi lên server.",
+      "intro": "Mã hoá văn bản bằng mật khẩu với AES-256-GCM và giải mã lại khi cần. Key được tạo từ mật khẩu bằng PBKDF2 (600.000 vòng), và mọi thứ chạy ngay trên trình duyệt của bạn.",
+      "howTo": {
+        "mode": "Chọn Mã hoá hoặc Giải mã.",
+        "input": "Nhập văn bản (hoặc chuỗi Base64 đã mã hoá) và mật khẩu.",
+        "run": "Bấm nút rồi copy kết quả. Giải mã cần đúng mật khẩu đã dùng."
+      },
+      "faq": {
+        "format": {
+          "q": "Kết quả cụ thể gồm những gì?",
+          "a": "Base64 của 16 byte salt, 12 byte IV và ciphertext AES-256-GCM kèm tag 16 byte. Key là PBKDF2-HMAC-SHA256 của mật khẩu và salt với 600.000 vòng, nên công cụ nào làm theo cấu trúc này cũng giải mã được."
+        },
+        "wrong": {
+          "q": "Nếu quên mật khẩu thì sao?",
+          "a": "Không khôi phục được: không có cửa sau, cũng không có bản sao nào. GCM còn phát hiện mật khẩu sai hay dữ liệu bị sửa thay vì trả về chuỗi rác."
+        },
+        "slow": {
+          "q": "Sao phải chờ một chút?",
+          "a": "Bước tạo key được cố ý làm chậm (600.000 vòng) để việc dò mật khẩu bằng brute force cũng chậm theo."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "encrypt": "Mã hoá",
+        "decrypt": "Giải mã",
+        "working": "Đang xử lý…",
+        "plaintext": "Văn bản gốc",
+        "ciphertext": "Đã mã hoá (Base64)",
+        "plainPlaceholder": "Văn bản cần mã hoá",
+        "cipherPlaceholder": "Chuỗi Base64 do công cụ này tạo ra",
+        "password": "Mật khẩu",
+        "passwordNote": "Chỉ dùng trong tab này, không bao giờ được lưu hay gửi đi. Nên dùng một cụm mật khẩu dài.",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+        "decryptFailed": "Sai mật khẩu, hoặc dữ liệu đã bị sửa hay không phải do công cụ này tạo ra",
+        "format": "AES-256-GCM · PBKDF2-SHA256, 600.000 vòng · salt 16 B + IV 12 B + ciphertext + tag 16 B, Base64"
+      }
+    },
+    "text-diff": {
+      "title": "So sánh văn bản",
+      "metaTitle": "So sánh hai đoạn văn bản (text diff) online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "So sánh hai đoạn văn bản theo dòng hoặc theo từ, xuất file patch dạng unified diff. Chạy ngay trên trình duyệt, không gửi gì lên server.",
+      "intro": "Dán hai phiên bản của một đoạn văn bản, file cấu hình hay đoạn code để thấy chính xác chỗ nào thay đổi, theo dòng hoặc theo từ. Có thể copy kết quả dạng unified diff chuẩn. Mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "paste": "Dán bản gốc vào bên trái và bản đã sửa vào bên phải.",
+        "mode": "Chọn Theo dòng cho code và cấu hình, hoặc Theo từ cho văn bản thường.",
+        "export": "Copy hoặc tải thay đổi về dạng unified diff (.patch)."
+      },
+      "faq": {
+        "patch": {
+          "q": "Có áp dụng patch bằng git được không?",
+          "a": "Được. Patch là unified diff chuẩn; lưu lại rồi chạy git apply changes.patch hoặc patch -p0 trong thư mục chứa file gốc (đổi tên original.txt trong phần header nếu cần)."
+        },
+        "whitespace": {
+          "q": "“Bỏ qua khoảng trắng đầu và cuối dòng” nghĩa là gì?",
+          "a": "Các dòng chỉ khác nhau ở thụt lề hoặc dấu cách cuối dòng được coi là không đổi. Khoảng trắng ở giữa dòng thì vẫn được tính."
+        }
+      },
+      "ui": {
+        "mode": "So sánh",
+        "lines": "Theo dòng",
+        "words": "Theo từ",
+        "ignoreWhitespace": "Bỏ qua khoảng trắng đầu và cuối dòng",
+        "original": "Bản gốc",
+        "changed": "Bản đã sửa",
+        "result": "Khác biệt",
+        "empty": "Dán hai đoạn văn bản để so sánh.",
+        "sample": "Dùng dữ liệu mẫu",
+        "identical": "Hai đoạn văn bản giống hệt nhau."
+      }
+    },
+    "regex-tester": {
+      "title": "Test regex",
+      "metaTitle": "Test regex JavaScript online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Test biểu thức chính quy JavaScript với highlight trực tiếp, capture group và xem trước kết quả replace. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Viết regex JavaScript và xem mọi kết quả khớp được highlight ngay khi gõ, kèm capture group và xem trước kết quả replace. Regex chạy trong một worker riêng, nên pattern chạy mãi cũng không làm treo trang.",
+      "howTo": {
+        "pattern": "Gõ pattern, không cần dấu gạch chéo hai đầu, và chọn flag trong phần Tuỳ chọn.",
+        "text": "Dán văn bản cần tìm; các đoạn khớp được highlight và liệt kê kèm group.",
+        "replace": "Nếu muốn, gõ chuỗi thay thế, dùng $1, $2… cho các group, để xem trước kết quả."
+      },
+      "faq": {
+        "engine": {
+          "q": "Đây là regex kiểu nào?",
+          "a": "Engine JavaScript (ECMAScript) của chính trình duyệt, nên kết quả đúng y như code JS của bạn. Cú pháp riêng của PCRE hay Python, như possessive quantifier, có thể không chạy."
+        },
+        "timeout": {
+          "q": "Vì sao báo pattern chạy quá lâu?",
+          "a": "Một số pattern như (a+)+$ bị backtrack theo cấp số nhân với vài kiểu input. Trình test dừng worker sau 1,5 giây; ở production, pattern đó cũng có thể làm treo ứng dụng của bạn (ReDoS)."
+        }
+      },
+      "ui": {
+        "flags": "Flag",
+        "flag": {
+          "g": "global: tìm mọi kết quả",
+          "i": "không phân biệt hoa thường",
+          "m": "multiline: ^ và $ khớp ở đầu, cuối mỗi dòng",
+          "s": "dotAll: dấu . khớp cả xuống dòng",
+          "u": "unicode",
+          "y": "sticky"
+        },
+        "pattern": "Pattern",
+        "hint": "Gõ pattern để bắt đầu.",
+        "timeout": "Đã dừng sau 1,5 giây: pattern này backtrack quá nhiều với văn bản này",
+        "invalid": "Pattern không hợp lệ: {message}",
+        "matches": "{count, plural, =0 {Không có kết quả khớp} other {# kết quả khớp}}",
+        "truncated": "chỉ hiện 1.000 kết quả đầu",
+        "text": "Văn bản test",
+        "textPlaceholder": "Văn bản cần tìm",
+        "replacement": "Thay bằng (tuỳ chọn)",
+        "result": "Kết quả khớp",
+        "replaced": "Sau khi thay",
+        "empty": "Các đoạn khớp sẽ được highlight ở đây."
+      }
+    },
+    "cron-parser": {
+      "title": "Đọc biểu thức cron",
+      "metaTitle": "Đọc biểu thức cron & xem lịch chạy tiếp theo online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Giải thích biểu thức cron bằng lời và liệt kê các lần chạy tiếp theo theo múi giờ của bạn hoặc UTC. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Dán một lịch cron để đọc ý nghĩa bằng lời và xem khi nào nó chạy tiếp, theo múi giờ của bạn hoặc UTC. Hỗ trợ crontab chuẩn 5 trường với tên tháng, tên thứ, khoảng, bước nhảy và các macro như @daily.",
+      "howTo": {
+        "type": "Gõ hoặc dán biểu thức cron, hoặc bắt đầu từ một mẫu có sẵn.",
+        "read": "Đọc phần mô tả và giá trị của từng trường.",
+        "next": "Xem 10 lần chạy tiếp theo, theo giờ địa phương hoặc UTC."
+      },
+      "faq": {
+        "fields": {
+          "q": "Năm trường gồm những gì?",
+          "a": "Phút (0–59), giờ (0–23), ngày trong tháng (1–31), tháng (1–12 hoặc JAN–DEC) và thứ trong tuần (0–7 hoặc SUN–SAT, cả 0 và 7 đều là Chủ nhật)."
+        },
+        "dayOr": {
+          "q": "Vì sao “0 0 13 * FRI” không chỉ chạy vào thứ Sáu ngày 13?",
+          "a": "Trong cron chuẩn, khi đặt cả ngày trong tháng lẫn thứ trong tuần, thời điểm khớp nếu một trong hai khớp. Vì vậy lịch này chạy vào mọi ngày 13 và mọi thứ Sáu."
+        },
+        "seconds": {
+          "q": "Có hỗ trợ giây hay năm không?",
+          "a": "Không. Công cụ theo crontab chuẩn 5 trường mà Linux, Kubernetes CronJob và GitHub Actions dùng. Biểu thức 6 hay 7 trường kiểu Quartz sẽ bị báo không hợp lệ."
+        }
+      },
+      "ui": {
+        "expression": "Biểu thức cron",
+        "errors": {
+          "fields": "Biểu thức cron cần đúng 5 trường: phút giờ ngày tháng thứ",
+          "minute": "Trường phút không hợp lệ (0–59)",
+          "hour": "Trường giờ không hợp lệ (0–23)",
+          "day": "Trường ngày trong tháng không hợp lệ (1–31)",
+          "month": "Trường tháng không hợp lệ (1–12 hoặc JAN–DEC)",
+          "weekday": "Trường thứ trong tuần không hợp lệ (0–7 hoặc SUN–SAT)"
+        },
+        "fields": "Các trường",
+        "field": {
+          "minute": "Phút",
+          "hour": "Giờ",
+          "day": "Ngày trong tháng",
+          "month": "Tháng",
+          "weekday": "Thứ trong tuần"
+        },
+        "next": "Các lần chạy tiếp theo",
+        "timeZone": "Múi giờ",
+        "local": "Địa phương",
+        "never": "Lịch này không chạy lần nào trong 5 năm tới.",
+        "empty": "Sửa biểu thức để xem các lần chạy tiếp theo."
+      }
+    },
+    "curl-converter": {
+      "title": "Đổi cURL sang fetch / axios",
+      "metaTitle": "Đổi lệnh cURL sang fetch, axios online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi lệnh cURL, ví dụ từ “Copy as cURL” của DevTools, sang code fetch hoặc axios. Chạy ngay trên trình duyệt; token của bạn không bao giờ bị gửi đi.",
+      "intro": "Dán một lệnh cURL, ví dụ từ “Copy as cURL” trong DevTools, để có request tương ứng bằng code fetch hoặc axios. Header, body JSON, form data và basic auth được chuyển đổi ngay trên máy, nên token của bạn không rời khỏi thiết bị.",
+      "howTo": {
+        "paste": "Dán lệnh curl. Lệnh xuống dòng bằng dấu gạch ngược và chuỗi $'…' từ “Copy as cURL (bash)” của Chrome đều đọc được.",
+        "target": "Chọn fetch hoặc axios.",
+        "copy": "Copy code. Các flag không ảnh hưởng tới request sẽ được bỏ qua, flag lạ được liệt kê ra."
+      },
+      "faq": {
+        "supported": {
+          "q": "Hỗ trợ những option nào của curl?",
+          "a": "-X, -H, -d và các biến thể --data, --data-urlencode, --json, -F, -u, -A, -e, -b, -G, -I và --url. Các option như -s, -L, -k, --compressed không làm thay đổi request nên được bỏ qua."
+        },
+        "cookies": {
+          "q": "Header Cookie có chạy trên trình duyệt không?",
+          "a": "Trình duyệt không cho fetch tự đặt header Cookie; code đó chạy được trên Node.js. Trên trình duyệt, cookie của trang đích được gửi tự động khi bạn dùng credentials: \"include\"."
+        }
+      },
+      "ui": {
+        "target": "Output",
+        "input": "Lệnh cURL",
+        "placeholder": "Dán lệnh curl vào đây",
+        "sample": "Dùng lệnh mẫu",
+        "errors": {
+          "quote": "Có dấu nháy chưa được đóng",
+          "notCurl": "Lệnh phải bắt đầu bằng curl",
+          "noUrl": "Không tìm thấy URL trong lệnh"
+        },
+        "outputPlaceholder": "Code JavaScript sẽ hiện ở đây",
+        "ignored": "Không chuyển đổi:"
+      }
+    },
+    "box-shadow-generator": {
+      "title": "Tạo box-shadow",
+      "metaTitle": "Tạo CSS box-shadow online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Thiết kế CSS box-shadow với xem trước trực tiếp: offset, blur, spread, màu, độ mờ, inset và nhiều lớp. Chạy ngay trên trình duyệt, không tải lên server.",
+      "intro": "Tạo CSS box-shadow bằng thanh trượt và xem trước trực tiếp. Chồng nhiều lớp để có bóng đổ mềm và tự nhiên, rồi copy CSS.",
+      "howTo": {
+        "adjust": "Kéo các thanh trượt offset, blur, spread, độ mờ và chọn màu.",
+        "layers": "Thêm lớp để bóng có chiều sâu hơn; chuyển giữa các lớp bằng các nút lớp.",
+        "copy": "Copy dòng khai báo box-shadow."
+      },
+      "faq": {
+        "layers": {
+          "q": "Sao nên dùng nhiều hơn một lớp?",
+          "a": "Bóng đổ thật thường sắc nét ở gần vật và mềm dần khi ra xa. Kết hợp một lớp nhỏ, đậm với một lớp lớn, nhạt trông tự nhiên hơn hẳn một lớp blur duy nhất."
+        },
+        "spread": {
+          "q": "Spread âm có tác dụng gì?",
+          "a": "Nó thu nhỏ bóng trước khi làm mờ, nên bóng nằm gọn bên dưới phần tử thay vì lộ ra ở mọi phía. Đây là mẹo đằng sau hầu hết các kiểu bóng “elevation”."
+        }
+      },
+      "ui": {
+        "layers": "Các lớp",
+        "layer": "Lớp {n}",
+        "addLayer": "Thêm lớp",
+        "removeLayer": "Xoá lớp",
+        "x": "Lệch ngang",
+        "y": "Lệch dọc",
+        "blur": "Độ nhoè (blur)",
+        "spread": "Độ lan (spread)",
+        "opacity": "Độ đậm",
+        "color": "Màu",
+        "inset": "Bóng trong (inset)",
+        "preview": "Xem trước"
+      }
+    },
+    "gradient-generator": {
+      "title": "Tạo CSS gradient",
+      "metaTitle": "Tạo CSS gradient linear, radial, conic online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tạo CSS gradient dạng linear, radial và conic với tối đa 6 điểm màu và xem trước trực tiếp. Chạy ngay trên trình duyệt, không gửi lên server.",
+      "intro": "Tạo CSS gradient dạng linear, radial và conic với xem trước trực tiếp, chọn màu và vị trí cho tối đa sáu điểm màu, rồi copy CSS.",
+      "howTo": {
+        "type": "Chọn linear, radial hoặc conic và chỉnh góc.",
+        "stops": "Chọn màu và vị trí cho từng điểm màu; thêm hoặc bớt điểm.",
+        "copy": "Copy dòng khai báo background-image."
+      },
+      "faq": {
+        "muddy": {
+          "q": "Sao gradient bị xỉn màu ở giữa?",
+          "a": "Trộn hai màu đậm trong không gian sRGB sẽ đi qua các tông xám hơn. Thêm một điểm màu tươi ở giữa, hoặc chọn hai màu có sắc độ gần nhau hơn."
+        },
+        "support": {
+          "q": "Mọi trình duyệt đều hỗ trợ conic gradient chứ?",
+          "a": "Đúng vậy, mọi trình duyệt hiện nay đều hỗ trợ linear, radial và conic gradient mà không cần prefix."
+        }
+      },
+      "ui": {
+        "settings": "Thiết lập",
+        "type": "Kiểu",
+        "types": {
+          "linear": "Linear",
+          "radial": "Radial",
+          "conic": "Conic"
+        },
+        "angle": "Góc",
+        "stops": "Các điểm màu",
+        "stopColor": "Màu của điểm {n}",
+        "stop": "Vị trí điểm {n}",
+        "removeStop": "Xoá điểm {n}",
+        "addStop": "Thêm điểm màu",
+        "preview": "Xem trước"
+      }
+    },
+    "cubic-bezier": {
+      "title": "Chỉnh cubic-bezier",
+      "metaTitle": "Chỉnh đường cong easing CSS cubic-bezier online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Kéo để tạo đường cong easing CSS cubic-bezier, so sánh với linear và copy timing function. Chạy ngay trên trình duyệt, không tải gì lên.",
+      "intro": "Kéo hai tay nắm để tạo đường cong easing, so sánh với chuyển động linear, rồi copy hàm cubic-bezier() cho transition và animation CSS của bạn.",
+      "howTo": {
+        "drag": "Kéo tay nắm, gõ giá trị chính xác, hoặc bắt đầu từ một mẫu.",
+        "play": "Bấm Chạy để so sánh chuyển động với linear.",
+        "copy": "Copy giá trị cubic-bezier() hoặc cả dòng transition."
+      },
+      "faq": {
+        "overshoot": {
+          "q": "Sao y có thể nhỏ hơn 0 hoặc lớn hơn 1?",
+          "a": "y là tiến độ của animation. Vượt quá 1 nghĩa là đi quá giá trị cuối rồi quay lại, tạo hiệu ứng “back” hay nảy. x là thời gian nên phải nằm trong khoảng 0 đến 1."
+        },
+        "keywords": {
+          "q": "ease và ease-in-out khác nhau thế nào?",
+          "a": "ease là cubic-bezier(0.25, 0.1, 0.25, 1): bắt đầu nhanh và dừng chậm, kéo dài. ease-in-out (0.42, 0, 0.58, 1) thì đối xứng, chậm ở cả hai đầu."
+        }
+      },
+      "ui": {
+        "curve": "Đường cong",
+        "preview": "Xem trước",
+        "play": "Chạy",
+        "yourCurve": "Đường cong của bạn",
+        "linear": "linear"
+      }
+    },
+    "json-converter": {
+      "title": "Đổi JSON ↔ YAML, XML, CSV, TOML",
+      "metaTitle": "Đổi JSON sang YAML, XML, CSV, TOML và ngược lại online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Chuyển đổi qua lại giữa JSON, YAML, XML, CSV và TOML. Chạy ngay trên trình duyệt; dữ liệu và file cấu hình không bao giờ bị gửi lên server.",
+      "intro": "Chuyển dữ liệu qua lại giữa JSON, YAML, XML, CSV và TOML theo mọi chiều: file cấu hình, response API, bảng tính xuất ra CSV. Parser của mỗi định dạng chỉ được tải khi bạn chọn, và mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "formats": "Chọn định dạng bạn có và định dạng bạn cần.",
+        "paste": "Dán dữ liệu vào bên trái, bản đã chuyển đổi hiện ở bên phải.",
+        "export": "Copy hoặc tải kết quả về. Nút đảo chiều giúp chuyển ngược lại."
+      },
+      "faq": {
+        "xml": {
+          "q": "Thuộc tính và thẻ lặp lại trong XML được xử lý thế nào?",
+          "a": "Thuộc tính thành các key bắt đầu bằng @_ (id=\"1\" thành \"@_id\": \"1\"), thẻ lặp lại thành mảng, nên chuyển ngược lại vẫn ra đúng XML ban đầu. Giá trị thuộc tính được giữ ở dạng chuỗi."
+        },
+        "csv": {
+          "q": "Dữ liệu lồng nhau trong CSV thì sao?",
+          "a": "CSV là dạng bảng phẳng: mỗi object là một dòng, mỗi key là một cột. Object và mảng lồng bên trong được ghi vào ô dưới dạng JSON. Khi đọc CSV, số và true/false được đổi thành giá trị thật."
+        },
+        "toml": {
+          "q": "Sao có JSON không đổi được sang TOML?",
+          "a": "Tài liệu TOML phải là một bảng (object) ở cấp ngoài cùng, nên mảng JSON hay một giá trị đơn không viết thành TOML được. Hãy bọc nó vào một object trước."
+        }
+      },
+      "ui": {
+        "from": "Từ",
+        "to": "Sang",
+        "swap": "Đảo định dạng",
+        "placeholder": "Dán {format} vào đây",
+        "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+        "errors": {
+          "parse": "Đây không phải {format} hợp lệ:",
+          "csvShape": "CSV cần một danh sách object (các dòng) hoặc một object",
+          "tomlShape": "TOML cần một object ở cấp ngoài cùng"
+        }
+      }
+    },
+    "json-to-types": {
+      "title": "JSON sang TypeScript & Zod",
+      "metaTitle": "Tạo TypeScript interface & Zod schema từ JSON online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tạo TypeScript interface hoặc Zod schema từ một mẫu JSON, tự nhận ra field optional từ mảng. Dữ liệu không bao giờ rời khỏi trình duyệt.",
+      "intro": "Dán một mẫu JSON, ví dụ response của API, để có TypeScript interface hoặc Zod schema tương ứng. Key chỉ có ở một số phần tử của mảng sẽ thành optional, giá trị lẫn kiểu sẽ thành union.",
+      "howTo": {
+        "paste": "Dán một mẫu JSON, tốt nhất là mảng có vài phần tử.",
+        "target": "Chọn TypeScript hoặc Zod, và tên kiểu gốc trong phần Tuỳ chọn.",
+        "copy": "Copy hoặc tải code về và xem lại: một mẫu dữ liệu không thể thể hiện hết mọi trường hợp."
+      },
+      "faq": {
+        "optional": {
+          "q": "Field optional được nhận ra thế nào?",
+          "a": "Mọi phần tử trong mảng được gộp lại: key có ở một số object nhưng thiếu ở object khác sẽ thành optional (key?: type, hoặc .optional() trong Zod)."
+        },
+        "limits": {
+          "q": "Có gì không suy ra được?",
+          "a": "Chỉ suy ra được những gì mẫu thể hiện: giá trị luôn là null sẽ có kiểu null, mảng rỗng là unknown[]. Ngày tháng và enum vẫn là string; hãy sửa lại kết quả ở những chỗ bạn biết rõ hơn."
+        }
+      },
+      "ui": {
+        "target": "Output",
+        "rootName": "Tên kiểu gốc",
+        "placeholder": "Dán một mẫu JSON, ví dụ response của API",
+        "invalid": "JSON không hợp lệ:",
+        "outputPlaceholder": "Kiểu được tạo sẽ hiện ở đây"
+      }
+    },
+    "sql-formatter": {
+      "title": "Format SQL",
+      "metaTitle": "Format SQL cho PostgreSQL, MySQL… online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Format câu SQL cho PostgreSQL, MySQL, SQLite, SQL Server và BigQuery, tuỳ chỉnh kiểu chữ keyword và thụt lề. Câu truy vấn không rời khỏi trình duyệt.",
+      "intro": "Biến câu SQL viết một dòng hay lộn xộn thành SQL dễ đọc, thụt lề đồng nhất. Hỗ trợ SQL chuẩn, PostgreSQL, MySQL, SQLite, SQL Server và BigQuery, không có gì được tải lên.",
+      "howTo": {
+        "paste": "Dán một hoặc nhiều câu lệnh SQL.",
+        "options": "Chọn dialect, kiểu chữ keyword và thụt lề trong phần Tuỳ chọn.",
+        "export": "Copy SQL đã format hoặc tải về dạng file .sql."
+      },
+      "faq": {
+        "dialect": {
+          "q": "Vì sao cần chọn dialect?",
+          "a": "Mỗi database có cú pháp riêng, như ép kiểu :: và tham số $1 của PostgreSQL, dấu backtick của MySQL hay ngoặc vuông của T-SQL. Chọn đúng dialect giúp công cụ đọc đúng các cú pháp đó."
+        },
+        "change": {
+          "q": "Format có làm thay đổi kết quả câu truy vấn không?",
+          "a": "Không: chỉ khoảng trắng, xuống dòng và kiểu chữ của keyword thay đổi. Chuỗi, tên định danh và comment được giữ nguyên."
+        }
+      },
+      "ui": {
+        "dialect": "Dialect",
+        "standardSql": "SQL chuẩn",
+        "keywords": "Keyword",
+        "case": {
+          "upper": "VIẾT HOA",
+          "lower": "viết thường",
+          "preserve": "Giữ nguyên"
+        },
+        "indent": "Thụt lề",
+        "placeholder": "Dán SQL, ví dụ select * from users where id = 1",
+        "invalid": "Không đọc được câu SQL này:",
+        "output": "Đã format",
+        "outputPlaceholder": "SQL đã format sẽ hiện ở đây"
+      }
+    },
+    "code-formatter": {
+      "title": "Format HTML & JavaScript",
+      "metaTitle": "Format HTML, JavaScript, TypeScript bằng Prettier online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Format HTML, JavaScript và TypeScript bằng Prettier, tuỳ chỉnh độ rộng dòng, thụt lề, dấu chấm phẩy, dấu nháy. Code format ngay trên máy, không tải lên.",
+      "intro": "Format HTML, JavaScript và TypeScript bằng Prettier, công cụ mà hầu hết các team đang dùng. Script và style inline trong HTML cũng được format. Prettier được tải vào worker nền ở lần dùng đầu; code của bạn chỉ nằm trên trình duyệt.",
+      "howTo": {
+        "language": "Chọn HTML, JavaScript hoặc TypeScript.",
+        "paste": "Dán code vào, bản đã format hiện ở bên phải.",
+        "options": "Chỉnh cho khớp cấu hình Prettier của dự án trong phần Tuỳ chọn, rồi copy hoặc tải về."
+      },
+      "faq": {
+        "same": {
+          "q": "Kết quả có giống khi chạy Prettier trong dự án không?",
+          "a": "Có, nếu cùng tuỳ chọn: đây chính là Prettier 3. Công cụ không đọc file .prettierrc, nên hãy chỉnh độ rộng dòng, thụt lề, dấu chấm phẩy và dấu nháy ở đây."
+        },
+        "jsx": {
+          "q": "Có hỗ trợ JSX không?",
+          "a": "Có. Cả JavaScript và TypeScript đều đọc được cú pháp JSX (như trong file .jsx và .tsx)."
+        }
+      },
+      "ui": {
+        "language": "Ngôn ngữ",
+        "printWidth": "Độ rộng dòng",
+        "indent": "Thụt lề",
+        "semi": "Dấu chấm phẩy",
+        "singleQuote": "Dấu nháy đơn",
+        "placeholder": "Dán code {language} vào đây",
+        "syntaxError": "Lỗi cú pháp",
+        "errorAt": "Dòng {line}, cột {column}",
+        "output": "Đã format",
+        "loading": "Đang tải Prettier (chỉ lần đầu)…",
+        "outputPlaceholder": "Code đã format sẽ hiện ở đây"
+      }
+    },
+    "markdown-preview": {
+      "title": "Xem trước Markdown",
+      "metaTitle": "Xem trước Markdown & đổi Markdown sang HTML online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Xem trước Markdown kiểu GitHub ngay khi gõ và xuất ra HTML sạch, đã lọc an toàn. Chạy trên trình duyệt; ghi chú và tài liệu không gửi lên server.",
+      "intro": "Viết hoặc dán Markdown để xem kết quả hiển thị ngay khi gõ, có bảng, task list và code block kiểu GitHub. Có thể xuất kết quả ra HTML sạch. Mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "write": "Viết hoặc dán Markdown vào bên trái.",
+        "preview": "Xem kết quả hiển thị trực tiếp ở bên phải.",
+        "export": "Copy HTML hoặc tải về thành một file .html hoàn chỉnh."
+      },
+      "faq": {
+        "images": {
+          "q": "Sao ảnh từ trang web khác không hiện?",
+          "a": "Tải ảnh từ server khác sẽ cho server đó biết địa chỉ IP của bạn và thời điểm bạn mở tài liệu. Kinbench không tạo những request như vậy, nên ảnh từ xa được thay bằng phần mô tả của nó."
+        },
+        "safe": {
+          "q": "HTML trong Markdown có an toàn không?",
+          "a": "Kết quả được lọc bằng DOMPurify: script, các event handler như onclick và style inline đều bị bỏ trước khi hiển thị hay xuất file."
+        }
+      },
+      "ui": {
+        "placeholder": "Viết Markdown vào đây",
+        "sample": "Dùng dữ liệu mẫu",
+        "preview": "Xem trước",
+        "empty": "Markdown sau khi render sẽ hiện ở đây.",
+        "remoteImage": "ảnh từ xa không được tải"
+      }
+    },
+    "svg-optimizer": {
+      "title": "Tối ưu SVG",
+      "metaTitle": "Tối ưu, nén file SVG (SVGO) online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Giảm dung lượng SVG bằng SVGO: bỏ metadata của trình vẽ, comment và markup thừa, có xem trước trước và sau. File không rời khỏi trình duyệt.",
+      "intro": "Làm nhỏ icon và hình minh hoạ SVG bằng SVGO: metadata của trình vẽ, comment, phần tử ẩn và thuộc tính thừa bị loại bỏ, path được rút gọn. So sánh trước và sau ngay cạnh nhau; không có gì được tải lên.",
+      "howTo": {
+        "input": "Dán code SVG hoặc chọn một file .svg.",
+        "check": "So sánh ảnh trước và sau cùng dung lượng giảm được.",
+        "export": "Copy SVG đã tối ưu hoặc tải về."
+      },
+      "faq": {
+        "safe": {
+          "q": "Tối ưu có làm SVG hiển thị khác đi không?",
+          "a": "Bộ tối ưu mặc định được thiết kế an toàn cho gần như mọi file. Hãy so sánh hai ảnh xem trước; nếu có gì khác, hãy tắt multipass, tuỳ chọn áp dụng tối ưu nhiều lượt."
+        },
+        "scripts": {
+          "q": "Mở SVG không rõ nguồn gốc ở đây có an toàn không?",
+          "a": "An toàn. Ảnh xem trước được hiển thị dưới dạng image, vốn không bao giờ chạy script có thể nằm trong SVG."
+        }
+      },
+      "ui": {
+        "multipass": "Multipass",
+        "pretty": "Định dạng dễ đọc",
+        "placeholder": "Dán code SVG vào đây",
+        "invalid": "Không đọc được SVG này:",
+        "fileError": "Không đọc được file này",
+        "output": "Đã tối ưu",
+        "saved": "nhỏ hơn {percent}%",
+        "outputPlaceholder": "SVG đã tối ưu sẽ hiện ở đây",
+        "before": "Trước",
+        "after": "Sau"
+      }
+    },
+    "exif-viewer": {
+      "title": "Xem & xoá EXIF ảnh",
+      "metaTitle": "Xem và xoá EXIF, metadata ảnh online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Xem dữ liệu EXIF, GPS, thông tin máy ảnh ẩn trong ảnh và xoá đi, không giảm chất lượng với JPEG và PNG. Ảnh xử lý trên trình duyệt, không tải lên.",
+      "intro": "Ảnh chụp thường mang theo dữ liệu ẩn: máy ảnh, thời gian, cả vị trí GPS nơi chụp. Xem toàn bộ, rồi tải về bản sạch trước khi chia sẻ. JPEG và PNG được làm sạch mà không nén lại, và ảnh không bao giờ rời khỏi trình duyệt của bạn.",
+      "howTo": {
+        "pick": "Chọn hoặc kéo thả một bức ảnh.",
+        "read": "Xem metadata; nếu ảnh chứa vị trí GPS sẽ có cảnh báo.",
+        "remove": "Bấm “Xoá metadata” rồi tải bản sạch về."
+      },
+      "faq": {
+        "lossless": {
+          "q": "Xoá metadata có làm giảm chất lượng ảnh không?",
+          "a": "Không, với JPEG và PNG: chỉ các khối metadata bị cắt bỏ, dữ liệu ảnh được giữ nguyên từng byte. Định dạng khác, và ảnh cần thông tin xoay trong EXIF, sẽ được encode lại ở chất lượng cao."
+        },
+        "what": {
+          "q": "Chính xác thì những gì bị xoá?",
+          "a": "EXIF (máy ảnh, thông số, ngày giờ, GPS), XMP, IPTC và comment, cùng các chunk văn bản của PNG. Color profile được giữ lại để màu không bị đổi. Công cụ đọc lại kết quả để chắc chắn không còn gì sót."
+        }
+      },
+      "ui": {
+        "remove": "Xoá metadata",
+        "hint": "JPEG, PNG, WebP, HEIC… Ảnh chỉ nằm trên máy bạn.",
+        "image": "Ảnh",
+        "notImage": "Không mở được file này dưới dạng ảnh",
+        "cleaned": "Đã xoá metadata.",
+        "cleanedPartly": "Còn {count} trường không xoá được.",
+        "lossless": "Dữ liệu ảnh giữ nguyên (lossless).",
+        "reencoded": "Đã encode lại để áp dụng hướng xoay.",
+        "metadata": "{count, plural, =0 {Metadata} other {Metadata (#)}}",
+        "gpsWarning": "Ảnh này cho biết nơi nó được chụp:",
+        "reading": "Đang đọc metadata…",
+        "none": "Không tìm thấy metadata."
+      }
+    },
+    "image-resize": {
+      "title": "Đổi kích thước & cắt ảnh",
+      "metaTitle": "Đổi kích thước, cắt ảnh online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Cắt ảnh theo tỷ lệ bất kỳ và đổi kích thước chính xác đến từng pixel, xuất JPEG, PNG hoặc WebP. Ảnh xử lý ngay trên máy, không tải lên.",
+      "intro": "Cắt ảnh theo tỷ lệ 1:1, 16:9 hay bất kỳ, đổi kích thước chính xác theo pixel và lưu thành JPEG, PNG hoặc WebP. Kéo khung cắt hoặc gõ giá trị chính xác; mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "pick": "Chọn hoặc kéo thả một ảnh.",
+        "crop": "Chọn tỷ lệ và kéo khung cắt, hoặc gõ vị trí và kích thước.",
+        "size": "Đặt chiều rộng hoặc chiều cao đầu ra, chọn định dạng rồi tải về."
+      },
+      "faq": {
+        "upscale": {
+          "q": "Có phóng to ảnh được không?",
+          "a": "Được, tới 10.000 px mỗi cạnh, nhưng phóng to không thể thêm chi tiết vốn không có, nên ảnh sẽ mềm hơn."
+        },
+        "exif": {
+          "q": "Metadata của ảnh có được giữ lại không?",
+          "a": "Không. Ảnh được vẽ lại trên canvas nên dữ liệu EXIF như vị trí GPS không có trong kết quả."
+        }
+      },
+      "ui": {
+        "notImage": "Không mở được file này dưới dạng ảnh",
+        "crop": "Cắt ảnh",
+        "rect": {
+          "x": "Trái",
+          "y": "Trên",
+          "w": "Rộng",
+          "h": "Cao"
+        },
+        "output": "Đầu ra",
+        "aspect": "Tỷ lệ",
+        "free": "Tự do",
+        "width": "Rộng (px)",
+        "height": "Cao (px)",
+        "lock": "Giữ tỷ lệ",
+        "format": "Định dạng",
+        "quality": "Chất lượng"
+      }
+    },
+    "favicon-generator": {
+      "title": "Tạo favicon",
+      "metaTitle": "Tạo favicon ICO, PNG & Apple touch icon online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tạo favicon.ico, icon PNG, Apple touch icon và web manifest từ một ảnh, kèm thẻ HTML. Tạo ngay trên trình duyệt, không tải gì lên server.",
+      "intro": "Biến một logo thành mọi icon mà website cần: favicon.ico, favicon PNG, Apple touch icon, icon Android và web manifest, đóng gói ZIP, kèm thẻ HTML để dán vào trang. Logo của bạn không rời khỏi trình duyệt.",
+      "howTo": {
+        "pick": "Chọn một logo vuông, tốt nhất là SVG hoặc PNG từ 512 px trở lên.",
+        "adjust": "Chỉnh khoảng đệm và màu nền; xem trước các icon.",
+        "download": "Tải file ZIP, đặt các file ở thư mục gốc của website và dán thẻ HTML vào phần head của trang."
+      },
+      "faq": {
+        "which": {
+          "q": "Thực sự cần những file nào?",
+          "a": "favicon.ico dùng được với mọi trình duyệt; các file PNG cho tab sắc nét hơn; apple-touch-icon.png dùng khi ai đó thêm trang của bạn ra màn hình chính iPhone; manifest và icon Android dành cho web app cài đặt được."
+        },
+        "background": {
+          "q": "Sao icon Apple luôn có nền?",
+          "a": "iOS hiển thị pixel trong suốt thành màu đen, nên Apple touch icon luôn dùng màu nền bạn chọn."
+        }
+      },
+      "ui": {
+        "source": "Ảnh gốc",
+        "notImage": "Không mở được file này dưới dạng ảnh",
+        "hint": "SVG hoặc PNG vuông, từ 512 px trở lên là tốt nhất.",
+        "padding": "Khoảng đệm",
+        "background": "Màu nền",
+        "transparent": "Nền trong suốt (trừ icon Apple)",
+        "siteName": "Tên website (cho manifest)",
+        "result": "Các icon",
+        "tags": "Thẻ HTML cho phần head",
+        "contents": "File ZIP gồm favicon.ico, 5 icon PNG, site.webmanifest và, nếu ảnh gốc là SVG, favicon.svg.",
+        "empty": "Chọn một ảnh để tạo icon."
+      }
+    },
+    "qr-code": {
+      "title": "Tạo & đọc mã QR",
+      "metaTitle": "Tạo và đọc mã QR online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Tạo mã QR cho link hoặc văn bản dưới dạng PNG, SVG và đọc mã QR từ ảnh. Chạy ngay trên trình duyệt, không gửi gì lên server.",
+      "intro": "Tạo mã QR cho bất kỳ link hay văn bản nào, với màu và mức sửa lỗi tuỳ chọn, rồi tải về dạng PNG hoặc SVG. Hoặc đọc mã QR trong ảnh chụp màn hình hay ảnh chụp. Mọi thứ chạy trên trình duyệt của bạn.",
+      "howTo": {
+        "create": "Gõ link hoặc văn bản; mã QR cập nhật ngay khi gõ.",
+        "style": "Chỉnh mức sửa lỗi, lề, kích thước và màu, rồi tải PNG hoặc SVG.",
+        "read": "Muốn giải mã, chuyển sang Đọc và chọn ảnh có chứa mã QR."
+      },
+      "faq": {
+        "ecc": {
+          "q": "Nên chọn mức sửa lỗi nào?",
+          "a": "Mức M (15%) hợp với hầu hết trường hợp. Chọn Q hoặc H nếu mã sẽ in nhỏ, dễ bị trầy xước hay có logo đè lên; đổi lại mã sẽ dày đặc hơn."
+        },
+        "expire": {
+          "q": "Mã QR này có hết hạn không?",
+          "a": "Không. Nội dung nằm ngay trong mã, không qua dịch vụ chuyển hướng nào, nên mã dùng được chừng nào link hay văn bản còn hợp lệ."
+        },
+        "contrast": {
+          "q": "Có dùng màu tuỳ ý được không?",
+          "a": "Nên giữ mã màu đậm trên nền sáng với độ tương phản cao; một số máy quét không đọc được mã bị đảo màu hoặc tương phản thấp."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "create": "Tạo",
+        "read": "Đọc",
+        "content": "Nội dung",
+        "placeholder": "Một link hoặc văn bản bất kỳ",
+        "ecc": "Mức sửa lỗi",
+        "margin": "Lề (số ô)",
+        "size": "Kích thước PNG",
+        "fg": "Màu mã",
+        "bg": "Màu nền",
+        "preview": "Xem trước",
+        "qrAlt": "Mã QR cho: {text}",
+        "empty": "Gõ nội dung để tạo mã QR.",
+        "image": "Ảnh có mã QR",
+        "decoded": "Nội dung",
+        "notImage": "Không mở được file này dưới dạng ảnh",
+        "notFound": "Không tìm thấy mã QR trong ảnh này",
+        "reading": "Đang đọc…",
+        "readHint": "Chọn ảnh chụp màn hình hoặc ảnh chụp có chứa mã QR."
+      }
+    },
+    "pdf-tools": {
+      "title": "Gộp & tách PDF",
+      "metaTitle": "Gộp, tách file PDF online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Gộp nhiều file PDF thành một hoặc tách PDF theo khoảng trang. Tài liệu được xử lý ngay trên trình duyệt, không bao giờ tải lên server.",
+      "intro": "Gộp nhiều file PDF thành một theo thứ tự bạn chọn, hoặc tách một PDF thành nhiều phần theo khoảng trang. Hợp đồng, hoá đơn vẫn nằm trên máy bạn: mọi thứ chạy trên trình duyệt.",
+      "howTo": {
+        "mode": "Chọn Gộp hoặc Tách.",
+        "files": "Gộp: thêm từ hai file PDF trở lên và sắp xếp thứ tự. Tách: thêm một file PDF và gõ khoảng trang như 1-3, 5, 8-.",
+        "download": "Bấm nút rồi tải kết quả về; nếu có nhiều phần sẽ được đóng gói ZIP."
+      },
+      "faq": {
+        "quality": {
+          "q": "Gộp hay tách có làm giảm chất lượng không?",
+          "a": "Không. Các trang được chép nguyên vẹn, giữ nguyên chữ, font và hình ảnh; không có gì bị vẽ lại hay nén lại."
+        },
+        "protected": {
+          "q": "Dùng được PDF có mật khẩu không?",
+          "a": "Hiện chưa: PDF đã mã hoá không đọc được nếu không có mật khẩu, nên công cụ sẽ báo thay vì sửa file."
+        }
+      },
+      "ui": {
+        "mode": "Chế độ",
+        "merge": "Gộp",
+        "split": "Tách",
+        "mergeAction": "Gộp PDF",
+        "splitAction": "Tách PDF",
+        "files": "Các file PDF",
+        "file": "File PDF",
+        "pages": "{count} trang",
+        "moveUp": "Đưa {name} lên trên",
+        "moveDown": "Đưa {name} xuống dưới",
+        "remove": "Bỏ {name}",
+        "addMore": "Thêm ít nhất một file PDF nữa để gộp.",
+        "result": "Kết quả",
+        "pagesToKeep": "Khoảng trang",
+        "ranges": "Các khoảng trang, từ 1 đến {count}",
+        "invalidRanges": "Dùng số trang từ 1 đến {count}, ví dụ 1-3, 5, 8-",
+        "everyPage": "Mỗi trang một file",
+        "rangesHint": "Mỗi khoảng thành một file PDF riêng; nhiều file sẽ được tải về dạng ZIP.",
+        "mergeHint": "Thêm các file PDF, sắp xếp thứ tự rồi bấm gộp.",
+        "splitHint": "Thêm một file PDF để tách.",
+        "errors": {
+          "encrypted": "File PDF này có mật khẩu bảo vệ",
+          "invalid": "File này không phải PDF đọc được"
+        }
+      }
+    },
+    "video-to-gif": {
+      "title": "Đổi video sang GIF",
+      "metaTitle": "Đổi video sang GIF online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "Đổi đoạn video MP4, WebM, MOV sang GIF bằng ffmpeg, tuỳ chọn điểm bắt đầu, độ dài, số khung hình và độ rộng. Video không rời khỏi trình duyệt.",
+      "intro": "Cắt một đoạn ngắn từ video MP4, WebM hay MOV và đổi thành GIF với bảng màu được tối ưu. Công cụ dùng ffmpeg biên dịch sang WebAssembly, chạy ngay trên trình duyệt, nên video của bạn không bao giờ bị tải lên.",
+      "howTo": {
+        "pick": "Chọn hoặc kéo thả một video.",
+        "settings": "Chỉnh điểm bắt đầu, độ dài (tối đa 30 giây), số khung hình và độ rộng.",
+        "convert": "Bấm Đổi sang GIF. Lần đầu, bộ xử lý video (khoảng 31 MB) được tải về một lần, sau đó GIF sẵn sàng để tải xuống."
+      },
+      "faq": {
+        "download": {
+          "q": "Sao phải tải về 31 MB?",
+          "a": "Đó chính là ffmpeg, biên dịch sang WebAssembly, để việc chuyển đổi chạy trên máy bạn thay vì trên server. Nó chỉ được tải khi bạn chuyển đổi lần đầu, từ chính trang này, và trình duyệt giữ lại cho các lần sau."
+        },
+        "size": {
+          "q": "Làm sao để GIF nhẹ hơn?",
+          "a": "Giảm độ rộng và số khung hình, và giữ đoạn cắt ngắn. GIF lưu mỗi khung hình thành một ảnh, nên đoạn 10 giây ở 15 fps đã có 150 khung hình."
+        },
+        "formats": {
+          "q": "Dùng được những video nào?",
+          "a": "Các định dạng phổ biến như MP4 (H.264), WebM, MOV và AVI. Video quá dài hoặc quá nặng có thể làm trình duyệt hết bộ nhớ; hãy cắt ngắn trước."
+        }
+      },
+      "ui": {
+        "convert": "Đổi sang GIF",
+        "cancel": "Huỷ",
+        "video": "Video",
+        "hint": "MP4, WebM, MOV… Video chỉ nằm trên máy bạn.",
+        "settings": "Thiết lập GIF",
+        "start": "Bắt đầu",
+        "duration": "Độ dài",
+        "fps": "Số khung hình",
+        "width": "Độ rộng",
+        "original": "Kích thước gốc",
+        "downloading": "Đang tải bộ xử lý video (ffmpeg)…",
+        "downloadNote": "Chỉ một lần: trình duyệt sẽ giữ lại cho các lần sau. File tải từ chính trang này, không qua bên thứ ba.",
+        "starting": "Đang khởi động bộ xử lý video…",
+        "engineFailed": "Không tải được bộ xử lý video. Hãy kiểm tra kết nối và thử lại.",
+        "converting": "Đang chuyển đổi… {percent}%",
+        "convertFailed": "Chuyển đổi thất bại:",
+        "result": "GIF"
+      }
+    },
+    "function-benchmark": {
+      "title": "Đo tốc độ function",
+      "metaTitle": "Benchmark, so sánh tốc độ function JavaScript online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaDescription": "So sánh tốc độ của nhiều function JavaScript trên cùng input: ops/sec, sai số, tốc độ tương đối. Chạy ngay trên máy trong worker sandbox.",
+      "intro": "Viết hai hay nhiều phiên bản của một function để xem bản nào nhanh nhất với cùng input, kèm số thao tác mỗi giây và sai số. Mỗi bản chạy trong một worker sandbox riêng trên trình duyệt của bạn.",
+      "howTo": {
+        "args": "Gõ tham số dạng mảng JSON; mọi function nhận cùng một bộ tham số.",
+        "fns": "Viết mỗi phiên bản thành một function, ví dụ (a) => a.slice().sort(). Tối đa sáu bản.",
+        "run": "Bấm Chạy và so sánh: bản nhanh nhất được đánh dấu, các bản khác cho biết chậm hơn bao nhiêu lần."
+      },
+      "faq": {
+        "accuracy": {
+          "q": "Kết quả đáng tin đến đâu?",
+          "a": "Mỗi function được chạy làm nóng trước, rồi chạy theo từng đợt trong khoảng thời gian bạn chọn; giá trị ± là sai số ở độ tin cậy 95%. Các kết quả nằm trong sai số của nhau coi như ngang nhau. Tab khác hay chế độ tiết kiệm pin có thể ảnh hưởng đến thời gian đo."
+        },
+        "real": {
+          "q": "Trong ứng dụng thật có nhanh y như vậy không?",
+          "a": "Chưa chắc. Micro-benchmark đo riêng một đoạn nhỏ; code thật chạy với dữ liệu khác, engine khác và có garbage collection. Hãy dùng kết quả để so sánh các cách làm, không phải tốc độ tuyệt đối."
+        }
+      },
+      "ui": {
+        "run": "Chạy benchmark",
+        "running": "Đang đo {name}…",
+        "budget": "Thời gian mỗi function (ms)",
+        "args": "Tham số (mảng JSON)",
+        "invalidArgs": "Tham số phải là mảng JSON, ví dụ [[3, 1, 2]]",
+        "sample": "Dùng ví dụ mẫu: ba cách sắp xếp một bản sao",
+        "name": "Tên của function {n}",
+        "code": "Code của {name}",
+        "remove": "Xoá {name}",
+        "add": "Thêm function",
+        "ops": "{hz} ops/s",
+        "fastest": "Nhanh nhất",
+        "baseline": "mốc so sánh",
+        "slower": "chậm hơn {times} lần",
+        "measuring": "Đang đo…",
+        "timedOut": "Đã dừng: có lần gọi chạy quá thời gian",
+        "notFunction": "Code phải là một function duy nhất"
+      }
+    }
+  },
+  "privacy": {
+    "metaTitle": "Quyền riêng tư — cách Kinbench giữ dữ liệu trên trình duyệt của bạn | Kinbench",
+    "metaDescription": "Kinbench xử lý mọi thứ ngay trên máy: không backend, không analytics, CSP nghiêm ngặt, chạy được offline, và cách tự kiểm chứng bằng DevTools.",
+    "title": "Quyền riêng tư: dữ liệu của bạn ở lại trên trình duyệt",
+    "intro": "Kinbench là một tập hợp các trang web tĩnh. Không có code phía server, không tài khoản, không database, nên dữ liệu của bạn chẳng có nơi nào để đi. Trang này giải thích cách hoạt động và cách bạn tự kiểm tra.",
+    "sections": {
+      "local": {
+        "title": "Mọi thứ chạy trên thiết bị của bạn",
+        "body": "Mỗi công cụ là JavaScript chạy ngay trong tab trình duyệt. Việc nặng hơn như tính hash file lớn, encode ảnh hay chạy code của bạn được đưa vào Web Worker, vẫn trên máy bạn. File bạn chọn được đọc tại chỗ bằng File API và không bao giờ được tải lên."
+      },
+      "noTracking": {
+        "title": "Không analytics, không cookie, không bên thứ ba",
+        "body": "Kinbench không có analytics, quảng cáo hay pixel theo dõi, và không đặt cookie nào. Font và thư viện đều được phục vụ từ chính trang này; không có script hay CDN của bên thứ ba nào được tải."
+      },
+      "storage": {
+        "title": "Những gì được lưu trên máy bạn",
+        "body": "Chỉ những thứ cần để trang hoạt động: giao diện và ngôn ngữ bạn chọn, danh sách công cụ bạn mở gần đây (chỉ tên công cụ, không bao giờ có nội dung) và, nếu bạn bật “Ghi nhớ input” trong một công cụ, input của công cụ đó. Tất cả nằm trong localStorage của trình duyệt và bạn có thể xoá bất cứ lúc nào trong phần cài đặt trình duyệt."
+      },
+      "csp": {
+        "title": "Content-Security-Policy nghiêm ngặt",
+        "body": "Mọi trang đều kèm Content-Security-Policy chỉ cho phép kết nối về chính trang này, nên dù có lỗi hay một thư viện bị chèn mã độc thì dữ liệu của bạn cũng không thể bị gửi đi nơi khác. Script inline chỉ chạy khi khớp đúng mã hash. Sandbox của Function Runner còn có policy chặt hơn nữa, không cho phép kết nối mạng nào."
+      },
+      "offline": {
+        "title": "Chạy được offline",
+        "body": "Service worker giữ một bản sao của các trang và công cụ bạn đã mở, nên chúng vẫn chạy khi mất mạng. Nó chỉ cache file của chính trang web, không bao giờ cache dữ liệu của bạn."
+      },
+      "verify": {
+        "title": "Tự kiểm chứng",
+        "steps": {
+          "open": "Mở công cụ dành cho nhà phát triển của trình duyệt (F12, hoặc Cmd+Option+I trên Mac) và chuyển sang tab Network.",
+          "use": "Dùng bất kỳ công cụ nào: dán dữ liệu, chọn file, bấm chạy.",
+          "check": "Theo dõi danh sách request. Bạn chỉ thấy file code của chính trang này được tải về, không có gì được gửi đi.",
+          "offline": "Nếu muốn, chuyển DevTools sang chế độ Offline: các công cụ bạn đã mở vẫn chạy bình thường."
+        }
+      }
+    }
+  },
+  "about": {
+    "metaTitle": "Giới thiệu Kinbench — công cụ cho developer, đặt quyền riêng tư lên đầu | Kinbench",
+    "metaDescription": "Kinbench là bộ công cụ miễn phí cho developer chạy hoàn toàn trên trình duyệt: JSON, CSS, ảnh, hash, JWT... không tải dữ liệu lên server.",
+    "title": "Giới thiệu Kinbench",
+    "intro": "Kinbench là bộ công cụ miễn phí cho công việc hằng ngày của developer: format, encode, tạo hash và ID, chuyển đổi ảnh, chạy test JavaScript. Tất cả chạy ngay trên trình duyệt của bạn.",
+    "sections": {
+      "why": {
+        "title": "Sao lại thêm một trang công cụ nữa?",
+        "body": "Dán một JWT, một response API hay file của khách hàng vào một trang web lạ đồng nghĩa với việc tin vào một server mà bạn không nhìn thấy. Kinbench bỏ luôn server: các công cụ chỉ là file tĩnh, nên dữ liệu không rời khỏi máy bạn."
+      },
+      "how": {
+        "title": "Kinbench được xây dựng thế nào?",
+        "body": "Next.js export ra file tĩnh. Code của mỗi công cụ chỉ tải trên trang của nó, thư viện nặng (Prettier, Sass, codec ảnh) chỉ tải khi dùng lần đầu, việc tốn CPU chạy trong Web Worker. Giao diện có tiếng Việt và tiếng Anh."
+      },
+      "free": {
+        "title": "Miễn phí, không cần đăng ký",
+        "body": "Không tài khoản, không giới hạn sử dụng, không quảng cáo."
+      }
+    },
+    "privacyLink": "Xem cách Kinbench bảo vệ dữ liệu của bạn →"
+  }
+}
