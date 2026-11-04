@@ -1,0 +1,9 @@
+// The brand mark: a "K" whose arms are a code chevron "<", on a light-blue tile. The header and the OG cards
+// inline it; app/icon.svg is the same file (logo.test.ts checks). favicon.ico and apple-icon.png in app/ are
+// rasterized from it, which the site's own Favicon Generator can redo if the mark changes.
+export const LOGO_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+  '<defs><linearGradient id="kb-logo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a6dcff"/><stop offset="1" stop-color="#5fb9f3"/></linearGradient></defs>' +
+  '<rect x=".5" y=".5" width="31" height="31" rx="7.5" fill="url(#kb-logo)" stroke="#0b1a2a" stroke-opacity=".12"/>' +
+  '<path d="M10 9v14M22 9l-7 7 7 7" fill="none" stroke="#0b1a2a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+  '</svg>\n';

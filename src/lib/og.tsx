@@ -1,7 +1,10 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { ImageResponse } from 'next/og';
+import { LOGO_SVG } from './logo';
 import { BRAND } from './site';
+
+const logo = `data:image/svg+xml;base64,${Buffer.from(LOGO_SVG).toString('base64')}`;
 
 // Build time only. Satori can't read WOFF2 (what next/font ships), so the WOFF files come from @fontsource.
 // Each subset gets its own family name: Satori keeps only one font per name/weight/style, so a shared name
@@ -23,7 +26,7 @@ export async function ogImage({ eyebrow, title, badge }: { eyebrow: string; titl
     (
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 72, background: '#f3f6f9', color: '#131820', fontFamily: 'BVP latin, BVP vietnamese', fontWeight: 600 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 20, fontSize: 36, fontWeight: 600 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 64, height: 64, borderRadius: 16, background: '#7cc8f8', color: '#0b1a2a', fontSize: 30 }}>k/</div>
+          <img src={logo} width={64} height={64} alt="" />
           {BRAND}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>

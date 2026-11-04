@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Menu, Monitor, Moon, Search, Sun, X } from 'lucide-react';
 import { getLocale, getMessages } from 'next-intl/server';
+import { LOGO_SVG } from '@/lib/logo';
 import { searchItems } from '@/lib/searchItems';
 import { BRAND } from '@/lib/site';
 import type { Locale } from 'next-intl';
@@ -31,9 +32,7 @@ export async function Header() {
           <CategoryNav />
         </NavDrawer>
         <Link href={`/${locale}`} className="flex items-center gap-2.5 rounded-md py-2 font-semibold tracking-tight">
-          <span aria-hidden className="grid size-7 place-items-center rounded-lg bg-primary font-mono text-[13px] font-semibold text-primary-foreground shadow-[inset_0_-2px_0_rgb(0_0_0/0.12)]">
-            k/
-          </span>
+          <span aria-hidden className="size-7 [&>svg]:size-full" dangerouslySetInnerHTML={{ __html: LOGO_SVG }} />
           {BRAND}
         </Link>
         <div className="ml-auto flex items-center gap-2">
