@@ -1,0 +1,2 @@
+# Its CSP pins the sha256 of its inline script; CRLF on checkout would change the hash and block the script.
+public/html-preview.html text eol=lf

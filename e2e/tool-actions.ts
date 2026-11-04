@@ -528,6 +528,18 @@ export const toolActions: Record<keyof Tools, (ctx: Ctx) => Promise<void>> = {
     expect((await download).suggestedFilename()).toBe('document.html');
   },
 
+  'html-preview': async ({ page, secret }) => {
+    await page.locator('#html-input').fill(`<style>h1 { color: rgb(255, 0, 0) }</style><h1 style="font-size: 40px">Hi ${secret}</h1><script>document.title = 'ran'</script><a href="https://example.com/?q=${secret}">out</a>`);
+    const frame = page.frameLocator('iframe[sandbox]');
+    const h1 = frame.getByRole('heading', { level: 1 });
+    await expect(h1).toHaveText(`Hi ${secret}`);
+    await expect(h1).toHaveCSS('color', 'rgb(255, 0, 0)'); // inline CSS works
+    await expect(h1).toHaveCSS('font-size', '40px');
+    await expect(frame.locator('script')).toHaveCount(0);
+    await frame.getByRole('link').click(); // must not navigate: the privacy spec fails on any request to example.com
+    await expect(h1).toBeVisible();
+  },
+
   'svg-optimizer': async (ctx) => {
     const { page, locale } = ctx;
     const m = ui(locale, 'svg-optimizer');

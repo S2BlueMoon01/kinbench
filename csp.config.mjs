@@ -10,6 +10,9 @@
 // - 'unsafe-eval', ONLY on /runner.worker.js and /bench.worker.js (pathHeaders below): the Function Runner and
 //   Function benchmark compile the user's code with new Function() inside those dedicated workers. The same policy sets default-src 'none', so code running
 //   there can make no network request at all. The pages themselves never allow eval.
+// - public/html-preview.html (HTML preview frame) carries its own <meta> policy: inline CSS and data: images for
+//   the user's HTML, no scripts but its own (hashed), no network. Hosts send it the header below as well, so that
+//   header sets no style-src (pages get style-src 'self' from their <meta>) and allows framing by this site only.
 
 /** Per-page policy, delivered in a <meta> tag because the hashes differ per page. */
 export const metaCsp = (scriptHashes) =>
@@ -34,13 +37,12 @@ const headerCsp = [
   "connect-src 'self'",
   "img-src 'self' blob: data:",
   "media-src 'self' blob:",
-  "style-src 'self'",
   "font-src 'self'",
   "worker-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'none'",
-  "frame-ancestors 'none'",
+  "frame-ancestors 'self'",
 ].join('; ');
 
 export const headers = {

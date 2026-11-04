@@ -50,7 +50,7 @@ async function main() {
     const flat = flattenedSegmentPath(f);
     if (flat) await copyFile(join(out, f), join(out, flat));
   }
-  const files = all.filter((f) => f.endsWith('.html'));
+  const files = all.filter((f) => f.endsWith('.html') && f !== 'html-preview.html'); // that frame has its own policy
   for (const f of files) {
     const path = join(out, f);
     await writeFile(path, addCspMeta(await readFile(path, 'utf8')));

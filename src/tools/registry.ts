@@ -1,7 +1,7 @@
 import {
   Clapperboard, FileStack, Film, Gauge,
   Crop, Eraser, QrCode, Stamp,
-  ArrowRightLeft, BookOpenText, CodeXml, Database, Shapes, SquareCode,
+  AppWindow, ArrowRightLeft, BookOpenText, CodeXml, Database, Shapes, SquareCode,
   Blend, CalendarClock, Diff, Regex, Spline, SquareDashed, SquareTerminal,
   Ampersand, Calculator, CaseSensitive, FileKey, Link, LockKeyhole, Network, Palette, RectangleEllipsis, Ruler, Signature,
   Binary, Braces, Clock, Code2, Dices, FileCode2, Fingerprint, Hash, Image as ImageIcon, ImageDown, KeyRound, LetterText, Paintbrush, Sparkles, SquareFunction, Type, type LucideIcon,
@@ -74,6 +74,7 @@ export const tools = [
   { slug: 'pdf-tools', category: 'media', icon: FileStack, relatedTools: ['image-resize', 'video-to-gif'], heavyDeps: ['pdf-lib'] },
   { slug: 'video-to-gif', category: 'media', icon: Clapperboard, relatedTools: ['image-converter', 'image-resize'], heavyDeps: ['@ffmpeg/core'] },
   { slug: 'function-benchmark', category: 'code', icon: Gauge, relatedTools: ['function-runner', 'regex-tester'], heavyDeps: [] },
+  { slug: 'html-preview', category: 'code', icon: AppWindow, relatedTools: ['markdown-preview', 'code-formatter', 'html-entities'], heavyDeps: [] },
 ] as const satisfies readonly ToolDef[];
 
 export type Tool = (typeof tools)[number];

@@ -1798,6 +1798,34 @@
         "timedOut": "Stopped: a call didn’t finish in time",
         "notFunction": "The code must be a single function"
       }
+    },
+    "html-preview": {
+      "title": "HTML Preview",
+      "metaTitle": "HTML Preview: Live HTML & CSS Viewer Online | Kinbench",
+      "metaDescription": "Paste HTML and CSS and see the page rendered live in a locked-down sandbox. Runs in your browser; your code is never uploaded.",
+      "intro": "Write or paste HTML with its CSS and see the page rendered as you type. The preview runs in a sandboxed frame: scripts don’t run and nothing is loaded from other servers.",
+      "howTo": {
+        "write": "Write or paste HTML on the left, including its style blocks.",
+        "preview": "Check the rendered page on the right; it updates as you type.",
+        "resize": "On a wide screen, drag the divider to see how the layout fits narrower widths."
+      },
+      "faq": {
+        "scripts": {
+          "q": "Why doesn’t my JavaScript run?",
+          "a": "The preview shows HTML and CSS only. Scripts in pasted code could send what you paste to other servers, so the frame is sandboxed and its security policy blocks every script, including handlers like onclick."
+        },
+        "remote": {
+          "q": "Why don’t images, fonts or stylesheets from other websites load?",
+          "a": "Loading them would tell those servers your IP address and what you are viewing. The preview makes no network requests: write CSS in the page itself, and embed images as data URLs if you need them."
+        }
+      },
+      "ui": {
+        "placeholder": "Write or paste HTML here",
+        "sample": "Try a sample",
+        "preview": "Preview",
+        "empty": "The rendered page appears here.",
+        "note": "Scripts don’t run, links don’t open, and images, fonts and stylesheets from other servers are not loaded."
+      }
     }
   },
   "privacy": {

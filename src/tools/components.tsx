@@ -49,6 +49,7 @@ const components: Record<Slug, ComponentType> = {
   'pdf-tools': dynamic(() => import('./pdf-tools/PdfTools')),
   'video-to-gif': dynamic(() => import('./video-to-gif/VideoToGif')),
   'function-benchmark': dynamic(() => import('./function-benchmark/FunctionBenchmark')),
+  'html-preview': dynamic(() => import('./html-preview/HtmlPreview')),
 };
 
 export function ToolComponent({ slug }: { slug: Slug }) {

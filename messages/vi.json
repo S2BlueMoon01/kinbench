@@ -1798,6 +1798,34 @@
         "timedOut": "Đã dừng: có lần gọi chạy quá thời gian",
         "notFunction": "Code phải là một function duy nhất"
       }
+    },
+    "html-preview": {
+      "title": "Xem trước HTML",
+      "metaTitle": "Xem trước HTML, xem HTML và CSS trực tiếp online | Kinbench",
+      "metaDescription": "Dán HTML và CSS để xem trang hiển thị ngay khi gõ, trong một khung sandbox khóa chặt. Chạy trên trình duyệt; code của bạn không gửi lên server.",
+      "intro": "Viết hoặc dán HTML kèm CSS để xem trang hiển thị ngay khi gõ. Bản xem trước chạy trong một khung sandbox: script không chạy và không tải gì từ server khác.",
+      "howTo": {
+        "write": "Viết hoặc dán HTML vào bên trái, kể cả các khối style.",
+        "preview": "Xem trang hiển thị ở bên phải, cập nhật ngay khi bạn gõ.",
+        "resize": "Trên màn hình rộng, kéo thanh chia ở giữa để xem bố cục ở chiều rộng hẹp hơn."
+      },
+      "faq": {
+        "scripts": {
+          "q": "Sao JavaScript của tôi không chạy?",
+          "a": "Bản xem trước chỉ hiển thị HTML và CSS. Script trong code dán vào có thể gửi nội dung bạn dán tới server khác, nên khung xem được sandbox và chính sách bảo mật của nó chặn mọi script, kể cả các handler như onclick."
+        },
+        "remote": {
+          "q": "Sao ảnh, font hay stylesheet từ trang khác không tải?",
+          "a": "Tải chúng sẽ cho các server đó biết địa chỉ IP của bạn và bạn đang xem gì. Bản xem trước không tạo request mạng nào: hãy viết CSS ngay trong trang, và nhúng ảnh dưới dạng data URL nếu cần."
+        }
+      },
+      "ui": {
+        "placeholder": "Viết hoặc dán HTML vào đây",
+        "sample": "Dùng dữ liệu mẫu",
+        "preview": "Xem trước",
+        "empty": "Trang sau khi render sẽ hiện ở đây.",
+        "note": "Script không chạy, link không mở, và ảnh, font, stylesheet từ server khác không được tải."
+      }
     }
   },
   "privacy": {

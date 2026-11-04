@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-VeRGHlEgmlfdCyhvSuMCljdNDGUuj242JbjFAuOfFOk='; style-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
+<meta name="robots" content="noindex">
+<script>
+// Frame of the HTML preview tool, loaded with sandbox="allow-scripts" (opaque origin). The policy above lets
+// only this script run, so the user's HTML gets inline CSS and data: images but no scripts and no network.
+onmessage = (e) => {
+  if (e.source !== parent) return;
+  const doc = new DOMParser().parseFromString(e.data, 'text/html'); // inert: nothing loads or runs while parsing
+  // Removed before insertion: meta refresh would navigate away, link rel=preconnect/dns-prefetch bypass the CSP.
+  doc.querySelectorAll('script, link, base, meta[http-equiv]').forEach((el) => el.remove());
+  document.documentElement.replaceWith(document.adoptNode(doc.documentElement));
+};
+// Links would load other sites into the frame; in-page #anchors still work.
+addEventListener('click', (e) => e.target.closest?.('a[href]:not([href^="#"]), area[href]') && e.preventDefault());
+</script>
+</head>
+</html>

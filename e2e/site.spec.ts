@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Request } from '@playwright/test';
 import { locales, messages, trackProblems } from './helpers';
 
 const isPhone = (name: string) => name === 'mobile-375';
@@ -76,6 +76,29 @@ test('Markdown preview drops inline event handlers, and the CSP blocks them befo
   // DOMPurify parses with DOMParser, whose document inherits this page's CSP: the handlers are refused there.
   expect(blocked.length).toBeGreaterThan(0);
   expect(new Set(blocked)).toEqual(new Set(['CSP script-src-attr']));
+});
+
+test('HTML preview runs no script and loads nothing from other servers', async ({ page, context, baseURL }, info) => {
+  test.skip(info.project.name !== 'desktop-1440', 'does not depend on the viewport');
+  const outside: Request[] = [];
+  context.on('request', (r) => new URL(r.url()).origin !== new URL(baseURL!).origin && !r.url().startsWith('data:') && outside.push(r));
+  await page.goto('/en/tools/html-preview');
+  await page.locator('#html-input').fill(
+    '<meta http-equiv="refresh" content="0;url=https://example.com/refresh"><link rel="stylesheet" href="https://example.com/x.css"><link rel="preconnect" href="https://example.org">' +
+      '<style>@import url(https://example.com/i.css); body { background: url(https://example.com/bg.png) }</style>' +
+      '<img src="https://example.com/x.png" onerror="document.body.dataset.ran = 1"><img alt="inline" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">' +
+      '<iframe src="https://example.com/frame"></iframe><form action="https://example.com/f"><button>send</button></form><p>ok</p>',
+  );
+  const frame = page.frameLocator('iframe[sandbox]');
+  await expect(frame.getByText('ok')).toBeVisible();
+  await frame.getByRole('button', { name: 'send' }).click();
+  await page.waitForLoadState('networkidle');
+  await expect(frame.locator('body')).not.toHaveAttribute('data-ran');
+  await expect(frame.locator('link, meta[http-equiv]')).toHaveCount(0);
+  await expect(frame.getByText('ok')).toBeVisible(); // still the preview: no refresh, no form submission
+  // Chromium reports CSP-refused loads as requests that failed with "csp"; they never reach the network.
+  expect(outside.length).toBeGreaterThan(0);
+  expect(outside.filter((r) => r.failure()?.errorText !== 'csp').map((r) => r.url())).toEqual([]);
 });
 
 test('image tools take a pasted screenshot (Ctrl+V)', async ({ page }, info) => {
