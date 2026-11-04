@@ -25,6 +25,11 @@ export function pageMetadata(locale: Locale, path: string, title: string, descri
   };
 }
 
+export const faqJsonLd = (items: { q: string; a: string }[]) => ({
+  '@type': 'FAQPage',
+  mainEntity: items.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
+
 export function JsonLd({ data }: { data: object }) {
   // Escape "<" so user-visible text can never close the script element.
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />;

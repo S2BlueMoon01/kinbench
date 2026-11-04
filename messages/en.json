@@ -114,16 +114,40 @@
     }
   },
   "home": {
-    "metaTitle": "Kinbench — developer tools that run 100% in your browser",
-    "metaDescription": "Free JSON, text, image, hash and encoding tools for developers. Everything runs locally in your browser — nothing is uploaded to any server.",
-    "title": "100% local tools — your data never leaves your browser",
-    "subtitle": "Format, convert, hash and debug without pasting secrets into someone else's server.",
+    "metaTitle": "Secure Developer Tools That Run in Your Browser | Kinbench",
+    "metaDescription": "Free developer tools that run 100% in your browser: JSON, JWT, hashes, Base64, images, PDF and more. No server, no upload, no sign-up.",
+    "title": "Secure developer tools that run 100% in your browser",
+    "subtitle": "Format JSON, decode JWTs, hash files, compress images and merge PDFs without uploading anything. No server ever sees your data, not even ours.",
     "categoriesTitle": "Browse by category",
-    "recentTitle": "Recently used"
+    "recentTitle": "Recently used",
+    "whySafeTitle": "Why browser-based tools are safer",
+    "whySafeIntro": "Most online tools send what you paste to their server to process it, and you have to trust whatever happens there. Kinbench does the work inside your browser instead, so API keys, tokens, customer data and private files never leave your device.",
+    "faq": {
+      "browser": {
+        "q": "What does “runs in your browser” mean?",
+        "a": "The tool’s code is downloaded to your browser and does the work there, on your own device. Unlike most online tools, nothing you paste or open is sent to a server to be processed, because Kinbench has no server-side code at all."
+      },
+      "secrets": {
+        "q": "Is it safe to paste API keys, JWTs or passwords?",
+        "a": "Yes. Tokens, keys and passwords are processed in the page on your device and are never sent anywhere. A strict Content-Security-Policy blocks the page from connecting to any other server, so even a buggy or compromised library could not send them out."
+      },
+      "verify": {
+        "q": "How can I check that nothing is uploaded?",
+        "a": "Open DevTools (F12), go to the Network tab and use any tool. You will only see this site’s own files loading, never a request carrying your data. Kinbench’s automated tests check the same thing for every tool."
+      },
+      "offline": {
+        "q": "Do the tools work offline?",
+        "a": "Yes. Once you have opened a tool, a service worker keeps a copy of it on your device, so it keeps working without an internet connection. It is also a simple way to be sure your data stays local."
+      },
+      "free": {
+        "q": "Is Kinbench free? Do I need an account?",
+        "a": "It is free, with no account, no usage limits, no ads, no analytics and no cookies. File sizes are limited only by your device’s memory."
+      }
+    }
   },
   "category": {
-    "metaTitle": "{name} — runs in your browser, no upload | Kinbench",
-    "metaDescription": "{name} tools for developers. Everything runs locally in your browser; nothing is sent to a server.",
+    "metaTitle": "{name}: Free Online Tools, No Upload | Kinbench",
+    "metaDescription": "Free {name} tools for developers: no sign-up, no upload. Everything runs locally in your browser, so your data never reaches a server.",
     "toolCount": "{count, plural, one {# tool} other {# tools}}"
   },
   "notFound": {
@@ -132,7 +156,7 @@
   "tools": {
     "json-formatter": {
       "title": "JSON Formatter",
-      "metaTitle": "JSON Formatter & Validator — runs in your browser, no upload | Kinbench",
+      "metaTitle": "JSON Formatter & Validator Online — No Upload | Kinbench",
       "metaDescription": "Format, validate and minify JSON in your browser. Errors show the exact line and column. Your data is never sent to any server.",
       "intro": "Paste or drop JSON to pretty-print, validate or minify it. Everything runs locally in your browser, and big numbers and escape sequences are kept exactly as written.",
       "howTo": {
@@ -196,7 +220,7 @@
     },
     "text-counter": {
       "title": "Text Counter",
-      "metaTitle": "Character & Word Counter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Character & Word Counter Online — No Upload | Kinbench",
       "metaDescription": "Count characters, words, lines, UTF-8 bytes and reading time as you type. Your text stays in your browser and is never sent to a server.",
       "intro": "Type or paste text to count characters, words, lines and UTF-8 bytes, and to estimate reading time. Counting happens in your browser as you type; nothing is uploaded.",
       "howTo": {
@@ -234,7 +258,7 @@
     },
     "base64": {
       "title": "Base64 Encode / Decode",
-      "metaTitle": "Base64 Encode & Decode — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Base64 Encode & Decode Online — No Upload | Kinbench",
       "metaDescription": "Encode text or files to Base64 and decode it back, with UTF-8 and URL-safe support. Runs in your browser; nothing is sent to a server.",
       "intro": "Encode text or any file to Base64, or decode Base64 back to text or a downloadable file. UTF-8 and URL-safe Base64 are handled, and everything happens in your browser.",
       "howTo": {
@@ -273,7 +297,7 @@
     },
     "uuid-generator": {
       "title": "UUID / ULID / nanoid Generator",
-      "metaTitle": "UUID, ULID & nanoid Generator — runs in your browser, no upload | Kinbench",
+      "metaTitle": "UUID, ULID & nanoid Generator — Free, No Upload | Kinbench",
       "metaDescription": "Generate UUID v4, ULID and nanoid in bulk with your browser’s secure random generator. IDs are created locally and never sent to a server.",
       "intro": "Generate up to 1,000 UUID v4, ULID or nanoid values at once. IDs come from your browser’s cryptographically secure random generator and are never sent anywhere.",
       "howTo": {
@@ -306,7 +330,7 @@
     },
     "unix-timestamp": {
       "title": "Unix Timestamp Converter",
-      "metaTitle": "Unix Timestamp Converter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Unix Timestamp Converter Online — No Upload | Kinbench",
       "metaDescription": "Convert Unix timestamps (seconds or ms) to ISO 8601, local and relative time, and back. Runs in your browser; nothing is sent to a server.",
       "intro": "Convert a Unix timestamp to a readable date in UTC and in your time zone, or turn a date into a timestamp. Seconds and milliseconds are detected automatically.",
       "howTo": {
@@ -349,7 +373,7 @@
     },
     "jwt-decoder": {
       "title": "JWT Decoder",
-      "metaTitle": "JWT Decoder — runs in your browser, no upload | Kinbench",
+      "metaTitle": "JWT Decoder & Verifier Online — No Upload | Kinbench",
       "metaDescription": "Decode a JWT’s header and payload, check exp, iat and nbf, and verify HS256 signatures. Tokens stay in your browser and are never sent to a server.",
       "intro": "Paste a JSON Web Token to see its header, payload and expiry. Decoding does not check the signature; to verify an HS256, HS384 or HS512 token, enter its secret. The token and secret stay in your browser.",
       "howTo": {
@@ -402,7 +426,7 @@
     },
     "hash-generator": {
       "title": "Hash Generator",
-      "metaTitle": "MD5, SHA-1, SHA-256 & SHA-512 Hash Generator — runs in your browser, no upload | Kinbench",
+      "metaTitle": "MD5, SHA-256 & SHA-512 Hash Generator — No Upload | Kinbench",
       "metaDescription": "Hash text or files with MD5, SHA-1, SHA-256 and SHA-512 at once. Large files are read in your browser and never uploaded to a server.",
       "intro": "Get the MD5, SHA-1, SHA-256 and SHA-512 hashes of text or a file in one go. Hashing runs in a background worker in your browser, so even multi-gigabyte files stay on your device.",
       "howTo": {
@@ -437,7 +461,7 @@
     },
     "function-runner": {
       "title": "Function Runner",
-      "metaTitle": "JavaScript Function Runner & Tester — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Run & Test JavaScript Functions Online — Sandboxed | Kinbench",
       "metaDescription": "Test a JavaScript function against a table of cases in a sandboxed Web Worker. Your code runs on your device and is never sent to a server.",
       "intro": "Write a JavaScript function, add test cases and run them all in a sandboxed Web Worker. You get pass or fail, the actual output, the time per case and captured console.log, and endless loops are stopped by a timeout.",
       "howTo": {
@@ -495,7 +519,7 @@
     },
     "css-formatter": {
       "title": "CSS & SCSS Formatter",
-      "metaTitle": "CSS & SCSS Formatter, Minifier & Compiler — runs in your browser, no upload | Kinbench",
+      "metaTitle": "CSS Formatter, Minifier & SCSS Compiler — No Upload | Kinbench",
       "metaDescription": "Format and minify CSS, and compile SCSS to CSS, with Prettier and Dart Sass in your browser. Your stylesheets are never sent to a server.",
       "intro": "Format CSS and SCSS with Prettier, compile SCSS to CSS, or minify either with Dart Sass. Both libraries run in a background worker in your browser and load only when you first use them.",
       "howTo": {
@@ -538,7 +562,7 @@
     },
     "image-converter": {
       "title": "Image Converter & Compressor",
-      "metaTitle": "Image Compressor & Converter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Compress & Convert Images to WebP, AVIF — No Upload | Kinbench",
       "metaDescription": "Convert images to PNG, JPEG, WebP or AVIF and compress them with a quality slider. Photos are processed in your browser and never uploaded.",
       "intro": "Convert PNG, JPEG, WebP and AVIF images and compress them with a quality slider, then compare before and after in one frame. Your images are processed in your browser and never uploaded.",
       "howTo": {
@@ -581,7 +605,7 @@
     },
     "case-converter": {
       "title": "Case Converter",
-      "metaTitle": "Case Converter: camelCase, snake_case, kebab-case — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Case Converter: camelCase, snake_case, kebab-case | Kinbench",
       "metaDescription": "Convert text to camelCase, PascalCase, snake_case, kebab-case, Title Case and more at once. Runs in your browser; nothing is sent to a server.",
       "intro": "Type a phrase or a list of names and get every common case at once: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, Title Case and more. Everything runs in your browser.",
       "howTo": {
@@ -620,7 +644,7 @@
     },
     "url-encoder": {
       "title": "URL Encoder & Parser",
-      "metaTitle": "URL Encode / Decode & URL Parser — runs in your browser, no upload | Kinbench",
+      "metaTitle": "URL Encoder/Decoder & URL Parser — No Upload | Kinbench",
       "metaDescription": "Percent-encode or decode URLs and query values, and split a URL into its parts and parameters. Runs in your browser; nothing is sent to a server.",
       "intro": "Percent-encode text for a URL, decode an encoded link, and see any URL split into protocol, host, path, query parameters and fragment. Everything runs in your browser.",
       "howTo": {
@@ -670,7 +694,7 @@
     },
     "html-entities": {
       "title": "HTML Entities Encoder",
-      "metaTitle": "HTML Entities Encode / Decode — runs in your browser, no upload | Kinbench",
+      "metaTitle": "HTML Entities Encode & Decode Online — No Upload | Kinbench",
       "metaDescription": "Escape text for HTML or decode named and numeric HTML entities, including all 2,231 HTML5 names. Runs in your browser; nothing is sent to a server.",
       "intro": "Escape text so it is safe inside HTML, or turn entities like &lt; &copy; &#7879; back into characters. Decoding knows every HTML5 entity and works the way browsers do.",
       "howTo": {
@@ -704,7 +728,7 @@
     },
     "number-base": {
       "title": "Number Base Converter",
-      "metaTitle": "Binary, Octal, Decimal & Hex Converter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Binary, Decimal, Hex & Octal Converter Online | Kinbench",
       "metaDescription": "Convert integers of any size between binary, octal, decimal, hex and any base from 2 to 36. Runs in your browser; nothing is sent to a server.",
       "intro": "Convert whole numbers between binary, octal, decimal, hexadecimal and any base from 2 to 36. Numbers of any size are exact, well past JavaScript’s 2^53 limit.",
       "howTo": {
@@ -747,7 +771,7 @@
     },
     "px-rem": {
       "title": "PX to REM Converter",
-      "metaTitle": "PX to REM Converter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "PX to REM (and REM to PX) Converter Online | Kinbench",
       "metaDescription": "Convert px to rem and rem to px with any root font size, plus a table of common sizes. Runs in your browser; nothing is sent to a server.",
       "intro": "Convert pixels to rem and back using your root font size (16px by default), and keep a table of common sizes at hand.",
       "howTo": {
@@ -776,7 +800,7 @@
     },
     "chmod-calculator": {
       "title": "Chmod Calculator",
-      "metaTitle": "Chmod Calculator: 755, rwxr-xr-x — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Chmod Calculator: 755, 644, rwxr-xr-x Online | Kinbench",
       "metaDescription": "Turn Unix permissions into octal (755) and symbolic (rwxr-xr-x) notation and back, including setuid, setgid and sticky bits. Runs in your browser.",
       "intro": "Tick the permissions for owner, group and others to get the chmod number, or type 755 or rwxr-xr-x to see what it means. Special bits (setuid, setgid, sticky) are included.",
       "howTo": {
@@ -822,7 +846,7 @@
     },
     "cidr-calculator": {
       "title": "CIDR Calculator",
-      "metaTitle": "CIDR / Subnet Calculator for IPv4 & IPv6 — runs in your browser, no upload | Kinbench",
+      "metaTitle": "CIDR & Subnet Calculator for IPv4 and IPv6 | Kinbench",
       "metaDescription": "Get the network, broadcast, netmask, host range and address count of any IPv4 or IPv6 CIDR block. Runs in your browser; nothing is sent to a server.",
       "intro": "Enter an IPv4 or IPv6 address with a prefix, like 10.0.0.0/16 or 2001:db8::/48, to get its network address, mask, host range and number of addresses.",
       "howTo": {
@@ -861,7 +885,7 @@
     },
     "password-generator": {
       "title": "Password Generator",
-      "metaTitle": "Strong Password Generator — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Secure Password Generator — Offline, Never Sent | Kinbench",
       "metaDescription": "Generate strong random passwords with the browser’s secure random generator, with entropy shown. Passwords are created locally and never sent.",
       "intro": "Create strong random passwords with the length and character sets you need. They come from your browser’s cryptographically secure generator and never leave this page.",
       "howTo": {
@@ -908,7 +932,7 @@
     },
     "color-converter": {
       "title": "Color Converter & Contrast Checker",
-      "metaTitle": "Color Converter & WCAG Contrast Checker — runs in your browser, no upload | Kinbench",
+      "metaTitle": "HEX, RGB, HSL, OKLCH Converter & WCAG Contrast | Kinbench",
       "metaDescription": "Convert colors between HEX, RGB, HSL and OKLCH, and check WCAG AA/AAA contrast between two colors. Runs in your browser; nothing is sent to a server.",
       "intro": "Convert any CSS color between HEX, RGB, HSL and OKLCH, and check whether a text and background pair meets WCAG AA and AAA contrast.",
       "howTo": {
@@ -953,7 +977,7 @@
     },
     "hmac-generator": {
       "title": "HMAC Generator",
-      "metaTitle": "HMAC SHA-256 / SHA-512 Generator — runs in your browser, no upload | Kinbench",
+      "metaTitle": "HMAC SHA-256 / SHA-512 Generator — No Upload | Kinbench",
       "metaDescription": "Compute HMAC-SHA256, SHA-384, SHA-512 and SHA-1 with Web Crypto, with text, hex or Base64 keys. Your message and key never leave your browser.",
       "intro": "Sign a message with a secret key using HMAC-SHA256, SHA-384, SHA-512 or SHA-1, for example to check a webhook signature. It uses your browser’s Web Crypto API; the key never leaves the page.",
       "howTo": {
@@ -996,7 +1020,7 @@
     },
     "aes-encryption": {
       "title": "AES Encryption",
-      "metaTitle": "AES-256 Encrypt / Decrypt Text with a Password — runs in your browser, no upload | Kinbench",
+      "metaTitle": "AES-256 Encrypt & Decrypt Online — No Upload | Kinbench",
       "metaDescription": "Encrypt and decrypt text with AES-256-GCM and a password, using Web Crypto in your browser. The text and password are never sent to a server.",
       "intro": "Encrypt text with a password using AES-256-GCM, and decrypt it again later. The key is derived from your password with PBKDF2 (600,000 iterations), and everything runs in your browser.",
       "howTo": {
@@ -1036,7 +1060,7 @@
     },
     "text-diff": {
       "title": "Text Diff",
-      "metaTitle": "Text Diff: Compare Two Texts — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Text Diff Checker: Compare Two Texts Online | Kinbench",
       "metaDescription": "Compare two texts line by line or word by word, and export a unified diff patch. Runs in your browser; nothing is sent to a server.",
       "intro": "Paste two versions of a text, config file or snippet to see exactly what changed, line by line or word by word. Copy the result as a standard unified diff. Everything runs in your browser.",
       "howTo": {
@@ -1069,7 +1093,7 @@
     },
     "regex-tester": {
       "title": "Regex Tester",
-      "metaTitle": "Regex Tester for JavaScript — runs in your browser, no upload | Kinbench",
+      "metaTitle": "JavaScript Regex Tester Online — No Upload | Kinbench",
       "metaDescription": "Test JavaScript regular expressions with live highlighting, capture groups and replace preview. Runs in your browser; nothing is sent to a server.",
       "intro": "Write a JavaScript regular expression and see every match highlighted as you type, with capture groups and a replace preview. Patterns run in a separate worker, so a runaway one can’t freeze the page.",
       "howTo": {
@@ -1113,7 +1137,7 @@
     },
     "cron-parser": {
       "title": "Cron Expression Parser",
-      "metaTitle": "Cron Expression Parser: Explain & Next Run Times — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Cron Expression Parser: Explain & Next Run Times | Kinbench",
       "metaDescription": "Explain a cron expression in plain words and list its next run times in your time zone or UTC. Runs in your browser; nothing is sent to a server.",
       "intro": "Paste a cron schedule to read it in plain words and see when it will run next, in your time zone or in UTC. Standard 5-field crontab syntax with names, ranges, steps and @daily-style macros.",
       "howTo": {
@@ -1162,7 +1186,7 @@
     },
     "curl-converter": {
       "title": "cURL to fetch / axios",
-      "metaTitle": "cURL to fetch & axios Converter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "cURL to fetch & axios Converter — Tokens Stay Local | Kinbench",
       "metaDescription": "Convert a cURL command, e.g. from DevTools “Copy as cURL”, to JavaScript fetch or axios code. Runs in your browser; your tokens are never sent.",
       "intro": "Paste a cURL command, for example from DevTools “Copy as cURL”, and get the same request as JavaScript fetch or axios code. Headers, JSON bodies, form data and basic auth are converted locally, so your tokens stay on your device.",
       "howTo": {
@@ -1196,7 +1220,7 @@
     },
     "box-shadow-generator": {
       "title": "Box Shadow Generator",
-      "metaTitle": "CSS Box Shadow Generator — runs in your browser, no upload | Kinbench",
+      "metaTitle": "CSS Box Shadow Generator with Live Preview | Kinbench",
       "metaDescription": "Design CSS box-shadow with live preview: offsets, blur, spread, color, opacity, inset and multiple layers. Runs in your browser; nothing is uploaded.",
       "intro": "Build a CSS box-shadow with sliders and a live preview. Stack several layers for soft, realistic shadows, then copy the CSS.",
       "howTo": {
@@ -1231,7 +1255,7 @@
     },
     "gradient-generator": {
       "title": "CSS Gradient Generator",
-      "metaTitle": "CSS Gradient Generator: Linear, Radial & Conic — runs in your browser, no upload | Kinbench",
+      "metaTitle": "CSS Gradient Generator: Linear, Radial & Conic | Kinbench",
       "metaDescription": "Create linear, radial and conic CSS gradients with up to 6 color stops and a live preview. Runs in your browser; nothing is sent to a server.",
       "intro": "Create linear, radial and conic CSS gradients with a live preview, pick colors and positions for up to six stops, and copy the CSS.",
       "howTo": {
@@ -1268,7 +1292,7 @@
     },
     "cubic-bezier": {
       "title": "Cubic Bezier Editor",
-      "metaTitle": "CSS Cubic Bezier Easing Editor — runs in your browser, no upload | Kinbench",
+      "metaTitle": "CSS Cubic Bezier Easing Generator & Editor | Kinbench",
       "metaDescription": "Shape a CSS cubic-bezier easing curve by dragging, compare it with linear, and copy the timing function. Runs in your browser, nothing uploaded.",
       "intro": "Drag the two handles to shape an easing curve, compare it with linear motion, and copy the cubic-bezier() timing function for your CSS transitions and animations.",
       "howTo": {
@@ -1296,7 +1320,7 @@
     },
     "json-converter": {
       "title": "JSON ↔ YAML, XML, CSV, TOML",
-      "metaTitle": "Convert JSON to YAML, XML, CSV & TOML and back — runs in your browser, no upload | Kinbench",
+      "metaTitle": "JSON to YAML, XML, CSV & TOML Converter — No Upload | Kinbench",
       "metaDescription": "Convert between JSON, YAML, XML, CSV and TOML in any direction. Runs in your browser; your data and config files are never sent to a server.",
       "intro": "Convert data between JSON, YAML, XML, CSV and TOML in any direction: config files, API responses, spreadsheets exported as CSV. Each format’s parser loads only when you pick it, and everything runs in your browser.",
       "howTo": {
@@ -1333,7 +1357,7 @@
     },
     "json-to-types": {
       "title": "JSON to TypeScript & Zod",
-      "metaTitle": "JSON to TypeScript Interface & Zod Schema — runs in your browser, no upload | Kinbench",
+      "metaTitle": "JSON to TypeScript Interface & Zod Schema | Kinbench",
       "metaDescription": "Generate TypeScript interfaces or a Zod schema from a JSON sample, with optional fields detected from arrays. Your data never leaves your browser.",
       "intro": "Paste a JSON sample, such as an API response, to get matching TypeScript interfaces or a Zod schema. Keys missing from some array items become optional, and mixed values become unions.",
       "howTo": {
@@ -1361,7 +1385,7 @@
     },
     "sql-formatter": {
       "title": "SQL Formatter",
-      "metaTitle": "SQL Formatter for PostgreSQL, MySQL & more — runs in your browser, no upload | Kinbench",
+      "metaTitle": "SQL Formatter Online for PostgreSQL, MySQL & More | Kinbench",
       "metaDescription": "Format SQL queries for PostgreSQL, MySQL, SQLite, SQL Server and BigQuery with your keyword case and indent. Your queries never leave your browser.",
       "intro": "Turn a one-line or messy SQL query into readable, consistently indented SQL. Supports standard SQL, PostgreSQL, MySQL, SQLite, SQL Server and BigQuery, and nothing is uploaded.",
       "howTo": {
@@ -1397,7 +1421,7 @@
     },
     "code-formatter": {
       "title": "HTML & JavaScript Formatter",
-      "metaTitle": "HTML, JavaScript & TypeScript Formatter (Prettier) — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Prettier Online: Format HTML, JavaScript & TypeScript | Kinbench",
       "metaDescription": "Format HTML, JavaScript and TypeScript with Prettier, with your print width, indent, semicolons and quotes. Code is formatted locally, never uploaded.",
       "intro": "Format HTML, JavaScript and TypeScript with Prettier, the formatter most teams already use. Inline scripts and styles in HTML are formatted too. Prettier loads in a background worker on first use; your code stays in your browser.",
       "howTo": {
@@ -1431,7 +1455,7 @@
     },
     "markdown-preview": {
       "title": "Markdown Preview",
-      "metaTitle": "Markdown Preview & Markdown to HTML — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Markdown Preview & Markdown to HTML Converter | Kinbench",
       "metaDescription": "Preview GitHub-flavored Markdown live and export clean, sanitized HTML. Runs in your browser; your notes and docs are never sent to a server.",
       "intro": "Write or paste Markdown and see it rendered as you type, with GitHub-flavored tables, task lists and code blocks. Export the result as clean HTML. Everything runs in your browser.",
       "howTo": {
@@ -1459,7 +1483,7 @@
     },
     "svg-optimizer": {
       "title": "SVG Optimizer",
-      "metaTitle": "SVG Optimizer (SVGO) — runs in your browser, no upload | Kinbench",
+      "metaTitle": "SVG Optimizer (SVGO) Online — Compress SVG, No Upload | Kinbench",
       "metaDescription": "Shrink SVG files with SVGO: remove editor metadata, comments and redundant markup, with before/after previews. Files never leave your browser.",
       "intro": "Make SVG icons and illustrations smaller with SVGO: editor metadata, comments, hidden elements and redundant attributes are removed, and paths are simplified. Compare before and after side by side; nothing is uploaded.",
       "howTo": {
@@ -1492,7 +1516,7 @@
     },
     "exif-viewer": {
       "title": "EXIF Viewer & Remover",
-      "metaTitle": "EXIF Viewer & Metadata Remover — runs in your browser, no upload | Kinbench",
+      "metaTitle": "EXIF Viewer & Remover — Strip Photo Metadata Locally | Kinbench",
       "metaDescription": "See the EXIF, GPS and camera data hidden in a photo, and remove it, losslessly for JPEG and PNG. Photos are processed in your browser, never uploaded.",
       "intro": "Photos often carry hidden data: the camera, the time, even the GPS position where they were taken. See all of it, then download a clean copy before sharing. JPEG and PNG are cleaned without re-compressing, and your photos never leave your browser.",
       "howTo": {
@@ -1527,7 +1551,7 @@
     },
     "image-resize": {
       "title": "Image Resizer & Cropper",
-      "metaTitle": "Resize & Crop Images — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Resize & Crop Images Online — No Upload | Kinbench",
       "metaDescription": "Crop images to any aspect ratio and resize them to exact pixel sizes, then export as JPEG, PNG or WebP. Images are processed locally, never uploaded.",
       "intro": "Crop a photo to 1:1, 16:9 or any shape, resize it to exact pixels, and save it as JPEG, PNG or WebP. Drag the crop box or type exact values; everything runs in your browser.",
       "howTo": {
@@ -1566,7 +1590,7 @@
     },
     "favicon-generator": {
       "title": "Favicon Generator",
-      "metaTitle": "Favicon Generator: ICO, PNG & Apple Touch Icon — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Favicon Generator: ICO, PNG & Apple Touch Icon | Kinbench",
       "metaDescription": "Make favicon.ico, PNG icons, an Apple touch icon and a web manifest from one image, with the HTML tags. Generated in your browser, nothing uploaded.",
       "intro": "Turn one logo into every icon a site needs: favicon.ico, PNG favicons, the Apple touch icon, Android icons and a web manifest, zipped, with the HTML tags to paste. Your logo never leaves your browser.",
       "howTo": {
@@ -1600,7 +1624,7 @@
     },
     "qr-code": {
       "title": "QR Code Generator & Reader",
-      "metaTitle": "QR Code Generator & Reader — runs in your browser, no upload | Kinbench",
+      "metaTitle": "QR Code Generator & Reader Online — No Upload | Kinbench",
       "metaDescription": "Create QR codes for links or text as PNG or SVG, and read QR codes from images. Runs in your browser; nothing is sent to a server.",
       "intro": "Create a QR code for any link or text, with your colors and error correction, and download it as PNG or SVG. Or read the QR code in a screenshot or photo. Everything runs in your browser.",
       "howTo": {
@@ -1646,7 +1670,7 @@
     },
     "pdf-tools": {
       "title": "PDF Merge & Split",
-      "metaTitle": "Merge & Split PDF — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Merge & Split PDF Online — Files Never Uploaded | Kinbench",
       "metaDescription": "Merge several PDFs into one or split a PDF by page ranges. Your documents are processed in your browser and never uploaded to a server.",
       "intro": "Combine several PDFs into one, in the order you choose, or split a PDF into parts by page ranges. Contracts and invoices stay on your device: everything runs in your browser.",
       "howTo": {
@@ -1693,7 +1717,7 @@
     },
     "video-to-gif": {
       "title": "Video to GIF",
-      "metaTitle": "Video to GIF Converter — runs in your browser, no upload | Kinbench",
+      "metaTitle": "Video to GIF Converter Online — No Upload | Kinbench",
       "metaDescription": "Turn an MP4, WebM or MOV clip into a GIF with ffmpeg, choosing start, length, frame rate and width. Videos never leave your browser.",
       "intro": "Cut a short clip from an MP4, WebM or MOV video and turn it into a GIF, with an optimized color palette. It uses ffmpeg compiled to WebAssembly, running in your browser, so your video is never uploaded.",
       "howTo": {
@@ -1737,7 +1761,7 @@
     },
     "function-benchmark": {
       "title": "Function Benchmark",
-      "metaTitle": "JavaScript Function Benchmark: Compare Speed — runs in your browser, no upload | Kinbench",
+      "metaTitle": "JavaScript Benchmark: Compare Function Speed | Kinbench",
       "metaDescription": "Compare how fast several JavaScript functions run on the same input: ops/sec, margin of error, relative speed. Runs locally in a sandboxed worker.",
       "intro": "Write two or more versions of a function and see which is fastest on the same input, with operations per second and margin of error. Each one runs in its own sandboxed worker in your browser.",
       "howTo": {
@@ -1777,7 +1801,7 @@
     }
   },
   "privacy": {
-    "metaTitle": "Privacy — how Kinbench keeps your data in your browser | Kinbench",
+    "metaTitle": "Privacy: How Your Data Stays in Your Browser | Kinbench",
     "metaDescription": "How Kinbench processes everything locally: no backend, no analytics, a strict CSP, offline support, and how to verify it yourself in DevTools.",
     "title": "Privacy: your data stays in your browser",
     "intro": "Kinbench is a set of static web pages. There is no server-side code, no account and no database, so there is nowhere for your data to go. This page explains how that works and how you can check it yourself.",
@@ -1814,7 +1838,7 @@
     }
   },
   "about": {
-    "metaTitle": "About Kinbench — privacy-first developer tools | Kinbench",
+    "metaTitle": "About Kinbench — Privacy-First Developer Tools",
     "metaDescription": "Kinbench is a free set of developer tools that run entirely in your browser: JSON, CSS, images, hashes, JWT and more, with nothing uploaded.",
     "title": "About Kinbench",
     "intro": "Kinbench is a free collection of everyday developer tools: formatters, encoders, hash and ID generators, an image converter and a JavaScript test runner. All of them run entirely in your browser.",

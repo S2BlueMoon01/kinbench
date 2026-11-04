@@ -64,6 +64,8 @@ All text lives in `messages/en.json` and `messages/vi.json`. Both files must hav
 - Lists (how-to steps, FAQ) are objects with named keys, not arrays, because next-intl's typed keys don't support arrays.
 - Vietnamese copy should read naturally for Vietnamese developers and keep the English terms they use (JSON, hash, format…).
 - Keep `metaDescription` under 155 characters and say that processing is local; the SEO test checks the length.
+- Keep `metaTitle` under 70 characters (60 is better): main search keyword first, then "Online" / "No Upload"
+  ("không tải lên"), then `| Kinbench`. Google cuts longer titles and often rewrites them.
 
 ## Deploy
 

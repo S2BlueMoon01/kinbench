@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, type Locale } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import { ChevronRight, Plus, ShieldCheck } from 'lucide-react';
+import { ChevronRight, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { Faq } from '@/components/Faq';
 import { PrivacyBadge } from '@/components/PrivacyBadge';
-import { absoluteUrl, JsonLd, pageMetadata } from '@/lib/seo';
+import { absoluteUrl, faqJsonLd, JsonLd, pageMetadata } from '@/lib/seo';
 import { BRAND } from '@/lib/site';
 import { ToolComponent } from '@/tools/components';
 import { getTool, tools } from '@/tools/registry';
@@ -106,17 +107,7 @@ export default async function ToolPage({ params }: PageProps<'/[locale]/tools/[s
 
       <section className="mt-14 max-w-3xl">
         <h2 className={h2}>{t('site.toolPage.faq')}</h2>
-        <div className="mt-3">
-          {faq.map(({ q, a }) => (
-            <details key={q} className="group border-b">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-medium [&::-webkit-details-marker]:hidden">
-                {q}
-                <Plus aria-hidden className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-45 motion-reduce:transition-none" />
-              </summary>
-              <p className="pb-4 leading-relaxed text-muted-foreground">{a}</p>
-            </details>
-          ))}
-        </div>
+        <Faq items={faq} />
       </section>
 
       {tool.relatedTools.length > 0 && (
@@ -147,10 +138,7 @@ export default async function ToolPage({ params }: PageProps<'/[locale]/tools/[s
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
               featureList: Object.values(messages.site.featureList),
             },
-            {
-              '@type': 'FAQPage',
-              mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
-            },
+            faqJsonLd(faq),
             {
               '@type': 'BreadcrumbList',
               itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: absoluteUrl(`/${locale}${c.path}`) })),

@@ -114,16 +114,40 @@
     }
   },
   "home": {
-    "metaTitle": "Kinbench — công cụ cho developer chạy 100% trên trình duyệt",
-    "metaDescription": "Bộ công cụ miễn phí cho developer: JSON, văn bản, hình ảnh, hash, encode... Tất cả chạy ngay trên trình duyệt, không tải dữ liệu lên server nào.",
-    "title": "Công cụ chạy 100% trên máy — dữ liệu không rời khỏi trình duyệt",
-    "subtitle": "Format, chuyển đổi, hash và debug mà không phải dán dữ liệu nhạy cảm lên server của người khác.",
+    "metaTitle": "Công cụ chạy trên trình duyệt, bảo mật, không cần server | Kinbench",
+    "metaDescription": "Công cụ miễn phí chạy 100% trên trình duyệt: JSON, JWT, hash, Base64, nén ảnh, PDF… Không server, không tải dữ liệu lên, không cần đăng ký.",
+    "title": "Công cụ chạy 100% trên trình duyệt — bảo mật, không cần server",
+    "subtitle": "Format JSON, decode JWT, tính hash, nén ảnh, gộp PDF mà không tải gì lên. Không server nào nhìn thấy dữ liệu của bạn, kể cả server của chúng tôi.",
     "categoriesTitle": "Danh mục công cụ",
-    "recentTitle": "Dùng gần đây"
+    "recentTitle": "Dùng gần đây",
+    "whySafeTitle": "Vì sao công cụ chạy trên trình duyệt an toàn hơn?",
+    "whySafeIntro": "Phần lớn công cụ online gửi dữ liệu bạn dán lên server của họ để xử lý, và bạn chỉ còn cách tin vào những gì xảy ra ở đó. Kinbench xử lý ngay trong trình duyệt, nên API key, token, dữ liệu khách hàng hay file riêng tư không bao giờ rời khỏi máy bạn.",
+    "faq": {
+      "browser": {
+        "q": "Công cụ “chạy trên trình duyệt” nghĩa là gì?",
+        "a": "Code của công cụ được tải về trình duyệt và xử lý ngay trên máy bạn. Khác với phần lớn công cụ online, dữ liệu bạn dán hay mở không bị gửi lên server để xử lý, vì Kinbench hoàn toàn không có code phía server."
+      },
+      "secrets": {
+        "q": "Dán API key, JWT hay mật khẩu vào có an toàn không?",
+        "a": "An toàn. Token, key và mật khẩu được xử lý ngay trong trang trên máy bạn và không được gửi đi đâu cả. Content-Security-Policy nghiêm ngặt chặn trang kết nối tới bất kỳ server nào khác, nên dù một thư viện có lỗi hay bị chèn mã độc cũng không thể gửi chúng ra ngoài."
+      },
+      "verify": {
+        "q": "Làm sao kiểm chứng dữ liệu không bị tải lên?",
+        "a": "Mở DevTools (F12), chuyển sang tab Network rồi dùng thử bất kỳ công cụ nào. Bạn chỉ thấy file của chính trang này được tải về, không có request nào mang dữ liệu của bạn. Bộ test tự động của Kinbench cũng kiểm tra đúng điều này cho từng công cụ."
+      },
+      "offline": {
+        "q": "Có dùng được khi không có mạng không?",
+        "a": "Có. Khi bạn đã mở một công cụ, service worker giữ bản sao của nó trên máy bạn, nên công cụ vẫn chạy khi mất mạng. Đây cũng là cách đơn giản để chắc chắn dữ liệu chỉ nằm trên máy."
+      },
+      "free": {
+        "q": "Kinbench có miễn phí không? Có cần tài khoản không?",
+        "a": "Miễn phí, không cần tài khoản, không giới hạn lượt dùng, không quảng cáo, không analytics, không cookie. Kích thước file chỉ bị giới hạn bởi bộ nhớ thiết bị của bạn."
+      }
+    }
   },
   "category": {
-    "metaTitle": "{name} — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
-    "metaDescription": "Các công cụ {name} cho developer. Tất cả chạy ngay trên trình duyệt, không gửi dữ liệu lên server.",
+    "metaTitle": "{name}: công cụ online miễn phí, không tải lên | Kinbench",
+    "metaDescription": "Bộ công cụ {name} miễn phí cho developer: không cần đăng ký, không tải lên. Mọi thứ chạy ngay trên trình duyệt, dữ liệu không tới server nào.",
     "toolCount": "{count} công cụ"
   },
   "notFound": {
@@ -132,7 +156,7 @@
   "tools": {
     "json-formatter": {
       "title": "JSON Formatter",
-      "metaTitle": "Format JSON online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Format JSON online, kiểm tra lỗi JSON — không tải lên | Kinbench",
       "metaDescription": "Format, validate và minify JSON ngay trên trình duyệt. Báo lỗi đúng dòng, đúng cột. Dữ liệu không bao giờ được gửi lên server.",
       "intro": "Dán hoặc kéo thả JSON để format, kiểm tra lỗi hay minify. Mọi thứ chạy trên trình duyệt của bạn, số lớn và chuỗi escape được giữ nguyên như bản gốc.",
       "howTo": {
@@ -196,7 +220,7 @@
     },
     "text-counter": {
       "title": "Đếm ký tự",
-      "metaTitle": "Đếm ký tự, đếm từ online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đếm ký tự, đếm số từ online — không tải lên | Kinbench",
       "metaDescription": "Đếm ký tự, số từ, số dòng, số byte UTF-8 và thời gian đọc ngay khi gõ. Văn bản chỉ nằm trên trình duyệt, không gửi lên server.",
       "intro": "Gõ hoặc dán văn bản để đếm ký tự, số từ, số dòng, số byte UTF-8 và ước lượng thời gian đọc. Mọi phép đếm chạy ngay trên trình duyệt khi bạn gõ, không có gì được tải lên.",
       "howTo": {
@@ -234,7 +258,7 @@
     },
     "base64": {
       "title": "Base64 Encode / Decode",
-      "metaTitle": "Base64 encode, decode online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Base64 encode, decode online — không tải lên | Kinbench",
       "metaDescription": "Encode văn bản hoặc file sang Base64 và decode ngược lại, hỗ trợ UTF-8 và URL-safe. Chạy ngay trên trình duyệt, không gửi gì lên server.",
       "intro": "Encode văn bản hoặc bất kỳ file nào sang Base64, hoặc decode Base64 về văn bản hay file để tải về. Hỗ trợ UTF-8 và Base64 URL-safe, mọi thứ chạy ngay trên trình duyệt.",
       "howTo": {
@@ -273,7 +297,7 @@
     },
     "uuid-generator": {
       "title": "Tạo UUID / ULID / nanoid",
-      "metaTitle": "Tạo UUID, ULID, nanoid online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo UUID, ULID, nanoid online — không tải lên | Kinbench",
       "metaDescription": "Tạo hàng loạt UUID v4, ULID và nanoid bằng bộ sinh số ngẫu nhiên an toàn của trình duyệt. ID được tạo ngay trên máy, không gửi lên server.",
       "intro": "Tạo cùng lúc tới 1.000 giá trị UUID v4, ULID hoặc nanoid. ID được sinh bằng bộ sinh số ngẫu nhiên an toàn về mật mã của trình duyệt và không được gửi đi đâu cả.",
       "howTo": {
@@ -306,7 +330,7 @@
     },
     "unix-timestamp": {
       "title": "Chuyển đổi Unix timestamp",
-      "metaTitle": "Chuyển đổi Unix timestamp online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Chuyển Unix timestamp sang ngày giờ online | Kinbench",
       "metaDescription": "Đổi Unix timestamp (giây hoặc mili giây) sang ISO 8601, giờ địa phương, thời gian tương đối và ngược lại. Chạy trên trình duyệt, không gửi lên server.",
       "intro": "Đổi Unix timestamp sang ngày giờ dễ đọc theo UTC và theo múi giờ của bạn, hoặc đổi ngày giờ thành timestamp. Công cụ tự nhận biết đơn vị giây hay mili giây.",
       "howTo": {
@@ -349,7 +373,7 @@
     },
     "jwt-decoder": {
       "title": "Decode JWT",
-      "metaTitle": "Decode JWT online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Decode JWT online, verify chữ ký — token không rời máy | Kinbench",
       "metaDescription": "Decode header, payload của JWT, xem exp, iat, nbf và verify chữ ký HS256. Token chỉ nằm trên trình duyệt, không bao giờ gửi lên server.",
       "intro": "Dán JSON Web Token để xem header, payload và thời hạn. Decode không kiểm tra chữ ký; muốn verify token HS256, HS384 hay HS512, hãy nhập secret. Token và secret chỉ nằm trên trình duyệt của bạn.",
       "howTo": {
@@ -402,7 +426,7 @@
     },
     "hash-generator": {
       "title": "Tạo mã hash",
-      "metaTitle": "Tạo hash MD5, SHA-1, SHA-256, SHA-512 online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo hash MD5, SHA-256, SHA-512 online — không tải lên | Kinbench",
       "metaDescription": "Tính hash MD5, SHA-1, SHA-256 và SHA-512 cho văn bản hoặc file cùng lúc. File lớn được đọc ngay trên trình duyệt, không tải lên server.",
       "intro": "Tính cùng lúc hash MD5, SHA-1, SHA-256 và SHA-512 của văn bản hoặc file. Việc tính hash chạy trong worker nền của trình duyệt, nên cả file nhiều GB cũng không rời khỏi máy bạn.",
       "howTo": {
@@ -437,7 +461,7 @@
     },
     "function-runner": {
       "title": "Chạy & test function",
-      "metaTitle": "Chạy, test function JavaScript online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Chạy và test function JavaScript online trong sandbox | Kinbench",
       "metaDescription": "Viết function JavaScript và test với bảng test case trong Web Worker sandbox. Code chạy ngay trên máy bạn, không bao giờ gửi lên server.",
       "intro": "Viết một function JavaScript, thêm test case rồi chạy tất cả trong Web Worker sandbox. Bạn xem được pass hay fail, output thực tế, thời gian từng case và console.log; vòng lặp vô hạn sẽ bị dừng khi hết timeout.",
       "howTo": {
@@ -495,7 +519,7 @@
     },
     "css-formatter": {
       "title": "Format CSS & SCSS",
-      "metaTitle": "Format, minify CSS & compile SCSS online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Format, minify CSS & compile SCSS online | Kinbench",
       "metaDescription": "Format, minify CSS và compile SCSS sang CSS bằng Prettier và Dart Sass ngay trên trình duyệt. Stylesheet không bao giờ bị gửi lên server.",
       "intro": "Format CSS và SCSS bằng Prettier, compile SCSS sang CSS hoặc minify bằng Dart Sass. Cả hai thư viện chạy trong worker nền của trình duyệt và chỉ được tải khi bạn dùng lần đầu.",
       "howTo": {
@@ -538,7 +562,7 @@
     },
     "image-converter": {
       "title": "Chuyển đổi & nén ảnh",
-      "metaTitle": "Nén ảnh online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Nén ảnh, chuyển ảnh sang WebP online — không tải lên | Kinbench",
       "metaDescription": "Chuyển ảnh sang PNG, JPEG, WebP hoặc AVIF và nén với thanh chỉnh chất lượng. Ảnh được xử lý ngay trên trình duyệt, không tải lên server.",
       "intro": "Chuyển đổi ảnh PNG, JPEG, WebP, AVIF và nén bằng thanh chỉnh chất lượng, rồi so sánh trước và sau ngay trên một khung hình. Ảnh được xử lý trên trình duyệt và không bao giờ bị tải lên.",
       "howTo": {
@@ -581,7 +605,7 @@
     },
     "case-converter": {
       "title": "Đổi kiểu chữ",
-      "metaTitle": "Đổi camelCase, snake_case, kebab-case online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi camelCase, snake_case, kebab-case online | Kinbench",
       "metaDescription": "Đổi văn bản sang camelCase, PascalCase, snake_case, kebab-case, Title Case… cùng lúc. Chạy ngay trên trình duyệt, không gửi gì lên server.",
       "intro": "Gõ một cụm từ hoặc danh sách tên để xem ngay mọi kiểu viết phổ biến: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, Title Case và hơn thế. Mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -620,7 +644,7 @@
     },
     "url-encoder": {
       "title": "URL Encode & phân tích URL",
-      "metaTitle": "URL encode, decode & phân tích URL online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "URL encode, decode & phân tích URL online | Kinbench",
       "metaDescription": "Encode, decode URL và giá trị query, tách URL thành từng phần và tham số. Chạy ngay trên trình duyệt, không gửi dữ liệu lên server.",
       "intro": "Percent-encode văn bản để đặt vào URL, decode một link đã mã hoá, và xem URL được tách thành protocol, host, path, tham số query và fragment. Mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -670,7 +694,7 @@
     },
     "html-entities": {
       "title": "Encode HTML entities",
-      "metaTitle": "Encode, decode HTML entities online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Encode, decode HTML entities online | Kinbench",
       "metaDescription": "Escape văn bản cho HTML hoặc decode HTML entity dạng tên và số, đủ 2.231 tên của HTML5. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Escape văn bản để đặt an toàn vào HTML, hoặc đổi các entity như &lt; &copy; &#7879; về lại ký tự. Phần decode biết mọi entity của HTML5 và xử lý đúng như trình duyệt.",
       "howTo": {
@@ -704,7 +728,7 @@
     },
     "number-base": {
       "title": "Đổi hệ cơ số",
-      "metaTitle": "Đổi số nhị phân, bát phân, thập phân, hex online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi số nhị phân, thập phân, hex, bát phân online | Kinbench",
       "metaDescription": "Đổi số nguyên mọi độ lớn giữa nhị phân, bát phân, thập phân, hex và mọi hệ từ 2 đến 36. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Đổi số nguyên giữa nhị phân, bát phân, thập phân, thập lục phân và mọi hệ cơ số từ 2 đến 36. Số lớn cỡ nào cũng chính xác, vượt xa giới hạn 2^53 của JavaScript.",
       "howTo": {
@@ -747,7 +771,7 @@
     },
     "px-rem": {
       "title": "Đổi PX sang REM",
-      "metaTitle": "Đổi px sang rem online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi px sang rem, rem sang px online | Kinbench",
       "metaDescription": "Đổi px sang rem và rem sang px với cỡ font gốc tuỳ chọn, kèm bảng các cỡ thường dùng. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Đổi pixel sang rem và ngược lại theo cỡ font gốc của bạn (mặc định 16px), kèm bảng các cỡ hay dùng để tra nhanh.",
       "howTo": {
@@ -776,7 +800,7 @@
     },
     "chmod-calculator": {
       "title": "Tính quyền chmod",
-      "metaTitle": "Tính chmod 755, rwxr-xr-x online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tính chmod 755, 644, rwxr-xr-x online | Kinbench",
       "metaDescription": "Đổi quyền Unix sang dạng số (755) và dạng ký hiệu (rwxr-xr-x) và ngược lại, có cả setuid, setgid, sticky. Chạy ngay trên trình duyệt.",
       "intro": "Tick quyền cho owner, group và others để có số chmod, hoặc gõ 755 hay rwxr-xr-x để xem ý nghĩa. Có cả các bit đặc biệt setuid, setgid và sticky.",
       "howTo": {
@@ -822,7 +846,7 @@
     },
     "cidr-calculator": {
       "title": "Tính CIDR",
-      "metaTitle": "Tính CIDR, subnet IPv4 & IPv6 online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tính CIDR, chia subnet IPv4 & IPv6 online | Kinbench",
       "metaDescription": "Tính địa chỉ mạng, broadcast, netmask, dải host và số địa chỉ của mọi khối CIDR IPv4 hoặc IPv6. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Nhập địa chỉ IPv4 hoặc IPv6 kèm prefix, như 10.0.0.0/16 hay 2001:db8::/48, để có địa chỉ mạng, mask, dải host và số địa chỉ.",
       "howTo": {
@@ -861,7 +885,7 @@
     },
     "password-generator": {
       "title": "Tạo mật khẩu",
-      "metaTitle": "Tạo mật khẩu mạnh ngẫu nhiên online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo mật khẩu mạnh online — tạo trên máy, không gửi đi | Kinbench",
       "metaDescription": "Tạo mật khẩu ngẫu nhiên mạnh bằng bộ sinh số an toàn của trình duyệt, kèm độ mạnh (entropy). Mật khẩu tạo ngay trên máy, không gửi đi đâu.",
       "intro": "Tạo mật khẩu ngẫu nhiên mạnh với độ dài và bộ ký tự bạn cần. Mật khẩu được sinh bằng bộ sinh số ngẫu nhiên an toàn về mật mã của trình duyệt và không rời khỏi trang này.",
       "howTo": {
@@ -908,7 +932,7 @@
     },
     "color-converter": {
       "title": "Đổi màu & kiểm tra tương phản",
-      "metaTitle": "Đổi màu HEX, RGB, HSL, OKLCH & kiểm tra tương phản WCAG online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi màu HEX, RGB, HSL, OKLCH & kiểm tra tương phản | Kinbench",
       "metaDescription": "Đổi màu giữa HEX, RGB, HSL, OKLCH và kiểm tra độ tương phản WCAG AA/AAA giữa hai màu. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Đổi mọi màu CSS giữa HEX, RGB, HSL và OKLCH, và kiểm tra một cặp màu chữ và màu nền có đạt độ tương phản WCAG AA, AAA hay không.",
       "howTo": {
@@ -953,7 +977,7 @@
     },
     "hmac-generator": {
       "title": "Tạo HMAC",
-      "metaTitle": "Tạo HMAC SHA-256, SHA-512 online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo HMAC SHA-256, SHA-512 online — không tải lên | Kinbench",
       "metaDescription": "Tính HMAC-SHA256, SHA-384, SHA-512, SHA-1 bằng Web Crypto, key dạng text, hex hoặc Base64. Message và key không bao giờ rời khỏi trình duyệt.",
       "intro": "Ký một message bằng secret key với HMAC-SHA256, SHA-384, SHA-512 hoặc SHA-1, ví dụ để kiểm tra chữ ký webhook. Công cụ dùng Web Crypto API của trình duyệt; key không bao giờ rời khỏi trang.",
       "howTo": {
@@ -996,7 +1020,7 @@
     },
     "aes-encryption": {
       "title": "Mã hoá AES",
-      "metaTitle": "Mã hoá, giải mã AES-256 bằng mật khẩu online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Mã hoá, giải mã AES-256 online — không tải lên | Kinbench",
       "metaDescription": "Mã hoá và giải mã văn bản bằng AES-256-GCM với mật khẩu, dùng Web Crypto ngay trên trình duyệt. Văn bản và mật khẩu không gửi lên server.",
       "intro": "Mã hoá văn bản bằng mật khẩu với AES-256-GCM và giải mã lại khi cần. Key được tạo từ mật khẩu bằng PBKDF2 (600.000 vòng), và mọi thứ chạy ngay trên trình duyệt của bạn.",
       "howTo": {
@@ -1036,7 +1060,7 @@
     },
     "text-diff": {
       "title": "So sánh văn bản",
-      "metaTitle": "So sánh hai đoạn văn bản (text diff) online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "So sánh hai đoạn văn bản, tìm khác biệt online | Kinbench",
       "metaDescription": "So sánh hai đoạn văn bản theo dòng hoặc theo từ, xuất file patch dạng unified diff. Chạy ngay trên trình duyệt, không gửi gì lên server.",
       "intro": "Dán hai phiên bản của một đoạn văn bản, file cấu hình hay đoạn code để thấy chính xác chỗ nào thay đổi, theo dòng hoặc theo từ. Có thể copy kết quả dạng unified diff chuẩn. Mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -1069,7 +1093,7 @@
     },
     "regex-tester": {
       "title": "Test regex",
-      "metaTitle": "Test regex JavaScript online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Test regex JavaScript online, highlight trực tiếp | Kinbench",
       "metaDescription": "Test biểu thức chính quy JavaScript với highlight trực tiếp, capture group và xem trước kết quả replace. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Viết regex JavaScript và xem mọi kết quả khớp được highlight ngay khi gõ, kèm capture group và xem trước kết quả replace. Regex chạy trong một worker riêng, nên pattern chạy mãi cũng không làm treo trang.",
       "howTo": {
@@ -1113,7 +1137,7 @@
     },
     "cron-parser": {
       "title": "Đọc biểu thức cron",
-      "metaTitle": "Đọc biểu thức cron & xem lịch chạy tiếp theo online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đọc biểu thức cron, xem lịch chạy tiếp theo | Kinbench",
       "metaDescription": "Giải thích biểu thức cron bằng lời và liệt kê các lần chạy tiếp theo theo múi giờ của bạn hoặc UTC. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Dán một lịch cron để đọc ý nghĩa bằng lời và xem khi nào nó chạy tiếp, theo múi giờ của bạn hoặc UTC. Hỗ trợ crontab chuẩn 5 trường với tên tháng, tên thứ, khoảng, bước nhảy và các macro như @daily.",
       "howTo": {
@@ -1162,7 +1186,7 @@
     },
     "curl-converter": {
       "title": "Đổi cURL sang fetch / axios",
-      "metaTitle": "Đổi lệnh cURL sang fetch, axios online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi cURL sang fetch, axios online — token không rời máy | Kinbench",
       "metaDescription": "Đổi lệnh cURL, ví dụ từ “Copy as cURL” của DevTools, sang code fetch hoặc axios. Chạy ngay trên trình duyệt; token của bạn không bao giờ bị gửi đi.",
       "intro": "Dán một lệnh cURL, ví dụ từ “Copy as cURL” trong DevTools, để có request tương ứng bằng code fetch hoặc axios. Header, body JSON, form data và basic auth được chuyển đổi ngay trên máy, nên token của bạn không rời khỏi thiết bị.",
       "howTo": {
@@ -1196,7 +1220,7 @@
     },
     "box-shadow-generator": {
       "title": "Tạo box-shadow",
-      "metaTitle": "Tạo CSS box-shadow online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo CSS box-shadow online, xem trước trực tiếp | Kinbench",
       "metaDescription": "Thiết kế CSS box-shadow với xem trước trực tiếp: offset, blur, spread, màu, độ mờ, inset và nhiều lớp. Chạy ngay trên trình duyệt, không tải lên server.",
       "intro": "Tạo CSS box-shadow bằng thanh trượt và xem trước trực tiếp. Chồng nhiều lớp để có bóng đổ mềm và tự nhiên, rồi copy CSS.",
       "howTo": {
@@ -1231,7 +1255,7 @@
     },
     "gradient-generator": {
       "title": "Tạo CSS gradient",
-      "metaTitle": "Tạo CSS gradient linear, radial, conic online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo CSS gradient linear, radial, conic online | Kinbench",
       "metaDescription": "Tạo CSS gradient dạng linear, radial và conic với tối đa 6 điểm màu và xem trước trực tiếp. Chạy ngay trên trình duyệt, không gửi lên server.",
       "intro": "Tạo CSS gradient dạng linear, radial và conic với xem trước trực tiếp, chọn màu và vị trí cho tối đa sáu điểm màu, rồi copy CSS.",
       "howTo": {
@@ -1268,7 +1292,7 @@
     },
     "cubic-bezier": {
       "title": "Chỉnh cubic-bezier",
-      "metaTitle": "Chỉnh đường cong easing CSS cubic-bezier online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo easing CSS cubic-bezier online | Kinbench",
       "metaDescription": "Kéo để tạo đường cong easing CSS cubic-bezier, so sánh với linear và copy timing function. Chạy ngay trên trình duyệt, không tải gì lên.",
       "intro": "Kéo hai tay nắm để tạo đường cong easing, so sánh với chuyển động linear, rồi copy hàm cubic-bezier() cho transition và animation CSS của bạn.",
       "howTo": {
@@ -1296,7 +1320,7 @@
     },
     "json-converter": {
       "title": "Đổi JSON ↔ YAML, XML, CSV, TOML",
-      "metaTitle": "Đổi JSON sang YAML, XML, CSV, TOML và ngược lại online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi JSON sang YAML, XML, CSV, TOML online | Kinbench",
       "metaDescription": "Chuyển đổi qua lại giữa JSON, YAML, XML, CSV và TOML. Chạy ngay trên trình duyệt; dữ liệu và file cấu hình không bao giờ bị gửi lên server.",
       "intro": "Chuyển dữ liệu qua lại giữa JSON, YAML, XML, CSV và TOML theo mọi chiều: file cấu hình, response API, bảng tính xuất ra CSV. Parser của mỗi định dạng chỉ được tải khi bạn chọn, và mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -1333,7 +1357,7 @@
     },
     "json-to-types": {
       "title": "JSON sang TypeScript & Zod",
-      "metaTitle": "Tạo TypeScript interface & Zod schema từ JSON online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo TypeScript interface, Zod schema từ JSON | Kinbench",
       "metaDescription": "Tạo TypeScript interface hoặc Zod schema từ một mẫu JSON, tự nhận ra field optional từ mảng. Dữ liệu không bao giờ rời khỏi trình duyệt.",
       "intro": "Dán một mẫu JSON, ví dụ response của API, để có TypeScript interface hoặc Zod schema tương ứng. Key chỉ có ở một số phần tử của mảng sẽ thành optional, giá trị lẫn kiểu sẽ thành union.",
       "howTo": {
@@ -1361,7 +1385,7 @@
     },
     "sql-formatter": {
       "title": "Format SQL",
-      "metaTitle": "Format SQL cho PostgreSQL, MySQL… online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Format SQL online cho PostgreSQL, MySQL… | Kinbench",
       "metaDescription": "Format câu SQL cho PostgreSQL, MySQL, SQLite, SQL Server và BigQuery, tuỳ chỉnh kiểu chữ keyword và thụt lề. Câu truy vấn không rời khỏi trình duyệt.",
       "intro": "Biến câu SQL viết một dòng hay lộn xộn thành SQL dễ đọc, thụt lề đồng nhất. Hỗ trợ SQL chuẩn, PostgreSQL, MySQL, SQLite, SQL Server và BigQuery, không có gì được tải lên.",
       "howTo": {
@@ -1397,7 +1421,7 @@
     },
     "code-formatter": {
       "title": "Format HTML & JavaScript",
-      "metaTitle": "Format HTML, JavaScript, TypeScript bằng Prettier online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Format HTML, JavaScript, TypeScript online (Prettier) | Kinbench",
       "metaDescription": "Format HTML, JavaScript và TypeScript bằng Prettier, tuỳ chỉnh độ rộng dòng, thụt lề, dấu chấm phẩy, dấu nháy. Code format ngay trên máy, không tải lên.",
       "intro": "Format HTML, JavaScript và TypeScript bằng Prettier, công cụ mà hầu hết các team đang dùng. Script và style inline trong HTML cũng được format. Prettier được tải vào worker nền ở lần dùng đầu; code của bạn chỉ nằm trên trình duyệt.",
       "howTo": {
@@ -1431,7 +1455,7 @@
     },
     "markdown-preview": {
       "title": "Xem trước Markdown",
-      "metaTitle": "Xem trước Markdown & đổi Markdown sang HTML online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Xem trước Markdown, đổi Markdown sang HTML online | Kinbench",
       "metaDescription": "Xem trước Markdown kiểu GitHub ngay khi gõ và xuất ra HTML sạch, đã lọc an toàn. Chạy trên trình duyệt; ghi chú và tài liệu không gửi lên server.",
       "intro": "Viết hoặc dán Markdown để xem kết quả hiển thị ngay khi gõ, có bảng, task list và code block kiểu GitHub. Có thể xuất kết quả ra HTML sạch. Mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -1459,7 +1483,7 @@
     },
     "svg-optimizer": {
       "title": "Tối ưu SVG",
-      "metaTitle": "Tối ưu, nén file SVG (SVGO) online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Nén, tối ưu file SVG online (SVGO) — không tải lên | Kinbench",
       "metaDescription": "Giảm dung lượng SVG bằng SVGO: bỏ metadata của trình vẽ, comment và markup thừa, có xem trước trước và sau. File không rời khỏi trình duyệt.",
       "intro": "Làm nhỏ icon và hình minh hoạ SVG bằng SVGO: metadata của trình vẽ, comment, phần tử ẩn và thuộc tính thừa bị loại bỏ, path được rút gọn. So sánh trước và sau ngay cạnh nhau; không có gì được tải lên.",
       "howTo": {
@@ -1492,7 +1516,7 @@
     },
     "exif-viewer": {
       "title": "Xem & xoá EXIF ảnh",
-      "metaTitle": "Xem và xoá EXIF, metadata ảnh online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Xem và xoá EXIF, metadata ảnh online — không tải lên | Kinbench",
       "metaDescription": "Xem dữ liệu EXIF, GPS, thông tin máy ảnh ẩn trong ảnh và xoá đi, không giảm chất lượng với JPEG và PNG. Ảnh xử lý trên trình duyệt, không tải lên.",
       "intro": "Ảnh chụp thường mang theo dữ liệu ẩn: máy ảnh, thời gian, cả vị trí GPS nơi chụp. Xem toàn bộ, rồi tải về bản sạch trước khi chia sẻ. JPEG và PNG được làm sạch mà không nén lại, và ảnh không bao giờ rời khỏi trình duyệt của bạn.",
       "howTo": {
@@ -1527,7 +1551,7 @@
     },
     "image-resize": {
       "title": "Đổi kích thước & cắt ảnh",
-      "metaTitle": "Đổi kích thước, cắt ảnh online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Đổi kích thước, cắt ảnh online — không tải lên | Kinbench",
       "metaDescription": "Cắt ảnh theo tỷ lệ bất kỳ và đổi kích thước chính xác đến từng pixel, xuất JPEG, PNG hoặc WebP. Ảnh xử lý ngay trên máy, không tải lên.",
       "intro": "Cắt ảnh theo tỷ lệ 1:1, 16:9 hay bất kỳ, đổi kích thước chính xác theo pixel và lưu thành JPEG, PNG hoặc WebP. Kéo khung cắt hoặc gõ giá trị chính xác; mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -1566,7 +1590,7 @@
     },
     "favicon-generator": {
       "title": "Tạo favicon",
-      "metaTitle": "Tạo favicon ICO, PNG & Apple touch icon online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo favicon ICO, PNG, Apple touch icon online | Kinbench",
       "metaDescription": "Tạo favicon.ico, icon PNG, Apple touch icon và web manifest từ một ảnh, kèm thẻ HTML. Tạo ngay trên trình duyệt, không tải gì lên server.",
       "intro": "Biến một logo thành mọi icon mà website cần: favicon.ico, favicon PNG, Apple touch icon, icon Android và web manifest, đóng gói ZIP, kèm thẻ HTML để dán vào trang. Logo của bạn không rời khỏi trình duyệt.",
       "howTo": {
@@ -1600,7 +1624,7 @@
     },
     "qr-code": {
       "title": "Tạo & đọc mã QR",
-      "metaTitle": "Tạo và đọc mã QR online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Tạo mã QR, đọc mã QR từ ảnh online | Kinbench",
       "metaDescription": "Tạo mã QR cho link hoặc văn bản dưới dạng PNG, SVG và đọc mã QR từ ảnh. Chạy ngay trên trình duyệt, không gửi gì lên server.",
       "intro": "Tạo mã QR cho bất kỳ link hay văn bản nào, với màu và mức sửa lỗi tuỳ chọn, rồi tải về dạng PNG hoặc SVG. Hoặc đọc mã QR trong ảnh chụp màn hình hay ảnh chụp. Mọi thứ chạy trên trình duyệt của bạn.",
       "howTo": {
@@ -1646,7 +1670,7 @@
     },
     "pdf-tools": {
       "title": "Gộp & tách PDF",
-      "metaTitle": "Gộp, tách file PDF online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Gộp, tách file PDF online — không tải file lên | Kinbench",
       "metaDescription": "Gộp nhiều file PDF thành một hoặc tách PDF theo khoảng trang. Tài liệu được xử lý ngay trên trình duyệt, không bao giờ tải lên server.",
       "intro": "Gộp nhiều file PDF thành một theo thứ tự bạn chọn, hoặc tách một PDF thành nhiều phần theo khoảng trang. Hợp đồng, hoá đơn vẫn nằm trên máy bạn: mọi thứ chạy trên trình duyệt.",
       "howTo": {
@@ -1693,7 +1717,7 @@
     },
     "video-to-gif": {
       "title": "Đổi video sang GIF",
-      "metaTitle": "Đổi video sang GIF online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Chuyển video sang GIF online — không tải video lên | Kinbench",
       "metaDescription": "Đổi đoạn video MP4, WebM, MOV sang GIF bằng ffmpeg, tuỳ chọn điểm bắt đầu, độ dài, số khung hình và độ rộng. Video không rời khỏi trình duyệt.",
       "intro": "Cắt một đoạn ngắn từ video MP4, WebM hay MOV và đổi thành GIF với bảng màu được tối ưu. Công cụ dùng ffmpeg biên dịch sang WebAssembly, chạy ngay trên trình duyệt, nên video của bạn không bao giờ bị tải lên.",
       "howTo": {
@@ -1737,7 +1761,7 @@
     },
     "function-benchmark": {
       "title": "Đo tốc độ function",
-      "metaTitle": "Benchmark, so sánh tốc độ function JavaScript online — xử lý ngay trên trình duyệt, không tải lên server | Kinbench",
+      "metaTitle": "Benchmark, so sánh tốc độ function JavaScript | Kinbench",
       "metaDescription": "So sánh tốc độ của nhiều function JavaScript trên cùng input: ops/sec, sai số, tốc độ tương đối. Chạy ngay trên máy trong worker sandbox.",
       "intro": "Viết hai hay nhiều phiên bản của một function để xem bản nào nhanh nhất với cùng input, kèm số thao tác mỗi giây và sai số. Mỗi bản chạy trong một worker sandbox riêng trên trình duyệt của bạn.",
       "howTo": {
@@ -1777,7 +1801,7 @@
     }
   },
   "privacy": {
-    "metaTitle": "Quyền riêng tư — cách Kinbench giữ dữ liệu trên trình duyệt của bạn | Kinbench",
+    "metaTitle": "Quyền riêng tư: dữ liệu ở lại trên trình duyệt | Kinbench",
     "metaDescription": "Kinbench xử lý mọi thứ ngay trên máy: không backend, không analytics, CSP nghiêm ngặt, chạy được offline, và cách tự kiểm chứng bằng DevTools.",
     "title": "Quyền riêng tư: dữ liệu của bạn ở lại trên trình duyệt",
     "intro": "Kinbench là một tập hợp các trang web tĩnh. Không có code phía server, không tài khoản, không database, nên dữ liệu của bạn chẳng có nơi nào để đi. Trang này giải thích cách hoạt động và cách bạn tự kiểm tra.",
@@ -1814,7 +1838,7 @@
     }
   },
   "about": {
-    "metaTitle": "Giới thiệu Kinbench — công cụ cho developer, đặt quyền riêng tư lên đầu | Kinbench",
+    "metaTitle": "Giới thiệu Kinbench — công cụ developer bảo mật, không server",
     "metaDescription": "Kinbench là bộ công cụ miễn phí cho developer chạy hoàn toàn trên trình duyệt: JSON, CSS, ảnh, hash, JWT... không tải dữ liệu lên server.",
     "title": "Giới thiệu Kinbench",
     "intro": "Kinbench là bộ công cụ miễn phí cho công việc hằng ngày của developer: format, encode, tạo hash và ID, chuyển đổi ảnh, chạy test JavaScript. Tất cả chạy ngay trên trình duyệt của bạn.",

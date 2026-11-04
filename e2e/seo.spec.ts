@@ -13,6 +13,8 @@ async function checkHead(request: APIRequestContext, locale: Locale, path: strin
   const html = await (await request.get(`/${locale}${path}`)).text();
   expect(html).toContain(`<html lang="${locale}"`);
   expect(html).toContain(`<title>${esc(meta.metaTitle)}</title>`);
+  // Google cuts titles at about 600px; past ~70 characters the end (and the brand) is dropped.
+  expect([...meta.metaTitle].length).toBeLessThanOrEqual(70);
   expect([...meta.metaDescription].length).toBeLessThanOrEqual(155);
   expect(html).toContain(`<meta name="description" content="${esc(meta.metaDescription)}"/>`);
   expect(attr(html, /<link rel="canonical" href="([^"]+)"/g)).toEqual([expect.stringMatching(new RegExp(`/${locale}${path}$`))]);
@@ -58,6 +60,8 @@ for (const locale of locales) {
   test(`${locale}: home, privacy, about and category pages have head tags`, async ({ request }) => {
     const home = await checkHead(request, locale, '', m.home);
     expect(home).toContain('"@type":"WebSite"');
+    expect(home).toContain('"@type":"FAQPage"');
+    expect(home).toContain(esc(m.home.faq.secrets.q)); // server-rendered, not added by JS
     await checkHead(request, locale, '/privacy', m.privacy);
     await checkHead(request, locale, '/about', m.about);
     await checkHead(request, locale, '/category/format', {
